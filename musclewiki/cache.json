@@ -1,44 +1,4 @@
 {
-  "bodyweight-assisted-mixed-grip-pullup": {
-    "slug": "bodyweight-assisted-mixed-grip-pullup",
-    "nome": "Barra fixa assistida com pegada mista.",
-    "nome_en": "Bodyweight Assisted Mixed Grip Pullup",
-    "passos": [
-      "Segure a barra fixa com pegada mista, mãos na largura dos ombros.",
-      "Apoie os pés no chão, com as pernas levemente dobradas.",
-      "Use as pernas para ajudar a puxar o queixo acima da barra."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-bodyweight-assisted-mixed-grip-pullup-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-bodyweight-assisted-mixed-grip-pullup-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-bodyweight-assisted-mixed-grip-pullup-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-bodyweight-assisted-mixed-grip-pullup-side.mp4"
-      }
-    }
-  },
-  "bodyweight-assisted-pull-up": {
-    "slug": "bodyweight-assisted-pull-up",
-    "nome": "Barra Fixa Assistida",
-    "nome_en": "Bodyweight Assisted Pull Up",
-    "passos": [
-      "Segure a barra fixa com pegada pronada, com as mãos na largura dos ombros.",
-      "Coloque os pés no chão, com as pernas levemente flexionadas.",
-      "Use as pernas para ajudar ao puxar o queixo acima da barra."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-bodyweight-assisted-pull-up-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-bodyweight-assisted-pull-up-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-bodyweight-assisted-pull-up-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-bodyweight-assisted-pull-up-side.mp4"
-      }
-    }
-  },
   "chin-ups": {
     "slug": "chin-ups",
     "nome": "Barra Fixa (pegada supinada)",
@@ -56,26 +16,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-bodyweight-chinup-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-bodyweight-chinup-side.mp4"
-      }
-    }
-  },
-  "dead-bug": {
-    "slug": "dead-bug",
-    "nome": "Dead Bug",
-    "nome_en": "Dead Bug",
-    "passos": [
-      "Deite-se de costas, braços estendidos para cima, pernas levantadas com os joelhos dobrados.",
-      "Abaixe o braço e a perna opostos até o chão, mantendo as costas pressionadas no chão.",
-      "Alterne os lados, mantenha o core ativado e repita pelo número de repetições ou pelo tempo desejado."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-dead-bug-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-dead-bug-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-dead-bug-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-dead-bug-side.mp4"
       }
     }
   },
@@ -99,248 +39,6 @@
       }
     }
   },
-  "dumbbell-bulgarian-split-squat": {
-    "slug": "dumbbell-bulgarian-split-squat",
-    "nome": "Afundo Búlgaro com Halteres",
-    "nome_en": "Dumbbell Bulgarian Split Squat",
-    "passos": [
-      "Encontre uma caixa ou um banco aproximadamente na altura do joelho ou alguns inches abaixo. (Quanto mais baixo for a caixa ou o banco, menor será a exigência de mobilidade.)",
-      "Você pode apoiar as pontas dos pés ou o dorso do pé na caixa. Posicione o pé da frente apontando para frente ou levemente virado para fora e flexione os joelhos e os quadris simultaneamente.",
-      "Procure que a perna da frente alcance a profundidade paralela (com o posterior da coxa paralelo ao chão) ou abaixo.",
-      "Quanto mais à frente o pé da frente estiver, maior será a amplitude de movimento nos quadris. Quanto mais para trás o pé da frente estiver, maior será a amplitude de movimento nos joelhos."
-    ],
-    "videos": {
-      "male": {
-        "side": "https://musclewiki.com/api-next/videos/male-Dumbbells-dumbbell-bulgarian-split-squat-side.mp4"
-      },
-      "female": {
-        "side": "https://musclewiki.com/api-next/videos/female-Dumbbells-dumbbell-bulgarian-split-squat-side.mp4"
-      }
-    }
-  },
-  "dumbbell-crunch": {
-    "slug": "dumbbell-crunch",
-    "nome": "Abdominal com haltere",
-    "nome_en": "Dumbbell Crunch",
-    "passos": [
-      "Comece deitado de costas com os pés apoiados no chão e os joelhos flexionados.",
-      "Segure um haltere sobre a clavícula.",
-      "Contraia os músculos do core e eleve o tronco do chão até que os ombros fiquem a alguns centímetros do solo.",
-      "Abaixe-se de volta à posição inicial, mas não descanse completamente no chão entre as repetições."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-dumbbell-crunch-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-dumbbell-crunch-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-dumbbell-crunch-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-dumbbell-crunch-side.mp4"
-      }
-    }
-  },
-  "dumbbell-goblet-bulgarian-split-squat": {
-    "slug": "dumbbell-goblet-bulgarian-split-squat",
-    "nome": "Afundo Búlgaro com Haltere (goblet)",
-    "nome_en": "Dumbbell Goblet Bulgarian Split Squat",
-    "passos": [
-      "Segure o halter em posição de goblet e apoie o pé em um banco ou caixa.",
-      "Dobre os quadris e os joelhos. Tente descer até o ponto em que o posterior da coxa fique paralelo ao chão. Ou até que o joelho de trás encoste no chão.",
-      "Mantenha as costas retas e os cotovelos diretamente abaixo dos punhos."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Dumbbells-dumbbell-goblet-bulgarian-split-squat-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Dumbbells-dumbbell-goblet-bulgarian-split-squat-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Dumbbells-dumbbell-goblet-bulgarian-split-squat-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Dumbbells-dumbbell-goblet-bulgarian-split-squat-side.mp4"
-      }
-    }
-  },
-  "dumbbell-hammer-curl": {
-    "slug": "dumbbell-hammer-curl",
-    "nome": "Rosca martelo com halteres",
-    "nome_en": "Dumbbell Hammer Curl",
-    "passos": [
-      "Segure os halteres com pegada neutra (polegares apontando para o teto).",
-      "Levante lentamente o halter até a altura do peito",
-      "Volte à posição inicial e repita."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Dumbbells-dumbbell-hammer-curl-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Dumbbells-dumbbell-hammer-curl-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Dumbbells-dumbbell-hammer-curl-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Dumbbells-dumbbell-hammer-curl-side.mp4"
-      }
-    }
-  },
-  "dumbbell-leg-curl": {
-    "slug": "dumbbell-leg-curl",
-    "nome": "Flexão de Pernas com Halteres",
-    "nome_en": "Dumbbell Leg Curl",
-    "passos": [
-      "Deite-se de costas em um banco com um haltere entre os pés.",
-      "Dobre os joelhos e levante o halter até que as solas dos seus tênis apontem para o teto."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-dumbbell-leg-curl-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-dumbbell-leg-curl-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-dumbbell-leg-curl-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-dumbbell-leg-curl-side.mp4"
-      }
-    }
-  },
-  "dumbbell-renegade-row": {
-    "slug": "dumbbell-renegade-row",
-    "nome": "Remada Renegade com Halteres",
-    "nome_en": "Dumbbell Renegade Row",
-    "passos": [
-      "Comece assumindo a posição de prancha com um haltere em cada mão. Mantenha os pés na largura dos ombros e as mãos apoiadas nos halteres, com as palmas voltadas uma para a outra.",
-      "A partir dessa posição inicial, puxe um haltere em direção ao peito, mantendo o cotovelo junto ao corpo e o core contraído.",
-      "Abaixe o haltere lentamente de volta à posição inicial e repita do outro lado.",
-      "Mantenha o corpo reto e os quadris nivelados durante todo o movimento."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-dumbbell-renegade-row-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-dumbbell-renegade-row-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-dumbbell-renegade-row-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-dumbbell-renegade-row-side.mp4"
-      }
-    }
-  },
-  "dumbbell-side-bend": {
-    "slug": "dumbbell-side-bend",
-    "nome": "Inclinação Lateral com Haltere",
-    "nome_en": "Dumbbell Side Bend",
-    "passos": [
-      "Fique em pé com os pés na largura do quadril e apoie a mão direita no quadril direito.",
-      "Segure um halter com a mão esquerda. Incline-se pelo quadril para o lado.",
-      "Não comece a inclinar-se para frente tentando forçar uma amplitude de movimento maior."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-dumbbell-side-bend-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-dumbbell-side-bend-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-dumbbell-side-bend-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-dumbbell-side-bend-side.mp4"
-      }
-    }
-  },
-  "dumbbell-split-squat": {
-    "slug": "dumbbell-split-squat",
-    "nome": "Afundo com Halteres",
-    "nome_en": "Dumbbell Split Squat",
-    "passos": [
-      "Segure um haltere na posição goblet.",
-      "Dê um passo largo à frente com uma perna e abaixe o corpo até que o joelho de trás quase toque o chão. O joelho da frente deve formar um ângulo de 90° e a perna de trás deve ficar reta.",
-      "Empurre com o calcanhar do pé da frente para voltar à posição inicial."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-dumbbell-split-squat-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-dumbbell-split-squat-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-dumbbell-split-squat-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-dumbbell-split-squat-side.mp4"
-      }
-    }
-  },
-  "dumbbell-sumo-squat": {
-    "slug": "dumbbell-sumo-squat",
-    "nome": "Agachamento Sumô com Haltere",
-    "nome_en": "Dumbbell Sumo Squat",
-    "passos": [
-      "Comece em pé com os pés mais abertos que a largura dos ombros, segurando um haltere em cada mão.",
-      "Coloque os halteres no chão entre os pés.",
-      "A partir desta posição, dobre os joelhos e desça o corpo até a posição de agachamento.",
-      "Mantenha o core ativado e as costas retas durante todo o movimento."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Dumbbells-dumbbell-sumo-squat-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Dumbbells-dumbbell-sumo-squat-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Dumbbells-dumbbell-sumo-squat-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Dumbbells-dumbbell-sumo-squat-side.mp4"
-      }
-    }
-  },
-  "dumbbell-tricep-kickback": {
-    "slug": "dumbbell-tricep-kickback",
-    "nome": "Kickback de tríceps com haltere",
-    "nome_en": "Dumbbell Tricep Kickback",
-    "passos": [
-      "Comece em pé com os pés na largura dos ombros, segurando um haltere em uma mão.",
-      "Dobre-se pela cintura e apoie a mão oposta no joelho para apoio.",
-      "A partir dessa posição inicial, estenda o braço para trás, posicionando o haltere atrás do corpo.",
-      "Mantenha o cotovelo junto ao corpo e o core ativado durante todo o movimento."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-dumbbell-tricep-kickback-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-dumbbell-tricep-kickback-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-dumbbell-tricep-kickback-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-dumbbell-tricep-kickback-side.mp4"
-      }
-    }
-  },
-  "gironda-chin-up": {
-    "slug": "gironda-chin-up",
-    "nome": "Elevação na barra com pegada Gironda.",
-    "nome_en": "Gironda Chin Up",
-    "passos": [
-      "Segure a barra com as mãos na largura dos ombros, pegada supinada (palmas voltadas para você)",
-      "Com o corpo pendurado e os braços totalmente estendidos, puxe-se para cima e incline-se para trás. Tente encostar o peito na barra.",
-      "Retorne lentamente à posição inicial. Repita."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-gironda-chin-up-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-gironda-chin-up-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-gironda-chin-up-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-gironda-chin-up-side.mp4"
-      }
-    }
-  },
-  "halo": {
-    "slug": "halo",
-    "nome": "Halo com bola medicinal",
-    "nome_en": "Medicine Ball Halo",
-    "passos": [
-      "Fique em pé com os pés na largura dos ombros e segure uma bola medicinal.",
-      "Gire a bola ao redor da cabeça, mantendo o controle.",
-      "Faça o número desejado de repetições em ambas as direções."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Medicine-Ball-halo-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Medicine-Ball-halo-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Medicine-Ball-halo-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Medicine-Ball-halo-side.mp4"
-      }
-    }
-  },
   "hanging-knee-raises": {
     "slug": "hanging-knee-raises",
     "nome": "Elevação de Joelhos na Barra Fixa",
@@ -359,46 +57,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-bodyweight-hanging-knee-raises-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-bodyweight-hanging-knee-raises-side.mp4"
-      }
-    }
-  },
-  "hanging-l-sit": {
-    "slug": "hanging-l-sit",
-    "nome": "Elevação em L Sentado",
-    "nome_en": "Hanging L Sit",
-    "passos": [
-      "Pendure-se em uma barra com os braços totalmente estendidos.",
-      "Levante as pernas até formar um L.",
-      "Segure pelo tempo indicado, mantendo o abdômen contraído."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-hanging-l-sit-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-hanging-l-sit-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-hanging-l-sit-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-hanging-l-sit-side.mp4"
-      }
-    }
-  },
-  "jump-squats": {
-    "slug": "jump-squats",
-    "nome": "Agachamento com salto",
-    "nome_en": "Jump Squats",
-    "passos": [
-      "Fique em pé com os pés na largura dos ombros.",
-      "Comece com um agachamento normal, ative o core e salte explosivamente.",
-      "Ao aterrissar, abaixe o corpo de volta à posição de agachamento."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-jump-squats-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-jump-squats-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-jump-squats-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-jump-squats-side.mp4"
       }
     }
   },
@@ -522,20 +180,6 @@
       }
     }
   },
-  "kettlebell-chest-press-single": {
-    "slug": "kettlebell-chest-press-single",
-    "nome": "Supino com Kettlebell (Unilateral)",
-    "nome_en": "Kettlebell Chest Press (Single)",
-    "passos": [
-      "Deite-se no chão com os joelhos flexionados e os pés firmemente apoiados no chão, segure o kettlebell junto ao peito com as duas mãos.",
-      "Estenda totalmente os braços, elevando a pesa russa até os cotovelos travarem.",
-      "Abaixe a pesa russa até a posição inicial e repita."
-    ],
-    "videos": {
-      "male": {},
-      "female": {}
-    }
-  },
   "kettlebell-clean-and-jerk": {
     "slug": "kettlebell-clean-and-jerk",
     "nome": "Clean e Jerk com Pesa Russa",
@@ -553,26 +197,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-clean-and-jerk-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-clean-and-jerk-side.mp4"
-      }
-    }
-  },
-  "kettlebell-clean-and-press": {
-    "slug": "kettlebell-clean-and-press",
-    "nome": "Clean and Press com Kettlebell",
-    "nome_en": "Kettlebell Clean And Press",
-    "passos": [
-      "Comece com os kettlebells entre as pernas.",
-      "Balance os kettlebells até o ombro.",
-      "Pressione os kettlebells acima da cabeça."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-clean-and-press-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-clean-and-press-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-clean-and-press-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-clean-and-press-side.mp4"
       }
     }
   },
@@ -635,20 +259,6 @@
         "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-curl-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-curl-side.mp4"
       }
-    }
-  },
-  "kettlebell-deadlift-single": {
-    "slug": "kettlebell-deadlift-single",
-    "nome": "Levantamento Terra com Kettlebell (Unilateral)",
-    "nome_en": "Kettlebell Deadlift (Single)",
-    "passos": [
-      "Fique em pé com os pés na largura dos ombros, segurando o kettlebell com as duas mãos à frente das coxas.",
-      "Incline-se a partir dos quadris, levando o kettlebell ao chão, com os joelhos levemente dobrados e as costas retas.",
-      "Volte à posição em pé e repita."
-    ],
-    "videos": {
-      "male": {},
-      "female": {}
     }
   },
   "kettlebell-farmers-carry": {
@@ -868,26 +478,6 @@
       }
     }
   },
-  "kettlebell-hang-clean-and-jerk": {
-    "slug": "kettlebell-hang-clean-and-jerk",
-    "nome": "Arremesso a partir da posição pendurada com kettlebell",
-    "nome_en": "Kettlebell Hang Clean And Jerk",
-    "passos": [
-      "Segure os kettlebells logo acima dos joelhos, com uma leve flexão dos quadris e joelhos.",
-      "Puxe os kettlebells explosivamente até os ombros, recebendo-os em um agachamento parcial.",
-      "Fique em pé com a postura ereta e empurre os kettlebells acima da cabeça até estender completamente os braços."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-hang-clean-and-jerk-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-hang-clean-and-jerk-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-hang-clean-and-jerk-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-hang-clean-and-jerk-side.mp4"
-      }
-    }
-  },
   "kettlebell-hip-thrust": {
     "slug": "kettlebell-hip-thrust",
     "nome": "Elevação de quadril com kettlebell",
@@ -946,27 +536,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-incline-bench-press-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-incline-bench-press-side.mp4"
-      }
-    }
-  },
-  "kettlebell-kneeling-bottoms-up-overhead-press": {
-    "slug": "kettlebell-kneeling-bottoms-up-overhead-press",
-    "nome": "Kettlebell Agachado com Press Acima da Cabeça",
-    "nome_en": "Kettlebell Kneeling Bottoms Up Overhead Press",
-    "passos": [
-      "Comece em posição de joelhos, segurando uma pesa russa em cada mão com a parte inferior voltada para cima.",
-      "Leve os kettlebells até os ombros, com as palmas das mãos voltadas para frente e os cotovelos dobrados.",
-      "A partir desta posição inicial, estenda os braços para cima até que os kettlebells fiquem acima da cabeça.",
-      "Mantenha o core ativado e as costas retas durante todo o movimento."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-kneeling-bottoms-up-overhead-press-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-kneeling-bottoms-up-overhead-press-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-kneeling-bottoms-up-overhead-press-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-kneeling-bottoms-up-overhead-press-side.mp4"
       }
     }
   },
@@ -1149,24 +718,6 @@
       }
     }
   },
-  "kettlebell-seated-overhead-press": {
-    "slug": "kettlebell-seated-overhead-press",
-    "nome": "Desenvolvimento Sentado com Kettlebell",
-    "nome_en": "Kettlebell Seated Overhead Press",
-    "passos": [
-      "Mantenha uma linha reta do cotovelo ao punho (antebraços verticais).",
-      "Sente-se ereto e evite arquear a coluna enquanto pressiona.",
-      "Pressione até que os cotovelos fiquem estendidos e empurre a cabeça levemente para frente."
-    ],
-    "videos": {
-      "male": {
-        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-seated-overhead-press-side.mp4"
-      },
-      "female": {
-        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-seated-overhead-press-side.mp4"
-      }
-    }
-  },
   "kettlebell-shrug": {
     "slug": "kettlebell-shrug",
     "nome": "Encolhimento de Ombros com Kettlebell",
@@ -1184,26 +735,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-shrug-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-shrug-side.mp4"
-      }
-    }
-  },
-  "kettlebell-single-arm-clean-and-jerk": {
-    "slug": "kettlebell-single-arm-clean-and-jerk",
-    "nome": "Kettlebell Clean E Jerk Unilateral",
-    "nome_en": "Kettlebell Single Arm Clean And Jerk",
-    "passos": [
-      "Segure o kettlebell entre as pernas com uma mão e incline levemente o quadril.",
-      "Puxe o kettlebell até o ombro, encaixando-o na posição de rack.",
-      "Flexione os joelhos e, em seguida, impulsione o corpo para cima para elevar o kettlebell acima da cabeça."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-clean-and-jerk-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-clean-and-jerk-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-single-arm-clean-and-jerk-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-single-arm-clean-and-jerk-side.mp4"
       }
     }
   },
@@ -1242,26 +773,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-Recovery-farmers-walk-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-Recovery-farmers-walk-side.mp4"
-      }
-    }
-  },
-  "kettlebell-single-arm-hang-clean-and-press": {
-    "slug": "kettlebell-single-arm-hang-clean-and-press",
-    "nome": "Kettlebell Clean e Desenvolvimento Unilateral a partir da Suspensão",
-    "nome_en": "Kettlebell Single Arm Hang Clean And Press",
-    "passos": [
-      "Segure o kettlebell logo acima do joelho, com uma leve flexão dos quadris e dos joelhos.",
-      "Puxe o kettlebell explosivamente até o ombro, recebendo-o em um agachamento parcial.",
-      "Fique em pé e empurre o kettlebell acima da cabeça até estender completamente o braço."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-hang-clean-and-press-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-hang-clean-and-press-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-single-arm-hang-clean-and-press-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-single-arm-hang-clean-and-press-side.mp4"
       }
     }
   },
@@ -1563,7 +1074,10 @@
         "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-double-swing-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-double-swing-side.mp4"
       },
-      "female": {}
+      "female": {
+        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-double-swing-front_baIwtC8.mp4",
+        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-double-swing-side_sngUSdT.mp4"
+      }
     }
   },
   "kettlebell-thruster": {
@@ -1625,26 +1139,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-upright-row-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-upright-row-side.mp4"
-      }
-    }
-  },
-  "kettlebell-walkover-pushup": {
-    "slug": "kettlebell-walkover-pushup",
-    "nome": "Flexão com passagem por cima do kettlebell",
-    "nome_en": "Kettlebell Walkover Pushup",
-    "passos": [
-      "Comece em posição de flexão com os pés afastados e uma mão apoiada no kettlebell. Execute uma flexão completa, descendo o peito em direção ao chão, mantendo o corpo alinhado e voltando à posição inicial.",
-      "Troque as mãos no kettlebell, colocando a mão que estava nele por baixo do ombro, e faça mais uma flexão.",
-      "Repita."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-walkover-pushup-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-walkover-pushup-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-walkover-pushup-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-kettlebell-walkover-pushup-side.mp4"
       }
     }
   },
@@ -1789,67 +1283,6 @@
       }
     }
   },
-  "l-sit-pull-up": {
-    "slug": "l-sit-pull-up",
-    "nome": "L-Sit na Barra Fixa",
-    "nome_en": "L Sit Pull Up",
-    "passos": [
-      "Segure a barra com pegada pronada, braços e ombros totalmente estendidos. Eleve as pernas até ficar em posição de L.",
-      "Puxe o corpo para cima até o queixo ficar acima da barra.",
-      "Abaixe o corpo de volta à posição inicial."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-l-sit-pull-up-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-l-sit-pull-up-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-l-sit-pull-up-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-l-sit-pull-up-side.mp4"
-      }
-    }
-  },
-  "laying-leg-raises": {
-    "slug": "laying-leg-raises",
-    "nome": "Elevação de pernas deitado",
-    "nome_en": "Laying Leg Raises",
-    "passos": [
-      "Deite-se de costas com os braços ao lado do corpo, palmas das mãos voltadas para baixo.",
-      "Mantenha as pernas juntas e tão retas quanto possível.",
-      "Levante as pernas lentamente até 90°, pause nessa posição (ou até onde conseguir) e depois abaixe-as lentamente de volta.",
-      "Execute esses movimentos lentamente para não usar o balanço e aproveitar ao máximo o exercício."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-laying-leg-raises-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-laying-leg-raises-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-laying-leg-raises-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-laying-leg-raises-side.mp4"
-      }
-    }
-  },
-  "lunge-walking": {
-    "slug": "lunge-walking",
-    "nome": "Afundo Caminhando",
-    "nome_en": "Walking Lunge",
-    "passos": [
-      "Dê um passo à frente, transferindo o peso para a perna da frente.",
-      "Dobre o joelho da perna da frente até que o joelho da perna de trás fique próximo ao chão.",
-      "Levante-se e faça um avanço com a perna oposta."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Recovery-lunge-walking-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Recovery-lunge-walking-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Recovery-lunge-walking-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Recovery-lunge-walking-side.mp4"
-      }
-    }
-  },
   "pull-ups": {
     "slug": "pull-ups",
     "nome": "Barra Fixa",
@@ -1870,6 +1303,26 @@
       }
     }
   },
+  "swing-to-upright-row": {
+    "slug": "swing-to-upright-row",
+    "nome": "Balanço Para Remada Alta",
+    "nome_en": "Swing To Upright Row",
+    "passos": [
+      "Comece com o kettlebell entre as pernas, projete os quadris para trás e balance-o para cima.",
+      "Levante a pesa russa até a altura do peito, mantendo os cotovelos altos e ativando os ombros.",
+      "Abaixe o kettlebell de volta, mantendo o controle. Repita para o número de repetições desejado."
+    ],
+    "videos": {
+      "male": {
+        "front": "https://musclewiki.com/api-next/videos/male-Kettlebells-swing-to-upright-row-front.mp4",
+        "side": "https://musclewiki.com/api-next/videos/male-Kettlebells-swing-to-upright-row-side.mp4"
+      },
+      "female": {
+        "front": "https://musclewiki.com/api-next/videos/female-Kettlebells-swing-to-upright-row-front.mp4",
+        "side": "https://musclewiki.com/api-next/videos/female-Kettlebells-swing-to-upright-row-side.mp4"
+      }
+    }
+  },
   "weighted-pull-ups": {
     "slug": "weighted-pull-ups",
     "nome": "Barra com peso",
@@ -1887,26 +1340,6 @@
       "female": {
         "front": "https://musclewiki.com/api-next/videos/female-Plate-weighted-pull-ups-front.mp4",
         "side": "https://musclewiki.com/api-next/videos/female-Plate-weighted-pull-ups-side.mp4"
-      }
-    }
-  },
-  "windshield-wiper": {
-    "slug": "windshield-wiper",
-    "nome": "Limpador de para-brisa",
-    "nome_en": "Windshield Wiper",
-    "passos": [
-      "Deite-se de costas, braços abertos, pernas juntas.",
-      "Levante as pernas até 90 graus.",
-      "Gire as pernas de um lado para o outro, mantendo os ombros apoiados no chão."
-    ],
-    "videos": {
-      "male": {
-        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-windshield-wiper-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-windshield-wiper-side.mp4"
-      },
-      "female": {
-        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-windshield-wiper-front.mp4",
-        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-windshield-wiper-side.mp4"
       }
     }
   }

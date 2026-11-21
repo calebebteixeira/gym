@@ -10,7 +10,7 @@ Generates one self-contained HTML page per workout (`dist/<treino>.html`), sent 
 
 ## MuscleWiki
 
-- `musclewiki/mapa.json` maps every catalog id to a MuscleWiki slug, `aproximado: true` when the video shows a close variation, or `null` when MuscleWiki has no equivalent. Edit it by hand, then run `pnpm musclewiki`.
+- `musclewiki/mapa.json` maps every catalog id to the slug of the same exercise on MuscleWiki, or `null`. Only exact matches: same movement, implement and leg/arm position, even when MuscleWiki names it differently (`high_pull` is `swing-to-upright-row`). Never map a variation. Confirm a new entry against frames of the video, not only its name: MuscleWiki titles can mislead (`kettlebell-deadlift-single` is a Romanian deadlift). Edit by hand, then run `pnpm musclewiki`.
 - `pnpm musclewiki` reads the public pages `musclewiki.com/pt-br/exercise/<slug>` (through curl: Cloudflare rejects Node's fetch) and writes `musclewiki/cache.json`. `pnpm gerar` reads only the cache.
 - MuscleWiki terms allow sharing videos and instructions for non-profit use, with branding and a link to musclewiki.com. Keep the link on every video; never download, embed or re-host videos, and never use MuscleWiki images or body maps.
 - The official API (`api.musclewiki.com`) is paid and its video URLs expire after 15 minutes, so it cannot feed static pages.

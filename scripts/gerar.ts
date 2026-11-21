@@ -22,17 +22,11 @@ const paginas = Object.entries(treinos).map(([slug, treino]) => {
       erros.push(`treinos/${slug}: exercício desconhecido "${item.exercicio}"`)
       continue
     }
-    const mapeado = mapa[item.exercicio]
-    const musclewiki = mapeado ? cache[mapeado.slug] : undefined
-    if (mapeado && !musclewiki)
-      erros.push(`${mapeado.slug} não está em musclewiki/cache.json: rode \`pnpm musclewiki\``)
-    itens.push({
-      item,
-      exercicio: encontrado,
-      ...(mapeado && musclewiki
-        ? { musclewiki: { ...musclewiki, aproximado: mapeado.aproximado } }
-        : {}),
-    })
+    const slugMuscleWiki = mapa[item.exercicio]
+    const musclewiki = slugMuscleWiki ? cache[slugMuscleWiki] : undefined
+    if (slugMuscleWiki && !musclewiki)
+      erros.push(`${slugMuscleWiki} não está em musclewiki/cache.json: rode \`pnpm musclewiki\``)
+    itens.push({ item, exercicio: encontrado, ...(musclewiki ? { musclewiki } : {}) })
   }
   return { arquivo: `${slug}.html`, html: renderizar(treino, itens) }
 })

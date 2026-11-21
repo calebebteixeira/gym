@@ -78,7 +78,7 @@ function videos(imagens: Json[]): Partial<Record<'front' | 'side', Video>> {
   const porAngulo: Partial<Record<'front' | 'side', Video>> = {}
   // Fixed key order keeps the cache diff stable.
   for (const angulo of ['front', 'side'] as const) {
-    const caminho = caminhos.find((c) => c.endsWith(`-${angulo}.mp4`))
+    const caminho = caminhos.find((c) => new RegExp(`-${angulo}(?:_\\w+)?\\.mp4$`, 'u').test(c))
     if (caminho) porAngulo[angulo] = `${ORIGEM}${caminho}`
   }
   return porAngulo
@@ -120,7 +120,7 @@ async function buscar(slug: string): Promise<ExercicioMuscleWiki> {
   }
 }
 
-const slugs = [...new Set(Object.values(lerMapa()).flatMap((item) => (item ? [item.slug] : [])))]
+const slugs = [...new Set(Object.values(lerMapa()).flatMap((slug) => (slug ? [slug] : [])))]
 const cache = lerCache()
 const resultado: Record<string, ExercicioMuscleWiki> = {}
 const falhas: string[] = []

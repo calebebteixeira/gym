@@ -1,6 +1,6 @@
-// MuscleWiki data in this repository: `musclewiki/mapa.json` maps each catalog exercise to a
-// MuscleWiki slug (or `null` when MuscleWiki has no equivalent); `musclewiki/cache.json` holds
-// what `pnpm musclewiki` read from those pages.
+// MuscleWiki data in this repository: `musclewiki/mapa.json` maps each catalog exercise to the
+// slug of the same exercise on MuscleWiki (often under another name), or `null` when MuscleWiki
+// does not have it; `musclewiki/cache.json` holds what `pnpm musclewiki` read from those pages.
 import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
@@ -15,12 +15,6 @@ export interface ExercicioMuscleWiki {
   /** Step-by-step instructions in Brazilian Portuguese. */
   passos: string[]
   videos: Record<'male' | 'female', Partial<Record<'front' | 'side', Video>>>
-}
-
-export interface Mapeamento {
-  slug: string
-  /** The video shows a close variation, not the exact exercise. */
-  aproximado: boolean
 }
 
 const pasta = join(import.meta.dirname, '..', 'musclewiki')
@@ -55,19 +49,13 @@ function exercicioMuscleWiki(valor: unknown): valor is ExercicioMuscleWiki {
   )
 }
 
-function mapeamento(valor: unknown): valor is Mapeamento | null {
-  return (
-    valor === null ||
-    (registro(valor) && typeof valor.slug === 'string' && typeof valor.aproximado === 'boolean')
-  )
-}
-
-export function lerMapa(): Record<string, Mapeamento | null> {
+export function lerMapa(): Record<string, string | null> {
   const dados = ler('mapa.json')
-  const mapa: Record<string, Mapeamento | null> = {}
+  const mapa: Record<string, string | null> = {}
   if (!registro(dados)) throw new Error('musclewiki/mapa.json: expected an object')
   for (const [id, valor] of Object.entries(dados)) {
-    if (!mapeamento(valor)) throw new Error(`musclewiki/mapa.json: invalid entry "${id}"`)
+    if (valor !== null && typeof valor !== 'string')
+      throw new Error(`musclewiki/mapa.json: invalid entry "${id}"`)
     mapa[id] = valor
   }
   return mapa

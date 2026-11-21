@@ -8,7 +8,7 @@ import type { ItemTreino, Treino } from './treino.ts'
 export interface ItemResolvido {
   item: ItemTreino
   exercicio: Exercicio
-  musclewiki?: ExercicioMuscleWiki & { aproximado: boolean }
+  musclewiki?: ExercicioMuscleWiki
 }
 
 type Modelo = NonNullable<Treino['modelo']>
@@ -46,11 +46,11 @@ function video(mw: NonNullable<ItemResolvido['musclewiki']>, modelo: Modelo): st
   const src = front ?? side
   if (!src) return ''
   const pagina = `${ORIGEM}/pt-br/exercise/${mw.slug}?model=${modelo === 'male' ? 'm' : 'f'}`
-  const aviso = mw.aproximado ? `Vídeo aproximado: ${mw.nome}. ` : ''
-  // `#t=0.1` makes mobile browsers paint the first frame before playback.
+  // `#t=0.1` makes mobile browsers paint the first frame before playback. MuscleWiki often names
+  // the exercise differently, so the caption shows its name.
   return `<figure class="item-video">
     <video src="${esc(src)}#t=0.1" controls muted loop playsinline preload="metadata"></video>
-    <figcaption>${esc(aviso)}Vídeo: <a href="${esc(pagina)}">MuscleWiki</a>${
+    <figcaption>Vídeo: <a href="${esc(pagina)}">${esc(mw.nome)} · MuscleWiki</a>${
       front && side ? ` · <a href="${esc(side)}">vista lateral</a>` : ''
     }</figcaption>
   </figure>`
@@ -60,7 +60,7 @@ function passos(mw: ItemResolvido['musclewiki']): string {
   if (!mw?.passos.length) return ''
   const itens = mw.passos.map((passo) => `<li>${esc(passo)}</li>`).join('')
   return `<details class="item-detalhes">
-    <summary>Como fazer${mw.aproximado ? ' (variação próxima)' : ''}</summary>
+    <summary>Como fazer</summary>
     <ol>${itens}</ol>
   </details>`
 }
