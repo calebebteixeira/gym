@@ -1,0 +1,17 @@
+# Dependencies whose install scripts may run (native binaries).
+allowBuilds:
+  esbuild: true
+  rolldown: true
+catalogMode: strict
+# One version per dependency. Bump here, then run `pnpm install`.
+catalog:
+  '@types/node': 24.19.2
+  typescript: 5.9.3
+  # One Vite for the whole graph: the Vite+ core that vite-plus itself ships.
+  vite: npm:@voidzero-dev/vite-plus-core@1.5.0
+  vite-plus: 1.5.0
+overrides:
+  vite@*: 'catalog:'
+peerDependencyRules:
+  allowedVersions:
+    vite: 1.5.0

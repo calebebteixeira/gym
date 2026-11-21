@@ -1,0 +1,469 @@
+{
+  "swing_russo": {
+    "slug": "kettlebell-swing",
+    "aproximado": false
+  },
+  "swing_americano": {
+    "slug": "kettlebell-full-swing",
+    "aproximado": false
+  },
+  "swing_unilateral": {
+    "slug": "kettlebell-single-arm-swing",
+    "aproximado": false
+  },
+  "swing_alternado": {
+    "slug": "kettlebell-alternating-swing",
+    "aproximado": false
+  },
+  "swing_duplo": {
+    "slug": "kettlebell-swing-double",
+    "aproximado": false
+  },
+  "swing_dead_stop": {
+    "slug": "kettlebell-swing",
+    "aproximado": true
+  },
+  "clean_unilateral": {
+    "slug": "kettlebell-single-arm-clean-and-press",
+    "aproximado": true
+  },
+  "clean_duplo": {
+    "slug": "kettlebell-clean-and-press",
+    "aproximado": true
+  },
+  "dead_clean": null,
+  "clean_bottoms_up": null,
+  "hang_clean": {
+    "slug": "kettlebell-single-arm-hang-clean-and-press",
+    "aproximado": true
+  },
+  "snatch_unilateral": {
+    "slug": "kettlebells-single-arm-snatch",
+    "aproximado": false
+  },
+  "snatch_duplo": {
+    "slug": "kettlebell-snatch-double",
+    "aproximado": false
+  },
+  "dead_snatch": null,
+  "half_snatch": null,
+  "high_pull": null,
+  "terra_convencional": {
+    "slug": "kettlebell-deadlift-single",
+    "aproximado": false
+  },
+  "terra_sumo": {
+    "slug": "kettlebell-sumo-deadlift",
+    "aproximado": false
+  },
+  "terra_duplo": {
+    "slug": "kettlebell-conventional-deadlift-double",
+    "aproximado": false
+  },
+  "terra_suitcase": {
+    "slug": "kettlebell-suitcase-deadlift",
+    "aproximado": false
+  },
+  "rdl_bilateral": {
+    "slug": "kettlebell-romanian-deadlift",
+    "aproximado": false
+  },
+  "stiff": {
+    "slug": "kettlebell-romanian-deadlift",
+    "aproximado": true
+  },
+  "rdl_unilateral": {
+    "slug": "kettlebell-single-leg-deadlift",
+    "aproximado": false
+  },
+  "rdl_kickstand": {
+    "slug": "kettlebell-staggered-deadlift-single",
+    "aproximado": false
+  },
+  "good_morning_goblet": {
+    "slug": "kettlebell-goblet-good-morning",
+    "aproximado": false
+  },
+  "hip_thrust": {
+    "slug": "kettlebell-hip-thrust",
+    "aproximado": false
+  },
+  "ponte_gluteo": {
+    "slug": "kettlebell-glute-bridge",
+    "aproximado": false
+  },
+  "hip_thrust_unilateral": {
+    "slug": "kettlebell-single-leg-hip-thrust",
+    "aproximado": false
+  },
+  "goblet_squat": {
+    "slug": "kettlebell-goblet-squat",
+    "aproximado": false
+  },
+  "front_squat_duplo": {
+    "slug": "kettlebell-front-rack-squat",
+    "aproximado": false
+  },
+  "front_squat_unilateral": {
+    "slug": "kettlebell-front-rack-squat",
+    "aproximado": true
+  },
+  "overhead_squat": null,
+  "sumo_squat": {
+    "slug": "dumbbell-sumo-squat",
+    "aproximado": true
+  },
+  "cossack_squat": {
+    "slug": "kettlebell-cossack-squat",
+    "aproximado": false
+  },
+  "pistol_squat": null,
+  "box_squat": {
+    "slug": "kettlebell-box-squat",
+    "aproximado": false
+  },
+  "squat_jump": {
+    "slug": "jump-squats",
+    "aproximado": true
+  },
+  "bulgaro_goblet": {
+    "slug": "dumbbell-goblet-bulgarian-split-squat",
+    "aproximado": true
+  },
+  "bulgaro_suitcase": {
+    "slug": "dumbbell-bulgarian-split-squat",
+    "aproximado": true
+  },
+  "split_squat": {
+    "slug": "dumbbell-split-squat",
+    "aproximado": true
+  },
+  "avanco_frontal": {
+    "slug": "kettlebell-forward-lunge-double",
+    "aproximado": false
+  },
+  "avanco_reverso": {
+    "slug": "kettlebell-reverse-lunge",
+    "aproximado": false
+  },
+  "avanco_lateral": {
+    "slug": "kettlebell-lateral-lunge",
+    "aproximado": false
+  },
+  "avanco_caminhando": {
+    "slug": "lunge-walking",
+    "aproximado": true
+  },
+  "curtsy_lunge": {
+    "slug": "kettlebell-alternating-curtsy-lunge",
+    "aproximado": false
+  },
+  "avanco_overhead": null,
+  "step_up": {
+    "slug": "kettlebell-step-up",
+    "aproximado": false
+  },
+  "press_unilateral": {
+    "slug": "kettlebell-seated-overhead-press",
+    "aproximado": true
+  },
+  "press_duplo": {
+    "slug": "kettlebell-seated-overhead-press",
+    "aproximado": true
+  },
+  "press_bottoms_up": {
+    "slug": "kettlebell-bottoms-up-single-arm-overhead-press",
+    "aproximado": false
+  },
+  "press_semiajoelhado": {
+    "slug": "kettlebell-kneeling-bottoms-up-overhead-press",
+    "aproximado": true
+  },
+  "z_press": {
+    "slug": "kettlebell-z-press",
+    "aproximado": false
+  },
+  "see_saw_press": null,
+  "push_press": {
+    "slug": "kettlebell-push-press",
+    "aproximado": false
+  },
+  "jerk_unilateral": {
+    "slug": "kettlebell-single-arm-clean-and-jerk",
+    "aproximado": true
+  },
+  "jerk_duplo": {
+    "slug": "kettlebell-hang-clean-and-jerk",
+    "aproximado": true
+  },
+  "floor_press": {
+    "slug": "kettlebell-floor-press",
+    "aproximado": false
+  },
+  "supino_plano": {
+    "slug": "kettlebell-bench-press",
+    "aproximado": false
+  },
+  "supino_inclinado": {
+    "slug": "kettlebell-incline-bench-press",
+    "aproximado": false
+  },
+  "squeeze_press": {
+    "slug": "kettlebell-chest-press-single",
+    "aproximado": true
+  },
+  "crucifixo_chao": {
+    "slug": "kettlebell-floor-fly",
+    "aproximado": false
+  },
+  "pullover": {
+    "slug": "kettlebell-pullover",
+    "aproximado": false
+  },
+  "flexao_kb": {
+    "slug": "kettlebell-walkover-pushup",
+    "aproximado": true
+  },
+  "remada_unilateral": {
+    "slug": "kettlebell-single-arm-row-on-bench",
+    "aproximado": false
+  },
+  "remada_curvada": {
+    "slug": "kettlebell-row",
+    "aproximado": false
+  },
+  "gorilla_row": {
+    "slug": "kettlebell-gorilla-row",
+    "aproximado": false
+  },
+  "renegade_row": {
+    "slug": "dumbbell-renegade-row",
+    "aproximado": true
+  },
+  "remada_alta": {
+    "slug": "kettlebell-upright-row",
+    "aproximado": false
+  },
+  "encolhimento": {
+    "slug": "kettlebell-shrug",
+    "aproximado": false
+  },
+  "crucifixo_inverso": {
+    "slug": "kettlebell-single-arm-rear-delt-fly",
+    "aproximado": true
+  },
+  "elevacao_lateral": {
+    "slug": "kettlebell-single-arm-lateral-raise",
+    "aproximado": false
+  },
+  "elevacao_frontal": {
+    "slug": "kettlebell-front-raise",
+    "aproximado": false
+  },
+  "halo": {
+    "slug": "halo",
+    "aproximado": true
+  },
+  "rosca_biceps": {
+    "slug": "kettlebell-curl",
+    "aproximado": false
+  },
+  "rosca_martelo": {
+    "slug": "dumbbell-hammer-curl",
+    "aproximado": true
+  },
+  "rosca_bottoms_up": null,
+  "rosca_punho": {
+    "slug": "kettlebell-wrist-curl",
+    "aproximado": false
+  },
+  "rosca_punho_inversa": {
+    "slug": "kettlebell-wrist-extension",
+    "aproximado": false
+  },
+  "triceps_overhead": {
+    "slug": "kettlebell-overhead-tricep-extension",
+    "aproximado": false
+  },
+  "triceps_testa": {
+    "slug": "kettlebell-skull-crusher",
+    "aproximado": false
+  },
+  "triceps_kickback": {
+    "slug": "dumbbell-tricep-kickback",
+    "aproximado": true
+  },
+  "turkish_get_up": null,
+  "get_up_situp": null,
+  "windmill": {
+    "slug": "kettlebell-windmill",
+    "aproximado": false
+  },
+  "low_windmill": {
+    "slug": "kettlebell-windmill-bottom-hand",
+    "aproximado": false
+  },
+  "bent_press": null,
+  "sots_press": null,
+  "russian_twist": {
+    "slug": "kettlebell-russian-twist",
+    "aproximado": false
+  },
+  "woodchop": {
+    "slug": "kettlebell-wood-chopper",
+    "aproximado": false
+  },
+  "lift_diagonal": {
+    "slug": "kettlebell-wood-chopper",
+    "aproximado": true
+  },
+  "flexao_lateral": {
+    "slug": "dumbbell-side-bend",
+    "aproximado": true
+  },
+  "abdominal_crunch": {
+    "slug": "dumbbell-crunch",
+    "aproximado": true
+  },
+  "sit_up_kb": {
+    "slug": "kettlebell-situp",
+    "aproximado": false
+  },
+  "dead_bug": {
+    "slug": "dead-bug",
+    "aproximado": true
+  },
+  "hollow_hold": {
+    "slug": "kettlebell-hollow-hold",
+    "aproximado": false
+  },
+  "plank_pull_through": null,
+  "arm_bar": null,
+  "elevacao_pernas": {
+    "slug": "laying-leg-raises",
+    "aproximado": true
+  },
+  "around_the_body": null,
+  "figure_8": null,
+  "farmers_carry": {
+    "slug": "kettlebell-farmers-carry",
+    "aproximado": false
+  },
+  "suitcase_carry": {
+    "slug": "kettlebell-single-arm-farmers-walk",
+    "aproximado": false
+  },
+  "rack_carry": null,
+  "overhead_carry": null,
+  "bottoms_up_carry": null,
+  "mixed_carry": null,
+  "goblet_carry": null,
+  "panturrilha_em_pe": {
+    "slug": "kettlebell-calf-raise",
+    "aproximado": false
+  },
+  "panturrilha_sentado": {
+    "slug": "kettlebell-seated-calf-raise",
+    "aproximado": false
+  },
+  "tibial_raise": {
+    "slug": "kettlebell-tibialis-raise",
+    "aproximado": false
+  },
+  "flexora_kb": {
+    "slug": "dumbbell-leg-curl",
+    "aproximado": true
+  },
+  "thruster": {
+    "slug": "kettlebell-thruster",
+    "aproximado": false
+  },
+  "clean_and_press": {
+    "slug": "kettlebell-single-arm-clean-and-press",
+    "aproximado": false
+  },
+  "long_cycle": {
+    "slug": "kettlebell-clean-and-jerk",
+    "aproximado": false
+  },
+  "man_maker": null,
+  "pullup_aberta": {
+    "slug": "pull-ups",
+    "aproximado": true
+  },
+  "pullup_pronada_media": {
+    "slug": "pull-ups",
+    "aproximado": false
+  },
+  "pullup_pronada_fechada": {
+    "slug": "pull-ups",
+    "aproximado": true
+  },
+  "chinup_supinada": {
+    "slug": "chin-ups",
+    "aproximado": false
+  },
+  "pullup_neutra": {
+    "slug": "pull-ups",
+    "aproximado": true
+  },
+  "pullup_mista": {
+    "slug": "bodyweight-assisted-mixed-grip-pullup",
+    "aproximado": true
+  },
+  "pullup_comando": null,
+  "pullup_toalha": null,
+  "pullup_negativa": {
+    "slug": "pull-ups",
+    "aproximado": true
+  },
+  "pullup_assistida_elastico": {
+    "slug": "bodyweight-assisted-pull-up",
+    "aproximado": true
+  },
+  "pullup_com_salto": null,
+  "pullup_com_carga": {
+    "slug": "weighted-pull-ups",
+    "aproximado": false
+  },
+  "pullup_l_sit": {
+    "slug": "l-sit-pull-up",
+    "aproximado": false
+  },
+  "pullup_arqueiro": null,
+  "pullup_typewriter": null,
+  "pullup_unilateral_assistida": null,
+  "pullup_peito_na_barra": {
+    "slug": "gironda-chin-up",
+    "aproximado": true
+  },
+  "pullup_isometria_topo": null,
+  "pullup_isometria_90": null,
+  "dead_hang": {
+    "slug": "dead-hang",
+    "aproximado": false
+  },
+  "active_hang": {
+    "slug": "dead-hang",
+    "aproximado": true
+  },
+  "suspensao_unilateral": null,
+  "scap_pullup": null,
+  "elevacao_joelhos": {
+    "slug": "hanging-knee-raises",
+    "aproximado": false
+  },
+  "elevacao_pernas_estendidas": null,
+  "elevacao_obliqua_joelhos": null,
+  "elevacao_obliqua_estendidas": null,
+  "toes_to_bar": null,
+  "limpador_parabrisa": {
+    "slug": "windshield-wiper",
+    "aproximado": true
+  },
+  "l_sit_suspenso": {
+    "slug": "hanging-l-sit",
+    "aproximado": false
+  },
+  "front_lever_tuck": null
+}
