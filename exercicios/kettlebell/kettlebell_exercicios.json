@@ -1,0 +1,6384 @@
+{
+  "meta": {
+    "titulo": "Banco de dados de exercícios com kettlebell e recrutamento muscular",
+    "versao": "1.0",
+    "data": "2026-11-21",
+    "n_exercicios": 115,
+    "n_musculos": 46,
+    "legenda_papeis": {
+      "P": "Agonista primário – principal gerador do torque nas ações articulares-alvo (peso 3)",
+      "S": "Sinergista – contribui para o torque ou para a ação articular secundária (peso 2)",
+      "E": "Estabilizador – contração predominantemente isométrica para manter posição articular, postura ou preensão (peso 1)"
+    },
+    "metodologia": "Classificação qualitativa baseada em anatomia funcional (ações articulares, braços de momento e posição de cada músculo) e, quando disponível, em literatura eletromiográfica/biomecânica. Em exercícios isométricos (carries, arm bar, dead bug), 'P' indica os músculos de maior demanda. Os papéis não são %CVM: a ativação real varia com carga, técnica, amplitude, velocidade e antropometria.",
+    "referencias": [
+      "McGill SM, Marshall LW. Kettlebell swing, snatch, and bottoms-up carry: back and hip muscle loading and comparison to traditional exercises. J Strength Cond Res. 2012;26(1):16-27.",
+      "Zebis MK et al. Kettlebell swing targets semitendinosus and supine leg curl targets biceps femoris: an EMG study with rehabilitation implications. Br J Sports Med. 2013;47(18):1192-1198.",
+      "Neumann DA. Kinesiology of the Musculoskeletal System. 3rd ed. Elsevier; 2017.",
+      "Federative International Programme for Anatomical Terminology (FIPAT). Terminologia Anatomica. 2nd ed.; 2019."
+    ]
+  },
+  "musculos": [
+    {
+      "id": "TRAP_S",
+      "nome_pt": "Trapézio – parte descendente (superior)",
+      "terminologia_anatomica": "M. trapezius, pars descendens",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. acessório (XI) + ramos C3–C4",
+      "acoes_principais": "Elevação e rotação superior da escápula; extensão/inclinação cervical"
+    },
+    {
+      "id": "TRAP_M",
+      "nome_pt": "Trapézio – parte transversa (média)",
+      "terminologia_anatomica": "M. trapezius, pars transversa",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. acessório (XI) + ramos C3–C4",
+      "acoes_principais": "Retração (adução) da escápula"
+    },
+    {
+      "id": "TRAP_I",
+      "nome_pt": "Trapézio – parte ascendente (inferior)",
+      "terminologia_anatomica": "M. trapezius, pars ascendens",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. acessório (XI) + ramos C3–C4",
+      "acoes_principais": "Depressão e rotação superior da escápula"
+    },
+    {
+      "id": "ROMB",
+      "nome_pt": "Romboides maior e menor",
+      "terminologia_anatomica": "Mm. rhomboidei major et minor",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. dorsal da escápula (C4–C5)",
+      "acoes_principais": "Retração, elevação e rotação inferior da escápula"
+    },
+    {
+      "id": "LEV_ESC",
+      "nome_pt": "Levantador da escápula",
+      "terminologia_anatomica": "M. levator scapulae",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. dorsal da escápula + C3–C4",
+      "acoes_principais": "Elevação e rotação inferior da escápula"
+    },
+    {
+      "id": "SERR",
+      "nome_pt": "Serrátil anterior",
+      "terminologia_anatomica": "M. serratus anterior",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. torácico longo (C5–C7)",
+      "acoes_principais": "Protração e rotação superior da escápula; mantém a escápula contra o tórax"
+    },
+    {
+      "id": "PEIT_C",
+      "nome_pt": "Peitoral maior – parte clavicular",
+      "terminologia_anatomica": "M. pectoralis major, pars clavicularis",
+      "regiao": "Tórax/ombro",
+      "inervacao": "N. peitoral lateral (C5–C7)",
+      "acoes_principais": "Flexão, adução horizontal e rotação medial do ombro"
+    },
+    {
+      "id": "PEIT_E",
+      "nome_pt": "Peitoral maior – parte esternocostal",
+      "terminologia_anatomica": "M. pectoralis major, pars sternocostalis",
+      "regiao": "Tórax/ombro",
+      "inervacao": "Nn. peitorais medial e lateral (C6–T1)",
+      "acoes_principais": "Adução, adução horizontal, extensão do ombro a partir da flexão, rotação medial"
+    },
+    {
+      "id": "DELT_A",
+      "nome_pt": "Deltoide – parte clavicular (anterior)",
+      "terminologia_anatomica": "M. deltoideus, pars clavicularis",
+      "regiao": "Ombro",
+      "inervacao": "N. axilar (C5–C6)",
+      "acoes_principais": "Flexão, rotação medial e adução horizontal do ombro"
+    },
+    {
+      "id": "DELT_M",
+      "nome_pt": "Deltoide – parte acromial (média)",
+      "terminologia_anatomica": "M. deltoideus, pars acromialis",
+      "regiao": "Ombro",
+      "inervacao": "N. axilar (C5–C6)",
+      "acoes_principais": "Abdução do ombro"
+    },
+    {
+      "id": "DELT_P",
+      "nome_pt": "Deltoide – parte espinal (posterior)",
+      "terminologia_anatomica": "M. deltoideus, pars spinalis",
+      "regiao": "Ombro",
+      "inervacao": "N. axilar (C5–C6)",
+      "acoes_principais": "Extensão, abdução horizontal e rotação lateral do ombro"
+    },
+    {
+      "id": "SUPRA",
+      "nome_pt": "Supraespinal",
+      "terminologia_anatomica": "M. supraspinatus",
+      "regiao": "Ombro (manguito rotador)",
+      "inervacao": "N. supraescapular (C5–C6)",
+      "acoes_principais": "Início da abdução; compressão/centralização da cabeça umeral"
+    },
+    {
+      "id": "INFRA",
+      "nome_pt": "Infraespinal e redondo menor",
+      "terminologia_anatomica": "Mm. infraspinatus et teres minor",
+      "regiao": "Ombro (manguito rotador)",
+      "inervacao": "N. supraescapular (infraespinal); n. axilar (redondo menor)",
+      "acoes_principais": "Rotação lateral; depressão e estabilização posterior da cabeça umeral"
+    },
+    {
+      "id": "SUBESC",
+      "nome_pt": "Subescapular",
+      "terminologia_anatomica": "M. subscapularis",
+      "regiao": "Ombro (manguito rotador)",
+      "inervacao": "Nn. subescapulares superior e inferior (C5–C6)",
+      "acoes_principais": "Rotação medial; estabilização anterior da cabeça umeral"
+    },
+    {
+      "id": "RED_MAI",
+      "nome_pt": "Redondo maior",
+      "terminologia_anatomica": "M. teres major",
+      "regiao": "Ombro",
+      "inervacao": "N. subescapular inferior (C5–C7)",
+      "acoes_principais": "Extensão, adução e rotação medial do ombro"
+    },
+    {
+      "id": "LAT",
+      "nome_pt": "Latíssimo do dorso",
+      "terminologia_anatomica": "M. latissimus dorsi",
+      "regiao": "Dorso/ombro",
+      "inervacao": "N. toracodorsal (C6–C8)",
+      "acoes_principais": "Extensão, adução e rotação medial do ombro; enrijece a fáscia toracolombar"
+    },
+    {
+      "id": "BIC",
+      "nome_pt": "Bíceps braquial",
+      "terminologia_anatomica": "M. biceps brachii",
+      "regiao": "Braço",
+      "inervacao": "N. musculocutâneo (C5–C6)",
+      "acoes_principais": "Flexão do cotovelo, supinação do antebraço, flexão fraca do ombro"
+    },
+    {
+      "id": "BRAQ",
+      "nome_pt": "Braquial",
+      "terminologia_anatomica": "M. brachialis",
+      "regiao": "Braço",
+      "inervacao": "N. musculocutâneo (+ ramo do n. radial)",
+      "acoes_principais": "Flexão do cotovelo (em qualquer posição do antebraço)"
+    },
+    {
+      "id": "BRAQRAD",
+      "nome_pt": "Braquiorradial",
+      "terminologia_anatomica": "M. brachioradialis",
+      "regiao": "Antebraço",
+      "inervacao": "N. radial (C5–C6)",
+      "acoes_principais": "Flexão do cotovelo, sobretudo com antebraço neutro"
+    },
+    {
+      "id": "TRI_L",
+      "nome_pt": "Tríceps braquial – cabeça longa",
+      "terminologia_anatomica": "M. triceps brachii, caput longum",
+      "regiao": "Braço",
+      "inervacao": "N. radial (C6–C8)",
+      "acoes_principais": "Extensão do cotovelo; extensão e adução do ombro"
+    },
+    {
+      "id": "TRI_LM",
+      "nome_pt": "Tríceps braquial – cabeças lateral e medial",
+      "terminologia_anatomica": "M. triceps brachii, caput laterale et mediale",
+      "regiao": "Braço",
+      "inervacao": "N. radial (C6–C8)",
+      "acoes_principais": "Extensão do cotovelo"
+    },
+    {
+      "id": "FLEX_ANT",
+      "nome_pt": "Flexores do punho e dos dedos",
+      "terminologia_anatomica": "Mm. flexor carpi radialis/ulnaris, flexor digitorum superficialis/profundus, flexor pollicis longus",
+      "regiao": "Antebraço",
+      "inervacao": "Nn. mediano e ulnar (C7–T1)",
+      "acoes_principais": "Flexão do punho e dos dedos; força de preensão"
+    },
+    {
+      "id": "EXT_ANT",
+      "nome_pt": "Extensores do punho e dos dedos",
+      "terminologia_anatomica": "Mm. extensor carpi radialis longus/brevis, extensor carpi ulnaris, extensor digitorum",
+      "regiao": "Antebraço",
+      "inervacao": "N. radial / interósseo posterior (C6–C8)",
+      "acoes_principais": "Extensão do punho; estabilização do punho durante a preensão"
+    },
+    {
+      "id": "RETO_ABD",
+      "nome_pt": "Reto do abdome",
+      "terminologia_anatomica": "M. rectus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "Nn. intercostais T7–T11 e subcostal T12",
+      "acoes_principais": "Flexão da coluna; anti-extensão; retroversão pélvica"
+    },
+    {
+      "id": "OBL_EXT",
+      "nome_pt": "Oblíquo externo do abdome",
+      "terminologia_anatomica": "M. obliquus externus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "Nn. intercostais T7–T11, subcostal T12",
+      "acoes_principais": "Rotação contralateral, flexão lateral, anti-rotação/anti-flexão lateral"
+    },
+    {
+      "id": "OBL_INT",
+      "nome_pt": "Oblíquo interno do abdome",
+      "terminologia_anatomica": "M. obliquus internus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "T7–T12, nn. ílio-hipogástrico e ilioinguinal (L1)",
+      "acoes_principais": "Rotação ipsilateral, flexão lateral, anti-rotação"
+    },
+    {
+      "id": "TRANSV",
+      "nome_pt": "Transverso do abdome",
+      "terminologia_anatomica": "M. transversus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "T7–T12, L1",
+      "acoes_principais": "Aumento da pressão intra-abdominal; rigidez do tronco"
+    },
+    {
+      "id": "ERET",
+      "nome_pt": "Eretores da espinha (iliocostal, longuíssimo, espinal)",
+      "terminologia_anatomica": "M. erector spinae",
+      "regiao": "Tronco",
+      "inervacao": "Ramos dorsais dos nervos espinhais",
+      "acoes_principais": "Extensão e flexão lateral da coluna; controle excêntrico da flexão"
+    },
+    {
+      "id": "MULTI",
+      "nome_pt": "Multífidos",
+      "terminologia_anatomica": "Mm. multifidi",
+      "regiao": "Tronco",
+      "inervacao": "Ramos mediais dos ramos dorsais",
+      "acoes_principais": "Estabilização segmentar; extensão e rotação vertebral"
+    },
+    {
+      "id": "QL",
+      "nome_pt": "Quadrado do lombo",
+      "terminologia_anatomica": "M. quadratus lumborum",
+      "regiao": "Tronco",
+      "inervacao": "Ramos ventrais T12–L4",
+      "acoes_principais": "Flexão lateral do tronco; elevação da pelve; estabilização no plano frontal"
+    },
+    {
+      "id": "GLU_MAX",
+      "nome_pt": "Glúteo máximo",
+      "terminologia_anatomica": "M. gluteus maximus",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo inferior (L5–S2)",
+      "acoes_principais": "Extensão e rotação lateral do quadril"
+    },
+    {
+      "id": "GLU_MED",
+      "nome_pt": "Glúteo médio",
+      "terminologia_anatomica": "M. gluteus medius",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo superior (L4–S1)",
+      "acoes_principais": "Abdução do quadril; estabilização da pelve no apoio unipodal"
+    },
+    {
+      "id": "GLU_MIN",
+      "nome_pt": "Glúteo mínimo",
+      "terminologia_anatomica": "M. gluteus minimus",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo superior (L4–S1)",
+      "acoes_principais": "Abdução e rotação medial; estabilização da cabeça femoral"
+    },
+    {
+      "id": "ROT_EXT_QUAD",
+      "nome_pt": "Rotadores laterais profundos do quadril",
+      "terminologia_anatomica": "Mm. piriformis, gemelli, obturatorii internus/externus, quadratus femoris",
+      "regiao": "Quadril",
+      "inervacao": "Plexo sacral (L4–S2); n. obturatório (obturador externo)",
+      "acoes_principais": "Rotação lateral; centralização da cabeça femoral"
+    },
+    {
+      "id": "ILIOPS",
+      "nome_pt": "Iliopsoas (psoas maior + ilíaco)",
+      "terminologia_anatomica": "M. iliopsoas",
+      "regiao": "Quadril",
+      "inervacao": "Ramos L1–L3 / n. femoral",
+      "acoes_principais": "Flexão do quadril; estabilização lombar (psoas)"
+    },
+    {
+      "id": "TFL",
+      "nome_pt": "Tensor da fáscia lata",
+      "terminologia_anatomica": "M. tensor fasciae latae",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo superior (L4–S1)",
+      "acoes_principais": "Flexão, abdução e rotação medial do quadril; tensiona o trato iliotibial"
+    },
+    {
+      "id": "ADU_MAG",
+      "nome_pt": "Adutor magno",
+      "terminologia_anatomica": "M. adductor magnus",
+      "regiao": "Coxa (medial)",
+      "inervacao": "N. obturatório (parte adutora) + n. isquiático/tibial (parte isquiotibial) L2–L4",
+      "acoes_principais": "Adução; extensão potente do quadril (parte posterior)"
+    },
+    {
+      "id": "ADU",
+      "nome_pt": "Adutores longo, curto, pectíneo e grácil",
+      "terminologia_anatomica": "Mm. adductor longus/brevis, pectineus, gracilis",
+      "regiao": "Coxa (medial)",
+      "inervacao": "N. obturatório (L2–L4); n. femoral (pectíneo)",
+      "acoes_principais": "Adução do quadril; flexão auxiliar"
+    },
+    {
+      "id": "RETO_FEM",
+      "nome_pt": "Reto femoral",
+      "terminologia_anatomica": "M. rectus femoris",
+      "regiao": "Coxa (anterior)",
+      "inervacao": "N. femoral (L2–L4)",
+      "acoes_principais": "Extensão do joelho; flexão do quadril"
+    },
+    {
+      "id": "VASTOS",
+      "nome_pt": "Vastos lateral, medial e intermédio",
+      "terminologia_anatomica": "Mm. vastus lateralis, medialis, intermedius",
+      "regiao": "Coxa (anterior)",
+      "inervacao": "N. femoral (L2–L4)",
+      "acoes_principais": "Extensão do joelho"
+    },
+    {
+      "id": "ISQ",
+      "nome_pt": "Isquiotibiais (bíceps femoral, semitendinoso, semimembranoso)",
+      "terminologia_anatomica": "M. biceps femoris, M. semitendinosus, M. semimembranosus",
+      "regiao": "Coxa (posterior)",
+      "inervacao": "N. isquiático – partes tibial e fibular (L5–S2)",
+      "acoes_principais": "Extensão do quadril; flexão do joelho"
+    },
+    {
+      "id": "GASTRO",
+      "nome_pt": "Gastrocnêmio",
+      "terminologia_anatomica": "M. gastrocnemius",
+      "regiao": "Perna",
+      "inervacao": "N. tibial (S1–S2)",
+      "acoes_principais": "Flexão plantar; flexão do joelho"
+    },
+    {
+      "id": "SOLEO",
+      "nome_pt": "Sóleo",
+      "terminologia_anatomica": "M. soleus",
+      "regiao": "Perna",
+      "inervacao": "N. tibial (S1–S2)",
+      "acoes_principais": "Flexão plantar (independente do ângulo do joelho)"
+    },
+    {
+      "id": "TIB_ANT",
+      "nome_pt": "Tibial anterior",
+      "terminologia_anatomica": "M. tibialis anterior",
+      "regiao": "Perna",
+      "inervacao": "N. fibular profundo (L4–L5)",
+      "acoes_principais": "Dorsiflexão e inversão do pé"
+    },
+    {
+      "id": "FIB",
+      "nome_pt": "Fibulares longo e curto",
+      "terminologia_anatomica": "Mm. fibularis longus et brevis",
+      "regiao": "Perna",
+      "inervacao": "N. fibular superficial (L5–S1)",
+      "acoes_principais": "Eversão; estabilidade lateral do tornozelo"
+    },
+    {
+      "id": "ECM",
+      "nome_pt": "Esternocleidomastoideo e flexores cervicais profundos",
+      "terminologia_anatomica": "M. sternocleidomastoideus, Mm. longus colli/capitis",
+      "regiao": "Pescoço",
+      "inervacao": "N. acessório (XI); ramos C1–C6",
+      "acoes_principais": "Flexão cervical; estabilização da cabeça"
+    }
+  ],
+  "exercicios": [
+    {
+      "id": "swing_russo",
+      "nome_pt": "Swing bilateral (russo / hardstyle)",
+      "nome_en": "Two-hand swing (hardstyle/Russian)",
+      "categoria": "Balístico – dobradiça de quadril (swing)",
+      "padrao_movimento": "Dobradiça de quadril",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão excêntrica (backswing) → extensão concêntrica explosiva; Joelho: leve flexão → extensão; Coluna: neutra (isometria); Ombro: flexão passiva até a altura do peito, gerada pela projeção do quadril; Escápula: depressão/retração isométrica",
+      "notas": "Ativação em 'pulso': pico curto de glúteo e eretores no lockout seguido de relaxamento (McGill & Marshall, 2012, J Strength Cond Res). EMG mostra maior ativação relativa do semitendinoso que do bíceps femoral (Zebis et al., 2013, Br J Sports Med).",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "LAT",
+          "ERET",
+          "MULTI",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "DELT_A": 2,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "swing_americano",
+      "nome_pt": "Swing americano (até acima da cabeça)",
+      "nome_en": "American swing (overhead)",
+      "categoria": "Balístico – dobradiça de quadril (swing)",
+      "padrao_movimento": "Dobradiça de quadril + flexão completa do ombro",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão → extensão explosiva; Joelho: flexão → extensão; Ombro: flexão completa (~180°) até acima da cabeça; Escápula: rotação superior e elevação; Cotovelo: extensão mantida; Coluna: neutra",
+      "notas": "Exige mobilidade de flexão do ombro e extensão torácica; sem ela, há compensação com hiperextensão lombar.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "PEIT_C",
+          "DELT_A",
+          "LAT",
+          "ERET",
+          "MULTI",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "swing_unilateral",
+      "nome_pt": "Swing unilateral",
+      "nome_en": "Single-arm swing",
+      "categoria": "Balístico – dobradiça de quadril (swing)",
+      "padrao_movimento": "Dobradiça de quadril (carga assimétrica)",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão excêntrica (backswing) → extensão concêntrica explosiva; Joelho: leve flexão → extensão; Coluna: neutra (isometria); Ombro: flexão passiva até a altura do peito, gerada pela projeção do quadril; Escápula: depressão/retração isométrica",
+      "notas": "Acrescenta demanda anti-rotacional (oblíquos, QL contralateral) e maior exigência de preensão.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "LAT",
+          "OBL_EXT",
+          "OBL_INT",
+          "ERET",
+          "MULTI",
+          "QL",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "DELT_A": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "swing_alternado",
+      "nome_pt": "Swing alternado (troca de mão no topo)",
+      "nome_en": "Hand-to-hand swing",
+      "categoria": "Balístico – dobradiça de quadril (swing)",
+      "padrao_movimento": "Dobradiça de quadril (carga assimétrica)",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão excêntrica (backswing) → extensão concêntrica explosiva; Joelho: leve flexão → extensão; Coluna: neutra (isometria); Ombro: flexão passiva até a altura do peito, gerada pela projeção do quadril; Escápula: depressão/retração isométrica",
+      "notas": "Fase de 'flutuação' no topo exige reposicionamento rápido e controle anti-rotacional.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "LAT",
+          "OBL_EXT",
+          "OBL_INT",
+          "ERET",
+          "MULTI",
+          "QL",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "swing_duplo",
+      "nome_pt": "Swing duplo (dois KBs)",
+      "nome_en": "Double kettlebell swing",
+      "categoria": "Balístico – dobradiça de quadril (swing)",
+      "padrao_movimento": "Dobradiça de quadril",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril: flexão excêntrica (backswing) → extensão concêntrica explosiva; Joelho: leve flexão → extensão; Coluna: neutra (isometria); Ombro: flexão passiva até a altura do peito, gerada pela projeção do quadril; Escápula: depressão/retração isométrica",
+      "notas": "Base mais larga para os KBs passarem: maior participação dos adutores.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ADU",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "LAT",
+          "ERET",
+          "MULTI",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "DELT_A": 2,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "swing_dead_stop",
+      "nome_pt": "Swing com parada morta (dead-stop)",
+      "nome_en": "Dead-stop swing",
+      "categoria": "Balístico – dobradiça de quadril (swing)",
+      "padrao_movimento": "Dobradiça de quadril",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão excêntrica (backswing) → extensão concêntrica explosiva; Joelho: leve flexão → extensão; Coluna: neutra (isometria); Ombro: flexão passiva até a altura do peito, gerada pela projeção do quadril; Escápula: depressão/retração isométrica",
+      "notas": "Cada repetição parte do repouso: elimina o ciclo alongamento-encurtamento e enfatiza a geração concêntrica de força e o 'hike pass'.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "LAT",
+          "ERET",
+          "MULTI",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "ROMB",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "DELT_A": 2,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "clean_unilateral",
+      "nome_pt": "Clean unilateral",
+      "nome_en": "Single-arm clean",
+      "categoria": "Balístico – clean",
+      "padrao_movimento": "Dobradiça de quadril + recepção em rack",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: extensão no backswing → flexão até o rack; Cotovelo: flexão até ~45° no rack; Antebraço: 'envolve' o KB (rotação para posição neutra); Punho: neutro; Coluna: neutra",
+      "notas": "A trajetória deve ser próxima ao corpo; o KB 'gira' ao redor do antebraço em vez de bater no punho.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "DELT_A",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD",
+          "ERET",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "SERR": 1,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "clean_duplo",
+      "nome_pt": "Clean duplo",
+      "nome_en": "Double clean",
+      "categoria": "Balístico – clean",
+      "padrao_movimento": "Dobradiça de quadril + recepção em rack",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: extensão no backswing → flexão até o rack; Cotovelo: flexão até ~45° no rack; Antebraço: 'envolve' o KB (rotação para posição neutra); Punho: neutro; Coluna: neutra",
+      "notas": "Recepção em rack duplo exige forte rigidez anti-extensão (reto do abdome).",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ADU",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "DELT_A",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD",
+          "ERET",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "SERR": 1,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "dead_clean",
+      "nome_pt": "Clean a partir do chão (dead clean)",
+      "nome_en": "Dead clean",
+      "categoria": "Balístico – clean",
+      "padrao_movimento": "Dobradiça de quadril / agachamento parcial + rack",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: extensão no backswing → flexão até o rack; Cotovelo: flexão até ~45° no rack; Antebraço: 'envolve' o KB (rotação para posição neutra); Punho: neutro; Coluna: neutra",
+      "notas": "Sem backswing: maior contribuição de quadríceps na saída do solo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "DELT_A",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "ERET"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 3,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "clean_bottoms_up",
+      "nome_pt": "Clean bottoms-up (fundo para cima)",
+      "nome_en": "Bottoms-up clean",
+      "categoria": "Balístico – clean",
+      "padrao_movimento": "Dobradiça de quadril + recepção instável",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Igual ao clean, com recepção do KB invertido (fundo para cima); Punho: neutro rígido; Antebraço: vertical",
+      "notas": "Preensão máxima e co-contração do manguito rotador para equilibrar a carga instável.",
+      "musculos": {
+        "agonistas_primarios": [
+          "FLEX_ANT",
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "EXT_ANT",
+          "ERET",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "SERR",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "SERR": 1,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "hang_clean",
+      "nome_pt": "Clean suspenso (hang clean)",
+      "nome_en": "Hang clean",
+      "categoria": "Balístico – clean",
+      "padrao_movimento": "Dobradiça de quadril curta + rack",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: extensão no backswing → flexão até o rack; Cotovelo: flexão até ~45° no rack; Antebraço: 'envolve' o KB (rotação para posição neutra); Punho: neutro; Coluna: neutra",
+      "notas": "Parte da posição suspensa (acima dos joelhos); amplitude de quadril menor e ênfase na taxa de desenvolvimento de força.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "DELT_A",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "ERET",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "snatch_unilateral",
+      "nome_pt": "Snatch (arranco) unilateral",
+      "nome_en": "Single-arm snatch",
+      "categoria": "Balístico – snatch / puxada alta",
+      "padrao_movimento": "Dobradiça de quadril + lockout acima da cabeça",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: flexão/abdução até ~180° com rotação lateral; Cotovelo: flexão (puxada) → extensão completa no lockout; Escápula: elevação e rotação superior; Descida: controle excêntrico/balístico até o backswing",
+      "notas": "Grande demanda de desaceleração na descida (latíssimo e isquiotibiais excêntricos). Analisado biomecanicamente junto ao swing por McGill & Marshall (2012).",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "DELT_P",
+          "LAT",
+          "TRI_LM",
+          "ERET",
+          "MULTI",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 2,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "snatch_duplo",
+      "nome_pt": "Snatch duplo",
+      "nome_en": "Double snatch",
+      "categoria": "Balístico – snatch / puxada alta",
+      "padrao_movimento": "Dobradiça de quadril + lockout acima da cabeça",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: flexão/abdução até ~180° com rotação lateral; Cotovelo: flexão (puxada) → extensão completa no lockout; Escápula: elevação e rotação superior; Descida: controle excêntrico/balístico até o backswing",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ADU",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "DELT_P",
+          "LAT",
+          "TRI_LM",
+          "ERET",
+          "MULTI",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 2,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "dead_snatch",
+      "nome_pt": "Snatch a partir do chão (dead snatch)",
+      "nome_en": "Dead snatch",
+      "categoria": "Balístico – snatch / puxada alta",
+      "padrao_movimento": "Dobradiça de quadril + lockout acima da cabeça",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: flexão/abdução até ~180° com rotação lateral; Cotovelo: flexão (puxada) → extensão completa no lockout; Escápula: elevação e rotação superior; Descida: controle excêntrico/balístico até o backswing",
+      "notas": "Sem impulso do backswing; exige mais força concêntrica inicial.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "DELT_P",
+          "TRI_LM",
+          "ERET"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 2,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 3,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "half_snatch",
+      "nome_pt": "Half snatch (sobe em snatch, desce pelo rack)",
+      "nome_en": "Half snatch",
+      "categoria": "Balístico – snatch / puxada alta",
+      "padrao_movimento": "Dobradiça de quadril + lockout; descida via rack",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: flexão/abdução até ~180° com rotação lateral; Cotovelo: flexão (puxada) → extensão completa no lockout; Escápula: elevação e rotação superior; Descida: controle excêntrico/balístico até o backswing",
+      "notas": "Reduz o estresse de preensão e desaceleração da descida; progressão didática para o snatch completo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "BIC",
+          "BRAQ",
+          "TRI_LM",
+          "ERET",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "BIC": 2,
+        "BRAQ": 2,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "high_pull",
+      "nome_pt": "Puxada alta (high pull)",
+      "nome_en": "Kettlebell high pull",
+      "categoria": "Balístico – snatch / puxada alta",
+      "padrao_movimento": "Dobradiça de quadril + puxada horizontal alta",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril e joelho: extensão explosiva; Ombro: abdução/extensão horizontal com rotação medial→neutra (cotovelo alto); Cotovelo: flexão; Escápula: elevação e retração",
+      "notas": "Progressão entre o swing e o snatch; ensina o cotovelo alto e a 'puxada' do KB para trás.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "DELT_M",
+          "DELT_P",
+          "INFRA",
+          "BIC",
+          "BRAQ",
+          "ERET",
+          "ADU_MAG"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_M": 2,
+        "ROMB": 2,
+        "DELT_M": 2,
+        "DELT_P": 2,
+        "INFRA": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "terra_convencional",
+      "nome_pt": "Levantamento terra com KB (um KB entre os pés)",
+      "nome_en": "Kettlebell deadlift",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão moderada → extensão; Tornozelo: dorsiflexão moderada; Coluna: neutra (isometria); Ombros: extensão isométrica (braços colados ao tronco); Mãos: preensão isométrica",
+      "notas": "Exercício-base para ensinar a dobradiça antes do swing.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "MULTI",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "LAT",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "LAT": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "terra_sumo",
+      "nome_pt": "Terra sumô com KB",
+      "nome_en": "Sumo kettlebell deadlift",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril (base larga)",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão moderada → extensão; Tornozelo: dorsiflexão moderada; Coluna: neutra (isometria); Ombros: extensão isométrica (braços colados ao tronco); Mãos: preensão isométrica; Quadril em abdução e rotação lateral",
+      "notas": "Base larga e tronco mais vertical: mais adutores e quadríceps, menos momento extensor lombar.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ADU",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ERET",
+          "MULTI",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "LAT",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "LAT": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 3,
+        "VASTOS": 3,
+        "ISQ": 2
+      }
+    },
+    {
+      "id": "terra_duplo",
+      "nome_pt": "Terra com dois KBs (ao lado dos pés)",
+      "nome_en": "Double kettlebell deadlift",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril / híbrido de agachamento",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão moderada → extensão; Tornozelo: dorsiflexão moderada; Coluna: neutra (isometria); Ombros: extensão isométrica (braços colados ao tronco); Mãos: preensão isométrica",
+      "notas": "Carga alinhada ao centro de massa (semelhante à barra hexagonal): maior participação de joelho.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "MULTI",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "ROMB",
+          "LAT",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "ROMB": 1,
+        "LAT": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "RETO_FEM": 2,
+        "VASTOS": 3,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "terra_suitcase",
+      "nome_pt": "Terra 'mala' (suitcase deadlift)",
+      "nome_en": "Suitcase deadlift",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril com carga lateral",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral (carga)",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão moderada → extensão; Tornozelo: dorsiflexão moderada; Coluna: neutra (isometria); Ombros: extensão isométrica (braços colados ao tronco); Mãos: preensão isométrica; Tronco: anti-flexão lateral",
+      "notas": "QL e oblíquos contralaterais à carga trabalham para impedir a flexão lateral.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT",
+          "ERET",
+          "QL",
+          "ADU_MAG"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "LAT",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "TRANSV",
+          "MULTI",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "LAT": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 1,
+        "QL": 2,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "rdl_bilateral",
+      "nome_pt": "Terra romeno (RDL) bilateral",
+      "nome_en": "Kettlebell Romanian deadlift",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão excêntrica (tronco à frente) → extensão concêntrica; Joelho: flexão leve e quase constante; Coluna: neutra (isometria); Ombro: adução/extensão isométrica",
+      "notas": "Ênfase excêntrica em isquiotibiais sob alongamento.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "MULTI"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "LAT",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "LAT": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "stiff",
+      "nome_pt": "Terra com pernas quase estendidas (stiff-legged)",
+      "nome_en": "Stiff-legged deadlift",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão excêntrica (tronco à frente) → extensão concêntrica; Joelho: flexão mínima (joelhos quase estendidos); Coluna: neutra (isometria); Ombro: adução/extensão isométrica",
+      "notas": "Maior alongamento de isquiotibiais; exige boa mobilidade para manter a coluna neutra.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "MULTI",
+          "ADU_MAG",
+          "GASTRO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "ROMB",
+          "LAT",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "ROMB": 1,
+        "LAT": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "ISQ": 3,
+        "GASTRO": 2
+      }
+    },
+    {
+      "id": "rdl_unilateral",
+      "nome_pt": "Terra romeno unilateral (single-leg RDL)",
+      "nome_en": "Single-leg Romanian deadlift",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril unipodal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril (perna de apoio): flexão → extensão com controle de adução/rotação; Quadril (perna livre): extensão; Joelho de apoio: leve flexão; Tornozelo: estabilização multiplanar; Pelve: nivelada (anti-rotação)",
+      "notas": "Grande demanda de estabilidade frontal/transversal do quadril (glúteo médio e rotadores profundos) e do tornozelo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "MULTI",
+          "GLU_MED"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL",
+          "GLU_MIN",
+          "ROT_EXT_QUAD",
+          "TFL",
+          "SOLEO",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "FLEX_ANT": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "GLU_MIN": 1,
+        "ROT_EXT_QUAD": 1,
+        "TFL": 1,
+        "ADU_MAG": 3,
+        "ISQ": 3,
+        "SOLEO": 1,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "rdl_kickstand",
+      "nome_pt": "Terra romeno 'kickstand' (B-stance)",
+      "nome_en": "Kickstand RDL",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril com apoio assistido",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral (predominante)",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril (perna de apoio): flexão → extensão com controle de adução/rotação; Quadril (perna livre): extensão; Joelho de apoio: leve flexão; Tornozelo: estabilização multiplanar; Pelve: nivelada (anti-rotação)",
+      "notas": "Regressão do RDL unipodal: ~70–80% da carga na perna da frente, com menor exigência de equilíbrio.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "GLU_MED",
+          "ADU_MAG"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "MULTI",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "ADU_MAG": 2,
+        "ISQ": 3,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "good_morning_goblet",
+      "nome_pt": "Good morning com KB no peito",
+      "nome_en": "Goblet good morning",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Dobradiça de quadril",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão excêntrica (tronco inclina à frente) → extensão; Joelho: leve flexão fixa; Coluna: neutra; Ombros/cotovelos: sustentação isométrica da carga no peito",
+      "notas": "Momento flexor no tronco maior que no RDL (carga mais distante do quadril); usar cargas moderadas.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "MULTI",
+          "ADU_MAG"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 2,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "hip_thrust",
+      "nome_pt": "Elevação de quadril (hip thrust) com KB",
+      "nome_en": "Kettlebell hip thrust",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Extensão de quadril (tronco apoiado)",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: extensão concêntrica até alinhamento tronco-coxa (retroversão pélvica no topo); Joelho: flexão isométrica (~90°); Coluna: neutra",
+      "notas": "Torque extensor máximo do quadril próximo à extensão completa (zona de encurtamento do glúteo máximo).",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "VASTOS",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "ADU_MAG": 2,
+        "VASTOS": 2,
+        "ISQ": 2
+      }
+    },
+    {
+      "id": "ponte_gluteo",
+      "nome_pt": "Ponte de glúteo com KB",
+      "nome_en": "Kettlebell glute bridge",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Extensão de quadril (no solo)",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: extensão concêntrica até alinhamento tronco-coxa (retroversão pélvica no topo); Joelho: flexão isométrica (~90°); Coluna: neutra",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "ADU_MAG": 2,
+        "ISQ": 2
+      }
+    },
+    {
+      "id": "hip_thrust_unilateral",
+      "nome_pt": "Hip thrust / ponte unilateral com KB",
+      "nome_en": "Single-leg hip thrust",
+      "categoria": "Dobradiça de quadril – força (levantamento terra e derivados)",
+      "padrao_movimento": "Extensão de quadril unipodal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: extensão concêntrica até alinhamento tronco-coxa (retroversão pélvica no topo); Joelho: flexão isométrica (~90°); Coluna: neutra; Pelve: anti-rotação e anti-queda",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL",
+          "GLU_MIN",
+          "ADU"
+        ]
+      },
+      "matriz": {
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "GLU_MIN": 1,
+        "ADU_MAG": 2,
+        "ADU": 1,
+        "ISQ": 2
+      }
+    },
+    {
+      "id": "goblet_squat",
+      "nome_pt": "Agachamento goblet",
+      "nome_en": "Goblet squat",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento (dominante de joelho)",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão → extensão; Tornozelo: dorsiflexão → flexão plantar; Coluna: neutra (isometria); Membros superiores: sustentação isométrica da carga",
+      "notas": "A carga anterior favorece tronco vertical e serve como contrapeso; excelente para ensinar profundidade.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU",
+          "RETO_FEM",
+          "ISQ",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "DELT_A": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 2,
+        "RETO_FEM": 2,
+        "VASTOS": 3,
+        "ISQ": 2,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "front_squat_duplo",
+      "nome_pt": "Agachamento frontal duplo (rack)",
+      "nome_en": "Double kettlebell front squat",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento (dominante de joelho)",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão → extensão; Tornozelo: dorsiflexão → flexão plantar; Coluna: neutra (isometria); Membros superiores: sustentação isométrica da carga",
+      "notas": "Grande demanda anti-flexão torácica e anti-extensão lombar devido à carga no rack.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU",
+          "RETO_FEM",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_M",
+          "ROMB",
+          "SERR",
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "SERR": 1,
+        "DELT_A": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 2,
+        "RETO_FEM": 2,
+        "VASTOS": 3,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "front_squat_unilateral",
+      "nome_pt": "Agachamento frontal unilateral (rack assimétrico)",
+      "nome_en": "Single-arm front squat (offset)",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento com carga assimétrica",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral (carga)",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão → extensão; Tornozelo: dorsiflexão → flexão plantar; Coluna: neutra (isometria); Membros superiores: sustentação isométrica da carga; Tronco: anti-flexão lateral e anti-rotação",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT",
+          "QL",
+          "ADU",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "DELT_A": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 2,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "ADU_MAG": 3,
+        "ADU": 2,
+        "VASTOS": 3,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "overhead_squat",
+      "nome_pt": "Agachamento overhead unilateral",
+      "nome_en": "Single-arm overhead squat",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento + estabilização acima da cabeça",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral (carga)",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão → extensão; Tornozelo: dorsiflexão → flexão plantar; Coluna: neutra (isometria); Membros superiores: sustentação isométrica da carga; Ombro carregado: flexão ~180° isométrica",
+      "notas": "Exige mobilidade torácica, de ombro e de tornozelo; usado também como avaliação de mobilidade.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "TRI_LM",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_I": 1,
+        "SERR": 1,
+        "DELT_A": 1,
+        "DELT_M": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_LM": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 2,
+        "VASTOS": 3,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "sumo_squat",
+      "nome_pt": "Agachamento sumô (KB pendente)",
+      "nome_en": "Kettlebell sumo squat",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento base larga",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão → extensão; Tornozelo: dorsiflexão → flexão plantar; Coluna: neutra (isometria); Membros superiores: sustentação isométrica da carga; Quadril: abdução e rotação lateral",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "ADU",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ISQ",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 3,
+        "ADU": 3,
+        "VASTOS": 3,
+        "ISQ": 2,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "cossack_squat",
+      "nome_pt": "Agachamento cossaco",
+      "nome_en": "Cossack squat",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento lateral profundo",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Perna de trabalho: flexão → extensão de quadril e joelho no plano frontal com abdução do quadril; Perna estendida: alongamento excêntrico dos adutores; Pelve: deslocamento lateral controlado; Tornozelo da perna de trabalho: dorsiflexão máxima",
+      "notas": "Alongamento sob carga dos adutores da perna estendida; desenvolve mobilidade no plano frontal.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU_MAG",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "BIC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ROT_EXT_QUAD",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "ROT_EXT_QUAD": 1,
+        "ADU_MAG": 3,
+        "ADU": 2,
+        "VASTOS": 3,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "pistol_squat",
+      "nome_pt": "Agachamento pistola com KB",
+      "nome_en": "Kettlebell pistol squat",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento unipodal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão → extensão; Tornozelo: dorsiflexão → flexão plantar; Coluna: neutra (isometria); Membros superiores: sustentação isométrica da carga; Perna livre: flexão isométrica do quadril e extensão do joelho",
+      "notas": "O KB à frente atua como contrapeso. A perna livre exige força isométrica de flexores do quadril em comprimento encurtado.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ILIOPS",
+          "ADU_MAG",
+          "RETO_FEM",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "BIC",
+          "RETO_ABD",
+          "TRANSV",
+          "GLU_MED",
+          "GLU_MIN",
+          "TFL",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 1,
+        "RETO_ABD": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "GLU_MIN": 1,
+        "ILIOPS": 2,
+        "TFL": 1,
+        "ADU_MAG": 2,
+        "RETO_FEM": 2,
+        "VASTOS": 3,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "box_squat",
+      "nome_pt": "Agachamento no banco/caixa (goblet)",
+      "nome_en": "Goblet box squat",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Agachamento até o apoio",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: flexão → extensão; Joelho: flexão → extensão; Tornozelo: dorsiflexão → flexão plantar; Coluna: neutra (isometria); Membros superiores: sustentação isométrica da carga",
+      "notas": "A caixa padroniza a profundidade e favorece o recuo do quadril (mais posterior).",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "DELT_A": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 2
+      }
+    },
+    {
+      "id": "squat_jump",
+      "nome_pt": "Agachamento com salto (KB goblet ou ao lado)",
+      "nome_en": "Kettlebell squat jump",
+      "categoria": "Agachamento",
+      "padrao_movimento": "Pliometria / agachamento balístico",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril, joelho e tornozelo: contramovimento (flexão) → extensão tripla explosiva → aterrissagem com absorção excêntrica",
+      "notas": "Usar cargas leves (≈10–30% do agachamento) para preservar a velocidade.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "RETO_FEM",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "RETO_FEM": 2,
+        "VASTOS": 3,
+        "ISQ": 2,
+        "GASTRO": 3,
+        "SOLEO": 3,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "bulgaro_goblet",
+      "nome_pt": "Agachamento búlgaro (goblet)",
+      "nome_en": "Goblet Bulgarian split squat",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Agachamento em base dividida, pé de trás elevado",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal",
+      "notas": "Inclinação do tronco desloca a ênfase: tronco vertical → quadríceps; tronco inclinado → glúteo máximo/adutor magno.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU_MAG",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MIN",
+          "ILIOPS",
+          "RETO_FEM",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "DELT_A": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "GLU_MIN": 1,
+        "ILIOPS": 1,
+        "ADU_MAG": 2,
+        "RETO_FEM": 1,
+        "VASTOS": 3,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "bulgaro_suitcase",
+      "nome_pt": "Agachamento búlgaro com KBs ao lado",
+      "nome_en": "Suitcase Bulgarian split squat",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Agachamento em base dividida, pé de trás elevado",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU_MAG",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MIN",
+          "ILIOPS",
+          "RETO_FEM",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "GLU_MIN": 1,
+        "ILIOPS": 1,
+        "ADU_MAG": 2,
+        "RETO_FEM": 1,
+        "VASTOS": 3,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "split_squat",
+      "nome_pt": "Agachamento dividido estático (split squat)",
+      "nome_en": "Kettlebell split squat",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Agachamento em base dividida",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU_MAG",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ILIOPS",
+          "RETO_FEM",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "ILIOPS": 1,
+        "ADU_MAG": 2,
+        "RETO_FEM": 1,
+        "VASTOS": 3,
+        "SOLEO": 2,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "avanco_frontal",
+      "nome_pt": "Afundo à frente (forward lunge)",
+      "nome_en": "Forward lunge",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Afundo com desaceleração",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal",
+      "notas": "Maior demanda excêntrica de quadríceps na frenagem do passo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "ISQ",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MED",
+          "TFL",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "TFL": 1,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 2,
+        "GASTRO": 2,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "avanco_reverso",
+      "nome_pt": "Afundo reverso",
+      "nome_en": "Reverse lunge",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Afundo com passo para trás",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal",
+      "notas": "Menor estresse anterior no joelho e mais ênfase no quadril que o afundo à frente.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MED",
+          "SOLEO",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 2,
+        "SOLEO": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "avanco_lateral",
+      "nome_pt": "Afundo lateral",
+      "nome_en": "Lateral lunge",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Afundo no plano frontal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Perna de trabalho: flexão → extensão de quadril e joelho no plano frontal com abdução do quadril; Perna estendida: alongamento excêntrico dos adutores; Pelve: deslocamento lateral controlado",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "ADU",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU_MAG",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "BIC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "ADU_MAG": 2,
+        "ADU": 3,
+        "VASTOS": 3,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "avanco_caminhando",
+      "nome_pt": "Afundo caminhando (KBs ao lado ou em rack)",
+      "nome_en": "Walking lunge",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Afundo dinâmico com deslocamento",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "ISQ",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MED",
+          "GLU_MIN",
+          "TFL",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "GLU_MIN": 1,
+        "TFL": 1,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 2,
+        "GASTRO": 2,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "curtsy_lunge",
+      "nome_pt": "Afundo cruzado (curtsy lunge)",
+      "nome_en": "Curtsy lunge",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Afundo com adução/rotação do quadril",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal; Quadril da frente: adução e rotação medial relativa",
+      "notas": "Coloca o glúteo médio/máximo em alongamento no plano frontal.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU_MAG",
+          "ADU"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MIN",
+          "ROT_EXT_QUAD",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "DELT_A": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "GLU_MIN": 1,
+        "ROT_EXT_QUAD": 1,
+        "ADU_MAG": 2,
+        "ADU": 2,
+        "VASTOS": 3,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "avanco_overhead",
+      "nome_pt": "Afundo com KB acima da cabeça",
+      "nome_en": "Overhead lunge",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Afundo + estabilização acima da cabeça",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Avançado",
+      "acoes_articulares": "Perna da frente: quadril e joelho flexão → extensão, tornozelo dorsiflexão; Perna de trás: extensão do quadril e flexão do joelho (alongamento dos flexores do quadril); Pelve: estabilização frontal e transversal; Ombro carregado: flexão ~180° isométrica",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "GLU_MED",
+          "ADU_MAG",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "TRI_LM",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_I": 1,
+        "SERR": 1,
+        "DELT_A": 1,
+        "DELT_M": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_LM": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "step_up",
+      "nome_pt": "Subida no banco (step-up) com KB",
+      "nome_en": "Kettlebell step-up",
+      "categoria": "Membro inferior unilateral (afundos, búlgaro, step-up)",
+      "padrao_movimento": "Subida unipodal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Perna de apoio: extensão do quadril e do joelho, flexão plantar; Pelve: estabilização frontal (anti-queda contralateral); Perna livre: flexão do quadril",
+      "notas": "Altura da caixa define a ênfase: caixas altas aumentam a demanda de glúteo máximo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "ADU_MAG",
+          "ISQ",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MED",
+          "GLU_MIN",
+          "TFL",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "GLU_MIN": 1,
+        "TFL": 1,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 2,
+        "GASTRO": 2,
+        "SOLEO": 2,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "press_unilateral",
+      "nome_pt": "Desenvolvimento estrito unilateral (military press)",
+      "nome_en": "Single-arm strict press",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: flexão/abdução no plano escapular até ~180°; Cotovelo: extensão; Escápula: rotação superior e elevação final; Antebraço: neutro→pronado; Tronco: anti-extensão e anti-flexão lateral",
+      "notas": "O KB a partir do rack segue trajetória levemente em 'J' no plano escapular; o latíssimo contribui para estabilidade na saída do rack.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "PEIT_C",
+          "DELT_M",
+          "SUPRA",
+          "LAT"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL",
+          "GLU_MAX",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 2,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1,
+        "GLU_MAX": 1,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "press_duplo",
+      "nome_pt": "Desenvolvimento duplo",
+      "nome_en": "Double kettlebell press",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Ombro: flexão/abdução no plano escapular até ~180°; Cotovelo: extensão; Escápula: rotação superior e elevação final; Antebraço: neutro→pronado; Tronco: anti-extensão e anti-flexão lateral",
+      "notas": "Maior demanda anti-extensão lombar que a versão unilateral.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "PEIT_C",
+          "DELT_M",
+          "SUPRA"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "GLU_MAX"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 2,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 1
+      }
+    },
+    {
+      "id": "press_bottoms_up",
+      "nome_pt": "Desenvolvimento bottoms-up",
+      "nome_en": "Bottoms-up press",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical com carga instável",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Ombro: flexão/abdução no plano escapular até ~180°; Cotovelo: extensão; Escápula: rotação superior e elevação final; Antebraço: neutro→pronado; Tronco: anti-extensão e anti-flexão lateral; Punho: neutro rígido",
+      "notas": "Preensão máxima favorece irradiação e co-contração do manguito rotador; cargas bem menores que o press convencional.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "PEIT_C",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 2,
+        "INFRA": 2,
+        "SUBESC": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 2,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "press_semiajoelhado",
+      "nome_pt": "Desenvolvimento semi-ajoelhado",
+      "nome_en": "Half-kneeling press",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: flexão/abdução no plano escapular até ~180°; Cotovelo: extensão; Escápula: rotação superior e elevação final; Antebraço: neutro→pronado; Tronco: anti-extensão e anti-flexão lateral; Quadril do joelho no chão: extensão isométrica",
+      "notas": "Elimina a compensação com hiperextensão lombar; glúteo do lado do joelho no chão estabiliza a pelve.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "PEIT_C",
+          "DELT_M"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL",
+          "GLU_MAX",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 2,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1,
+        "GLU_MAX": 1,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "z_press",
+      "nome_pt": "Z-press (sentado no chão, pernas estendidas)",
+      "nome_en": "Z-press",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical sem apoio",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Ombro: flexão/abdução no plano escapular até ~180°; Cotovelo: extensão; Escápula: rotação superior e elevação final; Antebraço: neutro→pronado; Tronco: anti-extensão e anti-flexão lateral; Quadril: flexão isométrica ~90°",
+      "notas": "Sem contribuição de membros inferiores; expõe limitações de mobilidade de ombro e extensão torácica.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "PEIT_C",
+          "DELT_M"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "QL",
+          "ILIOPS"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 2,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 1,
+        "ILIOPS": 1
+      }
+    },
+    {
+      "id": "see_saw_press",
+      "nome_pt": "Desenvolvimento alternado 'gangorra' (see-saw)",
+      "nome_en": "See-saw press",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical alternado",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Ombro: flexão/abdução no plano escapular até ~180°; Cotovelo: extensão; Escápula: rotação superior e elevação final; Antebraço: neutro→pronado; Tronco: anti-extensão e anti-flexão lateral",
+      "notas": "Um braço desce enquanto o outro sobe: demanda anti-flexão lateral contínua.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "PEIT_C",
+          "DELT_M",
+          "LAT"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "push_press",
+      "nome_pt": "Push press",
+      "nome_en": "Kettlebell push press",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical assistido por membros inferiores",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Fase de impulso: flexão rasa (dip) e extensão rápida de joelho e quadril, flexão plantar; Fase de press: flexão do ombro e extensão do cotovelo (completada pelos membros superiores)",
+      "notas": "Permite cargas supramáximas para o press estrito; ênfase na transferência de força de baixo para cima.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_LM",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_M",
+          "TRI_L",
+          "GLU_MAX",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 2,
+        "VASTOS": 3,
+        "GASTRO": 2,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "jerk_unilateral",
+      "nome_pt": "Jerk unilateral",
+      "nome_en": "Single-arm jerk",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical balístico com duplo dip",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Duplo dip: 1º dip e extensão explosiva de quadril/joelho/tornozelo; 2º dip (recepção) com cotovelos já estendidos; Ombro: flexão até ~180°; Cotovelo: extensão rápida; recuperação com extensão de joelhos",
+      "notas": "Exercício central do kettlebell sport (girevoy); o braço 'trava' em vez de empurrar a carga.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRI_LM",
+          "GLU_MAX",
+          "VASTOS",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "VASTOS": 3,
+        "GASTRO": 3,
+        "SOLEO": 3
+      }
+    },
+    {
+      "id": "jerk_duplo",
+      "nome_pt": "Jerk duplo",
+      "nome_en": "Double jerk",
+      "categoria": "Empurrar vertical (press acima da cabeça)",
+      "padrao_movimento": "Empurrar vertical balístico com duplo dip",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Duplo dip: 1º dip e extensão explosiva de quadril/joelho/tornozelo; 2º dip (recepção) com cotovelos já estendidos; Ombro: flexão até ~180°; Cotovelo: extensão rápida; recuperação com extensão de joelhos",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRI_LM",
+          "GLU_MAX",
+          "VASTOS",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 3,
+        "VASTOS": 3,
+        "GASTRO": 3,
+        "SOLEO": 3
+      }
+    },
+    {
+      "id": "floor_press",
+      "nome_pt": "Supino no chão (floor press)",
+      "nome_en": "Kettlebell floor press",
+      "categoria": "Empurrar horizontal / peitoral",
+      "padrao_movimento": "Empurrar horizontal com amplitude limitada",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: adução horizontal (e flexão no inclinado); Cotovelo: extensão; Escápula: retração/depressão isométrica (apoio no chão/banco)",
+      "notas": "Amplitude limitada pelo solo enfatiza o lockout (tríceps). Versão unilateral acrescenta anti-rotação.",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_C",
+          "PEIT_E",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "DELT_A"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "OBL_EXT",
+          "OBL_INT"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "PEIT_C": 3,
+        "PEIT_E": 3,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1
+      }
+    },
+    {
+      "id": "supino_plano",
+      "nome_pt": "Supino no banco com KBs",
+      "nome_en": "Kettlebell bench press",
+      "categoria": "Empurrar horizontal / peitoral",
+      "padrao_movimento": "Empurrar horizontal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: adução horizontal (e flexão no inclinado); Cotovelo: extensão; Escápula: retração/depressão isométrica (apoio no chão/banco)",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_C",
+          "PEIT_E",
+          "DELT_A",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "SERR",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "BIC",
+          "FLEX_ANT",
+          "EXT_ANT"
+        ]
+      },
+      "matriz": {
+        "SERR": 2,
+        "PEIT_C": 3,
+        "PEIT_E": 3,
+        "DELT_A": 3,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "BIC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1
+      }
+    },
+    {
+      "id": "supino_inclinado",
+      "nome_pt": "Supino inclinado com KBs",
+      "nome_en": "Incline kettlebell press",
+      "categoria": "Empurrar horizontal / peitoral",
+      "padrao_movimento": "Empurrar horizontal-oblíquo",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: adução horizontal (e flexão no inclinado); Cotovelo: extensão; Escápula: retração/depressão isométrica (apoio no chão/banco); Ombro: flexão predominante",
+      "notas": "Inclinação desloca a ênfase para a parte clavicular do peitoral.",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_C",
+          "DELT_A",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "SERR",
+          "PEIT_E",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT"
+        ]
+      },
+      "matriz": {
+        "SERR": 2,
+        "PEIT_C": 3,
+        "PEIT_E": 2,
+        "DELT_A": 3,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1
+      }
+    },
+    {
+      "id": "squeeze_press",
+      "nome_pt": "Supino com compressão (squeeze/hex press)",
+      "nome_en": "Kettlebell squeeze press",
+      "categoria": "Empurrar horizontal / peitoral",
+      "padrao_movimento": "Empurrar horizontal + adução isométrica",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: adução horizontal (e flexão no inclinado); Cotovelo: extensão; Escápula: retração/depressão isométrica (apoio no chão/banco); KBs pressionados um contra o outro (adução isométrica)",
+      "notas": "A compressão isométrica aumenta a demanda dos adutores horizontais em todo o arco.",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_C",
+          "PEIT_E"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "BIC",
+          "FLEX_ANT"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "PEIT_C": 3,
+        "PEIT_E": 3,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "BIC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1
+      }
+    },
+    {
+      "id": "crucifixo_chao",
+      "nome_pt": "Crucifixo no chão (floor fly)",
+      "nome_en": "Kettlebell floor fly",
+      "categoria": "Empurrar horizontal / peitoral",
+      "padrao_movimento": "Adução horizontal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: abdução horizontal excêntrica → adução horizontal concêntrica; Cotovelo: flexão leve isométrica",
+      "notas": "O solo limita a abdução horizontal, reduzindo estresse capsular anterior.",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_C",
+          "PEIT_E"
+        ],
+        "sinergistas": [
+          "DELT_A"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "BIC",
+          "BRAQ",
+          "FLEX_ANT"
+        ]
+      },
+      "matriz": {
+        "PEIT_C": 3,
+        "PEIT_E": 3,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "BIC": 1,
+        "BRAQ": 1,
+        "FLEX_ANT": 1
+      }
+    },
+    {
+      "id": "pullover",
+      "nome_pt": "Pullover com KB",
+      "nome_en": "Kettlebell pullover",
+      "categoria": "Empurrar horizontal / peitoral",
+      "padrao_movimento": "Extensão do ombro a partir da flexão total",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: flexão excêntrica (braços acima da cabeça) → extensão concêntrica até sobre o peito; Cotovelo: flexão leve isométrica; Tronco: anti-extensão",
+      "notas": "Classicamente associado ao peitoral e ao latíssimo; na fase final também exige anti-extensão do tronco.",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_E",
+          "LAT",
+          "TRI_L"
+        ],
+        "sinergistas": [
+          "SERR",
+          "DELT_P",
+          "RED_MAI"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "SERR": 2,
+        "PEIT_E": 3,
+        "DELT_P": 2,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "TRI_L": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "flexao_kb",
+      "nome_pt": "Flexão de braço sobre KBs",
+      "nome_en": "Kettlebell push-up",
+      "categoria": "Empurrar horizontal / peitoral",
+      "padrao_movimento": "Empurrar horizontal em cadeia fechada",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: adução horizontal/flexão; Cotovelo: extensão; Escápula: protração no topo; Tronco: prancha (anti-extensão)",
+      "notas": "Segurar as alças mantém o punho neutro e aumenta a amplitude em relação ao solo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_C",
+          "PEIT_E",
+          "DELT_A",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "SERR",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "GLU_MAX",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "SERR": 2,
+        "PEIT_C": 3,
+        "PEIT_E": 3,
+        "DELT_A": 3,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 1,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "remada_unilateral",
+      "nome_pt": "Remada unilateral apoiada (serrote)",
+      "nome_en": "Single-arm supported row",
+      "categoria": "Puxar (remadas e puxadas)",
+      "padrao_movimento": "Puxar horizontal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: extensão (cotovelo junto ao tronco); Cotovelo: flexão; Escápula: retração e leve depressão; Tronco: isometria em dobradiça de quadril (ou prancha)",
+      "notas": "Cotovelo próximo ao tronco → latíssimo; cotovelo aberto (~70–90°) → deltoide posterior/trapézio médio.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_M",
+          "ROMB",
+          "DELT_P",
+          "LAT"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "INFRA",
+          "RED_MAI",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 3,
+        "TRAP_I": 2,
+        "ROMB": 3,
+        "DELT_P": 3,
+        "INFRA": 2,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 2,
+        "BRAQ": 2,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "remada_curvada",
+      "nome_pt": "Remada curvada bilateral (dois KBs)",
+      "nome_en": "Bent-over double row",
+      "categoria": "Puxar (remadas e puxadas)",
+      "padrao_movimento": "Puxar horizontal em dobradiça",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Ombro: extensão (cotovelo junto ao tronco); Cotovelo: flexão; Escápula: retração e leve depressão; Tronco: isometria em dobradiça de quadril (ou prancha)",
+      "notas": "Isometria de dobradiça carrega fortemente eretores e isquiotibiais.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_M",
+          "ROMB",
+          "DELT_P",
+          "LAT"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "INFRA",
+          "RED_MAI",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "GLU_MAX",
+          "ISQ"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 3,
+        "TRAP_I": 2,
+        "ROMB": 3,
+        "DELT_P": 3,
+        "INFRA": 2,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 2,
+        "BRAQ": 2,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 1,
+        "ISQ": 1
+      }
+    },
+    {
+      "id": "gorilla_row",
+      "nome_pt": "Remada gorila (alternada a partir do chão)",
+      "nome_en": "Gorilla row",
+      "categoria": "Puxar (remadas e puxadas)",
+      "padrao_movimento": "Puxar horizontal alternado em agachamento-dobradiça",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Ombro: extensão (cotovelo junto ao tronco); Cotovelo: flexão; Escápula: retração e leve depressão; Tronco: isometria em dobradiça de quadril (ou prancha); Tronco: rotação controlada",
+      "notas": "O KB de apoio no chão permite rotação; desafio anti-rotacional/rotacional.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_M",
+          "ROMB",
+          "DELT_P",
+          "LAT"
+        ],
+        "sinergistas": [
+          "RED_MAI",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "QL",
+          "GLU_MAX",
+          "ADU",
+          "VASTOS",
+          "ISQ"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 3,
+        "ROMB": 3,
+        "DELT_P": 3,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 2,
+        "BRAQ": 2,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 1,
+        "GLU_MAX": 1,
+        "ADU": 1,
+        "VASTOS": 1,
+        "ISQ": 1
+      }
+    },
+    {
+      "id": "renegade_row",
+      "nome_pt": "Remada renegada (em prancha)",
+      "nome_en": "Renegade row",
+      "categoria": "Puxar (remadas e puxadas)",
+      "padrao_movimento": "Puxar horizontal em prancha",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Tronco: anti-rotação e anti-extensão em prancha; Ombro que puxa: extensão/abdução horizontal; Ombro de apoio: estabilização em cadeia fechada",
+      "notas": "Muito do estímulo é anti-rotacional; base mais larga dos pés facilita.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_M",
+          "ROMB",
+          "DELT_P",
+          "LAT"
+        ],
+        "sinergistas": [
+          "BIC",
+          "BRAQ",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "PEIT_E",
+          "DELT_A",
+          "TRI_LM",
+          "FLEX_ANT",
+          "QL",
+          "GLU_MAX",
+          "GLU_MED",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 3,
+        "ROMB": 3,
+        "SERR": 1,
+        "PEIT_E": 1,
+        "DELT_A": 1,
+        "DELT_P": 3,
+        "LAT": 3,
+        "BIC": 2,
+        "BRAQ": 2,
+        "TRI_LM": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 2,
+        "QL": 1,
+        "GLU_MAX": 1,
+        "GLU_MED": 1,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "remada_alta",
+      "nome_pt": "Remada alta (upright row)",
+      "nome_en": "Kettlebell upright row",
+      "categoria": "Puxar (remadas e puxadas)",
+      "padrao_movimento": "Puxar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: abdução com rotação medial; Cotovelo: flexão; Escápula: elevação e rotação superior",
+      "notas": "Abdução com rotação medial acima de ~90° pode reduzir o espaço subacromial; limitar a altura do cotovelo se houver dor.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_S",
+          "DELT_M"
+        ],
+        "sinergistas": [
+          "LEV_ESC",
+          "SERR",
+          "DELT_A",
+          "SUPRA",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 3,
+        "LEV_ESC": 2,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 3,
+        "SUPRA": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "encolhimento",
+      "nome_pt": "Encolhimento de ombros (shrug)",
+      "nome_en": "Kettlebell shrug",
+      "categoria": "Puxar (remadas e puxadas)",
+      "padrao_movimento": "Elevação escapular",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Escápula: elevação → depressão controlada; Cotovelos estendidos; Mãos: preensão isométrica",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_S",
+          "LEV_ESC"
+        ],
+        "sinergistas": [
+          "ROMB"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 3,
+        "ROMB": 2,
+        "LEV_ESC": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "crucifixo_inverso",
+      "nome_pt": "Crucifixo inverso curvado",
+      "nome_en": "Bent-over reverse fly",
+      "categoria": "Puxar (remadas e puxadas)",
+      "padrao_movimento": "Abdução horizontal",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: abdução horizontal com rotação lateral leve; Escápula: retração; Tronco: isometria em dobradiça de quadril",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_M",
+          "ROMB",
+          "DELT_P",
+          "INFRA"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "RED_MAI"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "ERET",
+          "MULTI",
+          "GLU_MAX",
+          "ISQ"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 3,
+        "TRAP_I": 2,
+        "ROMB": 3,
+        "DELT_P": 3,
+        "INFRA": 3,
+        "RED_MAI": 2,
+        "FLEX_ANT": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 1,
+        "ISQ": 1
+      }
+    },
+    {
+      "id": "elevacao_lateral",
+      "nome_pt": "Elevação lateral",
+      "nome_en": "Kettlebell lateral raise",
+      "categoria": "Ombro – isolados",
+      "padrao_movimento": "Abdução do ombro",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: abdução até ~90° no plano escapular; Escápula: rotação superior; Cotovelo: flexão leve isométrica",
+      "notas": "O KB desloca o centro de massa para longe da mão, aumentando o momento de força para a mesma carga nominal.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_M",
+          "SUPRA"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "DELT_P"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 3,
+        "DELT_P": 2,
+        "SUPRA": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "elevacao_frontal",
+      "nome_pt": "Elevação frontal",
+      "nome_en": "Kettlebell front raise",
+      "categoria": "Ombro – isolados",
+      "padrao_movimento": "Flexão do ombro",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: flexão até ~90°; Escápula: rotação superior; Cotovelo: extensão/flexão leve isométrica",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_C",
+          "DELT_A"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_M",
+          "BIC"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "SERR": 2,
+        "PEIT_C": 3,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "BIC": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1
+      }
+    },
+    {
+      "id": "halo",
+      "nome_pt": "Halo (circundução ao redor da cabeça)",
+      "nome_en": "Kettlebell halo",
+      "categoria": "Ombro – isolados",
+      "padrao_movimento": "Circundução do ombro",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombro: flexão, abdução e rotações combinadas (circundução da cabeça); Cotovelo: flexão/extensão dinâmica; Escápula: elevação/rotação superior; Tronco: anti-extensão e anti-rotação",
+      "notas": "Usado como exercício de mobilidade e aquecimento do complexo do ombro.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "DELT_M",
+          "DELT_P"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "INFRA",
+          "SUBESC",
+          "LAT",
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "estabilizadores": [
+          "BIC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "SERR": 2,
+        "DELT_A": 3,
+        "DELT_M": 3,
+        "DELT_P": 3,
+        "INFRA": 2,
+        "SUBESC": 2,
+        "LAT": 2,
+        "BIC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "rosca_biceps",
+      "nome_pt": "Rosca bíceps com KB",
+      "nome_en": "Kettlebell biceps curl",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Flexão do cotovelo",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Cotovelo: flexão → extensão excêntrica; Antebraço: posição definida pela pegada; Ombro: estável (sem flexão compensatória) (supinada)",
+      "notas": "Supinação máxima aumenta a participação do bíceps.",
+      "musculos": {
+        "agonistas_primarios": [
+          "BIC",
+          "BRAQ"
+        ],
+        "sinergistas": [
+          "BRAQRAD",
+          "FLEX_ANT"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "rosca_martelo",
+      "nome_pt": "Rosca martelo com KB (pegada neutra)",
+      "nome_en": "Kettlebell hammer curl",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Flexão do cotovelo",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Cotovelo: flexão → extensão excêntrica; Antebraço: posição definida pela pegada; Ombro: estável (sem flexão compensatória) (neutra)",
+      "notas": "Antebraço neutro favorece braquiorradial e braquial.",
+      "musculos": {
+        "agonistas_primarios": [
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "BIC",
+          "FLEX_ANT"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 2,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "rosca_bottoms_up",
+      "nome_pt": "Rosca bottoms-up",
+      "nome_en": "Bottoms-up curl",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Flexão do cotovelo com carga instável",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Cotovelo: flexão → extensão excêntrica; Antebraço: posição definida pela pegada; Ombro: estável (sem flexão compensatória)",
+      "notas": "Alta demanda de preensão e estabilização do punho.",
+      "musculos": {
+        "agonistas_primarios": [
+          "BIC",
+          "BRAQ",
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "BRAQRAD",
+          "EXT_ANT"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "rosca_punho",
+      "nome_pt": "Flexão de punho (wrist curl)",
+      "nome_en": "Kettlebell wrist curl",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Flexão do punho",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Punho: flexão/extensão (conforme a variação); Antebraço apoiado; Dedos: preensão",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "FLEX_ANT"
+        ],
+        "sinergistas": [],
+        "estabilizadores": [
+          "BIC"
+        ]
+      },
+      "matriz": {
+        "BIC": 1,
+        "FLEX_ANT": 3
+      }
+    },
+    {
+      "id": "rosca_punho_inversa",
+      "nome_pt": "Extensão de punho (reverse wrist curl)",
+      "nome_en": "Kettlebell reverse wrist curl",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Extensão do punho",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Punho: flexão/extensão (conforme a variação); Antebraço apoiado; Dedos: preensão",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "EXT_ANT"
+        ],
+        "sinergistas": [
+          "BRAQRAD"
+        ],
+        "estabilizadores": []
+      },
+      "matriz": {
+        "BRAQRAD": 2,
+        "EXT_ANT": 3
+      }
+    },
+    {
+      "id": "triceps_overhead",
+      "nome_pt": "Extensão de tríceps acima da cabeça",
+      "nome_en": "Overhead triceps extension",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Extensão do cotovelo com ombro flexionado",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Cotovelo: flexão excêntrica → extensão concêntrica; Ombro: posição fixa (flexão, neutro ou extensão, conforme a variação)",
+      "notas": "Ombro flexionado alonga a cabeça longa (biarticular), aumentando seu estímulo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [],
+        "estabilizadores": [
+          "SERR",
+          "DELT_A",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "DELT_A": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "triceps_testa",
+      "nome_pt": "Tríceps testa (skull crusher) com KB",
+      "nome_en": "Kettlebell skull crusher",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Extensão do cotovelo em decúbito",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Cotovelo: flexão excêntrica → extensão concêntrica; Ombro: posição fixa (flexão, neutro ou extensão, conforme a variação)",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [],
+        "estabilizadores": [
+          "PEIT_E",
+          "DELT_A",
+          "LAT",
+          "FLEX_ANT"
+        ]
+      },
+      "matriz": {
+        "PEIT_E": 1,
+        "DELT_A": 1,
+        "LAT": 1,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1
+      }
+    },
+    {
+      "id": "triceps_kickback",
+      "nome_pt": "Tríceps coice (kickback)",
+      "nome_en": "Kettlebell triceps kickback",
+      "categoria": "Braço e antebraço – isolados",
+      "padrao_movimento": "Extensão do cotovelo com ombro estendido",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Cotovelo: flexão excêntrica → extensão concêntrica; Ombro: posição fixa (flexão, neutro ou extensão, conforme a variação)",
+      "notas": "Ombro estendido coloca a cabeça longa em posição encurtada.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRI_L",
+          "TRI_LM"
+        ],
+        "sinergistas": [],
+        "estabilizadores": [
+          "ROMB",
+          "DELT_P",
+          "LAT",
+          "FLEX_ANT",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "ROMB": 1,
+        "DELT_P": 1,
+        "LAT": 1,
+        "TRI_L": 3,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "ERET": 1,
+        "MULTI": 1
+      }
+    },
+    {
+      "id": "turkish_get_up",
+      "nome_pt": "Levantamento turco (Turkish get-up)",
+      "nome_en": "Turkish get-up",
+      "categoria": "Integrados multiplanares (get-up, windmill, bent press)",
+      "padrao_movimento": "Transição solo-em pé com carga acima da cabeça",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Sequência: rolagem/sit-up (flexão e rotação do tronco) → apoio no cotovelo e mão (extensão do cotovelo de apoio) → ponte (extensão de quadril) → varredura da perna (flexão de quadril/joelho) → semi-ajoelhado → afundo até em pé; Ombro carregado: flexão ~90–180° isométrica com rotação externa e escápula estabilizada durante toda a sequência",
+      "notas": "Analisado biomecanicamente como tarefa de estabilidade do ombro e do tronco em múltiplas posições; o ombro de apoio trabalha em cadeia fechada.",
+      "musculos": {
+        "agonistas_primarios": [
+          "SERR",
+          "DELT_A",
+          "OBL_EXT",
+          "OBL_INT",
+          "GLU_MAX"
+        ],
+        "sinergistas": [
+          "DELT_P",
+          "TRI_L",
+          "TRI_LM",
+          "RETO_ABD",
+          "QL",
+          "GLU_MED",
+          "ILIOPS",
+          "ADU_MAG",
+          "ADU",
+          "VASTOS",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_I",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "ECM"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_I": 1,
+        "SERR": 3,
+        "DELT_A": 3,
+        "DELT_M": 1,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 2,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "ILIOPS": 2,
+        "ADU_MAG": 2,
+        "ADU": 2,
+        "VASTOS": 2,
+        "ISQ": 2,
+        "ECM": 1
+      }
+    },
+    {
+      "id": "get_up_situp",
+      "nome_pt": "Sit-up turco (meio get-up)",
+      "nome_en": "Get-up sit-up",
+      "categoria": "Integrados multiplanares (get-up, windmill, bent press)",
+      "padrao_movimento": "Flexão e rotação do tronco com carga acima",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Coluna: flexão com rotação até apoio no cotovelo/mão; Ombro carregado: flexão ~90° isométrica; Ombro de apoio: extensão/abdução em cadeia fechada",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "sinergistas": [
+          "DELT_P",
+          "TRI_LM",
+          "ILIOPS",
+          "ECM"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "DELT_A",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "DELT_A": 1,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ILIOPS": 2,
+        "ECM": 2
+      }
+    },
+    {
+      "id": "windmill",
+      "nome_pt": "Moinho de vento (windmill) – KB acima",
+      "nome_en": "Kettlebell windmill",
+      "categoria": "Integrados multiplanares (get-up, windmill, bent press)",
+      "padrao_movimento": "Dobradiça de quadril lateral com carga acima",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril (perna de carga): flexão com rotação e deslocamento lateral da pelve; Tronco: flexão lateral e rotação controladas; Ombro carregado: flexão/abdução ~180° isométrica; Olhar na carga",
+      "notas": "Grande demanda de estabilidade do ombro em flexão máxima combinada com rotação do tronco.",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT",
+          "QL",
+          "GLU_MAX",
+          "GLU_MED",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "ERET",
+          "TFL",
+          "ADU_MAG",
+          "ADU"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "TRI_LM",
+          "FLEX_ANT",
+          "TRANSV",
+          "MULTI",
+          "ROT_EXT_QUAD"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "TRAP_I": 1,
+        "SERR": 1,
+        "DELT_A": 1,
+        "DELT_M": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_LM": 1,
+        "FLEX_ANT": 1,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 1,
+        "QL": 3,
+        "GLU_MAX": 3,
+        "GLU_MED": 3,
+        "ROT_EXT_QUAD": 1,
+        "TFL": 2,
+        "ADU_MAG": 2,
+        "ADU": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "low_windmill",
+      "nome_pt": "Moinho baixo (KB na mão de baixo)",
+      "nome_en": "Low windmill",
+      "categoria": "Integrados multiplanares (get-up, windmill, bent press)",
+      "padrao_movimento": "Dobradiça de quadril lateral com carga embaixo",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril (perna de carga): flexão com rotação e deslocamento lateral da pelve; Tronco: flexão lateral e rotação controladas; Ombro de cima (sem carga): flexão/abdução ~180° isométrica; Olhar na carga",
+      "notas": "Progressão do windmill: mesma mecânica de quadril sem exigir o ombro carregado acima.",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT",
+          "QL",
+          "GLU_MAX",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "LAT",
+          "ERET",
+          "GLU_MED",
+          "ADU_MAG"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "FLEX_ANT",
+          "TRANSV",
+          "MULTI",
+          "ROT_EXT_QUAD"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 1,
+        "QL": 3,
+        "GLU_MAX": 3,
+        "GLU_MED": 2,
+        "ROT_EXT_QUAD": 1,
+        "ADU_MAG": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "bent_press",
+      "nome_pt": "Bent press",
+      "nome_en": "Kettlebell bent press",
+      "categoria": "Integrados multiplanares (get-up, windmill, bent press)",
+      "padrao_movimento": "Flexão lateral do tronco 'por baixo' da carga",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Tronco: flexão lateral e rotação 'por baixo' da carga; Quadril: flexão e deslocamento lateral; Ombro: abdução mantida enquanto o tronco desce; Cotovelo: extensão progressiva",
+      "notas": "Levantamento histórico de força; a carga sobe mais pelo afastamento do tronco do que pela extensão do braço.",
+      "musculos": {
+        "agonistas_primarios": [
+          "LAT",
+          "TRI_LM",
+          "OBL_EXT",
+          "OBL_INT",
+          "QL"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "TRI_L",
+          "GLU_MAX",
+          "GLU_MED",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "DELT_A": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 3,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 3,
+        "GLU_MAX": 2,
+        "GLU_MED": 2,
+        "ISQ": 2
+      }
+    },
+    {
+      "id": "sots_press",
+      "nome_pt": "Sots press (press no fundo do agachamento)",
+      "nome_en": "Sots press",
+      "categoria": "Integrados multiplanares (get-up, windmill, bent press)",
+      "padrao_movimento": "Empurrar vertical em agachamento profundo",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Posição: agachamento profundo isométrico; Ombro: flexão até ~180°; Cotovelo: extensão; Tronco: extensão torácica e anti-flexão",
+      "notas": "Exige mobilidade extrema de tornozelo, quadril e coluna torácica.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_LM"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "TRAP_I",
+          "SERR",
+          "DELT_M",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "GLU_MAX",
+          "ADU_MAG",
+          "ADU",
+          "VASTOS",
+          "SOLEO",
+          "TIB_ANT"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 2,
+        "SERR": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 1,
+        "ADU_MAG": 1,
+        "ADU": 1,
+        "VASTOS": 1,
+        "SOLEO": 1,
+        "TIB_ANT": 1
+      }
+    },
+    {
+      "id": "russian_twist",
+      "nome_pt": "Torção russa (Russian twist)",
+      "nome_en": "Kettlebell Russian twist",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Rotação do tronco",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Tronco: rotação alternada com flexão isométrica (~45°); Quadril: flexão isométrica; Ombros: sustentação da carga",
+      "notas": "Flexão e rotação repetidas sob carga aumentam o estresse discal; amplitude moderada recomendada.",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "sinergistas": [
+          "RETO_ABD",
+          "TRANSV",
+          "ILIOPS"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "BIC",
+          "ERET",
+          "RETO_FEM"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 2,
+        "ERET": 1,
+        "ILIOPS": 2,
+        "RETO_FEM": 1
+      }
+    },
+    {
+      "id": "woodchop",
+      "nome_pt": "Lenhador diagonal (alto → baixo)",
+      "nome_en": "Kettlebell woodchop",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Rotação/flexão diagonal",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Tronco: rotação e flexão em diagonal (alto→baixo); Ombros: extensão/adução; Quadril e joelho: flexão (agachamento parcial com pivô)",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_E",
+          "LAT",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "sinergistas": [
+          "SERR",
+          "TRI_L",
+          "RETO_ABD",
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "SERR": 2,
+        "PEIT_E": 3,
+        "LAT": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 2,
+        "GLU_MED": 1,
+        "VASTOS": 2
+      }
+    },
+    {
+      "id": "lift_diagonal",
+      "nome_pt": "Levantamento diagonal (baixo → alto)",
+      "nome_en": "Kettlebell reverse chop / lift",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Rotação/extensão diagonal",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Tronco: rotação e extensão em diagonal (baixo→alto); Quadril e joelho: extensão com pivô; Ombros: flexão/abdução",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "OBL_EXT",
+          "OBL_INT",
+          "GLU_MAX"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_M",
+          "ERET",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "RETO_ABD",
+          "TRANSV",
+          "MULTI",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "SERR": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "VASTOS": 2
+      }
+    },
+    {
+      "id": "flexao_lateral",
+      "nome_pt": "Flexão lateral do tronco (side bend)",
+      "nome_en": "Kettlebell side bend",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Flexão lateral",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Tronco: flexão lateral excêntrica (para o lado da carga) → concêntrica contralateral; Pelve: estável",
+      "notas": "Musculatura contralateral à carga é a principal (controle excêntrico e retorno concêntrico).",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT",
+          "QL"
+        ],
+        "sinergistas": [
+          "RETO_ABD",
+          "ERET"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "FLEX_ANT",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "ERET": 2,
+        "QL": 3,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "abdominal_crunch",
+      "nome_pt": "Abdominal (crunch) com KB",
+      "nome_en": "Kettlebell crunch",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Flexão da coluna",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Coluna: flexão (enrolamento torácico/lombar); Quadril: pouca participação; Cervical: flexão isométrica",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "BIC",
+          "ECM"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "BIC": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "ECM": 1
+      }
+    },
+    {
+      "id": "sit_up_kb",
+      "nome_pt": "Sit-up com KB (no peito ou acima)",
+      "nome_en": "Kettlebell sit-up",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Flexão da coluna e do quadril",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Coluna: flexão; Quadril: flexão (tronco até vertical); Cervical: flexão isométrica",
+      "notas": "Fase final dominada pelos flexores do quadril.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "ILIOPS"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "DELT_A",
+          "TRANSV",
+          "ECM"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ILIOPS": 3,
+        "RETO_FEM": 2,
+        "ECM": 1
+      }
+    },
+    {
+      "id": "dead_bug",
+      "nome_pt": "Dead bug com KB",
+      "nome_en": "Kettlebell dead bug",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Anti-extensão",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Bilateral (membros alternados)",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Tronco: anti-extensão isométrica (lombar em contato com o solo); Quadril: flexão/extensão dos membros inferiores; Ombros: flexão isométrica sustentando a carga",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ],
+        "sinergistas": [
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "DELT_A",
+          "LAT",
+          "TRI_LM",
+          "FLEX_ANT"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "DELT_A": 1,
+        "LAT": 1,
+        "TRI_LM": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 3,
+        "ILIOPS": 2,
+        "RETO_FEM": 2
+      }
+    },
+    {
+      "id": "hollow_hold",
+      "nome_pt": "Hollow hold com KB",
+      "nome_en": "Kettlebell hollow hold",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Anti-extensão",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Tronco: anti-extensão isométrica (lombar em contato com o solo); Quadril: flexão/extensão dos membros inferiores; Ombros: flexão isométrica sustentando a carga",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ],
+        "sinergistas": [
+          "ILIOPS",
+          "ADU",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "DELT_A",
+          "LAT",
+          "FLEX_ANT"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "DELT_A": 1,
+        "LAT": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 3,
+        "ILIOPS": 2,
+        "ADU": 2,
+        "RETO_FEM": 2
+      }
+    },
+    {
+      "id": "plank_pull_through",
+      "nome_pt": "Prancha com passagem do KB (pull-through)",
+      "nome_en": "Plank pull-through",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Anti-rotação/anti-extensão",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Alternado",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Tronco: anti-rotação e anti-extensão em prancha; Ombro que puxa: extensão/abdução horizontal; Ombro de apoio: estabilização em cadeia fechada",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ],
+        "sinergistas": [
+          "DELT_P",
+          "LAT"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "PEIT_E",
+          "DELT_A",
+          "TRI_LM",
+          "FLEX_ANT",
+          "QL",
+          "GLU_MAX",
+          "GLU_MED",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "PEIT_E": 1,
+        "DELT_A": 1,
+        "DELT_P": 2,
+        "LAT": 2,
+        "TRI_LM": 1,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 3,
+        "QL": 1,
+        "GLU_MAX": 1,
+        "GLU_MED": 1,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "arm_bar",
+      "nome_pt": "Arm bar com KB",
+      "nome_en": "Kettlebell arm bar",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Estabilização do ombro + rotação torácica",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Ombro carregado: flexão ~90° isométrica com rotação externa e escápula deprimida/retraída; Tronco: rotação para decúbito ventral parcial; Quadril: perna cruzada (flexão/adução)",
+      "notas": "Usado na reabilitação/preparação do ombro para press e get-up; carga estabilizada com o braço vertical.",
+      "musculos": {
+        "agonistas_primarios": [
+          "SERR",
+          "SUPRA",
+          "INFRA",
+          "SUBESC"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "DELT_P",
+          "OBL_EXT",
+          "OBL_INT",
+          "GLU_MAX"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "TRAP_I",
+          "LAT",
+          "TRI_LM",
+          "FLEX_ANT"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 1,
+        "SERR": 3,
+        "DELT_A": 2,
+        "DELT_P": 2,
+        "SUPRA": 3,
+        "INFRA": 3,
+        "SUBESC": 3,
+        "LAT": 1,
+        "TRI_LM": 1,
+        "FLEX_ANT": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "GLU_MAX": 2
+      }
+    },
+    {
+      "id": "elevacao_pernas",
+      "nome_pt": "Elevação de pernas segurando KB acima",
+      "nome_en": "Leg raise with kettlebell hold",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Flexão do quadril com anti-extensão",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Quadril: flexão até ~90° → extensão excêntrica; Pelve: retroversão controlada; Ombros: flexão isométrica sustentando a carga (contrapeso)",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT",
+          "TFL",
+          "ADU"
+        ],
+        "estabilizadores": [
+          "SERR",
+          "DELT_A",
+          "LAT",
+          "TRI_LM",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "SERR": 1,
+        "DELT_A": 1,
+        "LAT": 1,
+        "TRI_LM": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ILIOPS": 3,
+        "TFL": 2,
+        "ADU": 2,
+        "RETO_FEM": 3
+      }
+    },
+    {
+      "id": "around_the_body",
+      "nome_pt": "Passe ao redor do corpo (around the body)",
+      "nome_en": "Around the body pass",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Anti-rotação dinâmica",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Bilateral (troca de mãos)",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Ombros: extensão/flexão e abdução alternadas para passar a carga ao redor do corpo; Tronco: anti-rotação e anti-flexão lateral isométricas; Preensão: troca de mãos",
+      "notas": "Aquecimento clássico; velocidade maior → maior demanda anti-rotacional.",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "DELT_P",
+          "LAT",
+          "FLEX_ANT",
+          "QL"
+        ],
+        "estabilizadores": [
+          "RETO_ABD",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 2,
+        "DELT_P": 2,
+        "LAT": 2,
+        "FLEX_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 2,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "figure_8",
+      "nome_pt": "Figura 8 (passe entre as pernas)",
+      "nome_en": "Figure 8",
+      "categoria": "Core – rotação, anti-movimento e flexão",
+      "padrao_movimento": "Dobradiça isométrica + anti-rotação",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Bilateral (troca de mãos)",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Quadril: dobradiça isométrica (flexão ~45–70°); Ombros: extensão e rotações para passar a carga entre as pernas; Tronco: anti-rotação; Preensão: troca de mãos",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT",
+          "GLU_MAX",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "DELT_P",
+          "FLEX_ANT"
+        ],
+        "estabilizadores": [
+          "ERET",
+          "MULTI",
+          "QL",
+          "ADU",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "DELT_A": 2,
+        "DELT_P": 2,
+        "FLEX_ANT": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU": 1,
+        "VASTOS": 1,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "farmers_carry",
+      "nome_pt": "Caminhada do fazendeiro (bilateral)",
+      "nome_en": "Farmer's carry",
+      "categoria": "Carregamentos (carries)",
+      "padrao_movimento": "Locomoção com carga",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Marcha: ciclos de flexão/extensão de quadril, joelho e tornozelo; Tronco: isometria (anti-flexão lateral/anti-extensão conforme a posição da carga); Ombros e mãos: sustentação isométrica",
+      "notas": "Excelente para preensão e resistência dos estabilizadores de tronco e quadril em marcha.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_S",
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "LEV_ESC",
+          "ERET",
+          "QL",
+          "GLU_MED"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "ROMB",
+          "LAT",
+          "BRAQRAD",
+          "EXT_ANT",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "MULTI",
+          "GLU_MIN",
+          "VASTOS",
+          "GASTRO",
+          "SOLEO",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 3,
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "LEV_ESC": 2,
+        "LAT": 1,
+        "BRAQRAD": 1,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 1,
+        "QL": 2,
+        "GLU_MED": 2,
+        "GLU_MIN": 1,
+        "VASTOS": 1,
+        "GASTRO": 1,
+        "SOLEO": 1,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "suitcase_carry",
+      "nome_pt": "Caminhada 'mala' (suitcase carry)",
+      "nome_en": "Suitcase carry",
+      "categoria": "Carregamentos (carries)",
+      "padrao_movimento": "Locomoção com carga lateral",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Marcha: ciclos de flexão/extensão de quadril, joelho e tornozelo; Tronco: isometria (anti-flexão lateral/anti-extensão conforme a posição da carga); Ombros e mãos: sustentação isométrica",
+      "notas": "Desafio anti-flexão lateral: QL e oblíquos contralaterais à carga dominam.",
+      "musculos": {
+        "agonistas_primarios": [
+          "FLEX_ANT",
+          "OBL_EXT",
+          "OBL_INT",
+          "QL"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "ERET",
+          "GLU_MED"
+        ],
+        "estabilizadores": [
+          "LAT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "TRANSV",
+          "MULTI",
+          "GLU_MIN",
+          "TIB_ANT",
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "LAT": 1,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "ERET": 2,
+        "MULTI": 1,
+        "QL": 3,
+        "GLU_MED": 2,
+        "GLU_MIN": 1,
+        "TIB_ANT": 1,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "rack_carry",
+      "nome_pt": "Caminhada em rack",
+      "nome_en": "Rack carry",
+      "categoria": "Carregamentos (carries)",
+      "padrao_movimento": "Locomoção com carga anterior alta",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Marcha: ciclos de flexão/extensão de quadril, joelho e tornozelo; Tronco: isometria (anti-flexão lateral/anti-extensão conforme a posição da carga); Ombros e mãos: sustentação isométrica",
+      "notas": "Carga anterior gera demanda anti-extensão; a versão unilateral acrescenta anti-flexão lateral.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ],
+        "sinergistas": [
+          "DELT_A",
+          "BIC",
+          "BRAQ",
+          "ERET"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "SERR",
+          "LAT",
+          "MULTI",
+          "QL",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "SERR": 1,
+        "DELT_A": 2,
+        "LAT": 1,
+        "BIC": 2,
+        "BRAQ": 2,
+        "RETO_ABD": 3,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 3,
+        "ERET": 2,
+        "MULTI": 1,
+        "QL": 1,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "overhead_carry",
+      "nome_pt": "Caminhada com KB acima (waiter walk)",
+      "nome_en": "Overhead carry / waiter walk",
+      "categoria": "Carregamentos (carries)",
+      "padrao_movimento": "Locomoção com carga acima da cabeça",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Marcha: ciclos de flexão/extensão de quadril, joelho e tornozelo; Tronco: isometria (anti-flexão lateral/anti-extensão conforme a posição da carga); Ombros e mãos: sustentação isométrica",
+      "notas": "Treina estabilidade escapular em rotação superior e estabilidade do manguito.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "TRI_LM"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "QL",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 3,
+        "TRAP_I": 2,
+        "SERR": 3,
+        "DELT_A": 3,
+        "DELT_M": 3,
+        "SUPRA": 3,
+        "INFRA": 3,
+        "SUBESC": 3,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 1,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "bottoms_up_carry",
+      "nome_pt": "Caminhada bottoms-up",
+      "nome_en": "Bottoms-up carry",
+      "categoria": "Carregamentos (carries)",
+      "padrao_movimento": "Locomoção com carga instável",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Marcha: ciclos de flexão/extensão de quadril, joelho e tornozelo; Tronco: isometria (anti-flexão lateral/anti-extensão conforme a posição da carga); Ombros e mãos: sustentação isométrica",
+      "notas": "Incluída na análise de McGill & Marshall (2012) junto ao swing e ao snatch como exercício de estabilização.",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "SERR",
+          "BIC",
+          "BRAQ",
+          "EXT_ANT"
+        ],
+        "estabilizadores": [
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "SERR": 2,
+        "DELT_A": 3,
+        "SUPRA": 3,
+        "INFRA": 3,
+        "SUBESC": 3,
+        "BIC": 2,
+        "BRAQ": 2,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "mixed_carry",
+      "nome_pt": "Caminhada mista (ex.: rack + acima, ou rack + mala)",
+      "nome_en": "Mixed / offset carry",
+      "categoria": "Carregamentos (carries)",
+      "padrao_movimento": "Locomoção com carga assimétrica em dois planos",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Bilateral (assimétrico)",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Marcha: ciclos de flexão/extensão de quadril, joelho e tornozelo; Tronco: isometria (anti-flexão lateral/anti-extensão conforme a posição da carga); Ombros e mãos: sustentação isométrica",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "SERR",
+          "DELT_A",
+          "OBL_EXT",
+          "OBL_INT",
+          "QL"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "BIC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "TRANSV"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "ERET",
+          "MULTI",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 3,
+        "DELT_A": 3,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "BIC": 2,
+        "FLEX_ANT": 2,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 2,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 3,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "goblet_carry",
+      "nome_pt": "Caminhada goblet",
+      "nome_en": "Goblet carry",
+      "categoria": "Carregamentos (carries)",
+      "padrao_movimento": "Locomoção com carga anterior",
+      "tipo_contracao": "Isométrico",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Marcha: ciclos de flexão/extensão de quadril, joelho e tornozelo; Tronco: isometria (anti-flexão lateral/anti-extensão conforme a posição da carga); Ombros e mãos: sustentação isométrica",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "BIC",
+          "RETO_ABD",
+          "TRANSV"
+        ],
+        "sinergistas": [
+          "BRAQ",
+          "OBL_EXT",
+          "OBL_INT",
+          "ERET"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "ROMB",
+          "FLEX_ANT",
+          "MULTI",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "ROMB": 1,
+        "DELT_A": 3,
+        "BIC": 3,
+        "BRAQ": 2,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 3,
+        "ERET": 2,
+        "MULTI": 1,
+        "GLU_MED": 1
+      }
+    },
+    {
+      "id": "panturrilha_em_pe",
+      "nome_pt": "Elevação de panturrilha em pé com KB",
+      "nome_en": "Standing calf raise",
+      "categoria": "Membro inferior – isolados",
+      "padrao_movimento": "Flexão plantar",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Tornozelo: dorsiflexão excêntrica → flexão plantar concêntrica; Joelho: estendido (em pé) ou flexionado (sentado)",
+      "notas": "Com joelho estendido, o gastrocnêmio está em comprimento favorável.",
+      "musculos": {
+        "agonistas_primarios": [
+          "GASTRO",
+          "SOLEO"
+        ],
+        "sinergistas": [
+          "FIB"
+        ],
+        "estabilizadores": [
+          "TRAP_S",
+          "FLEX_ANT",
+          "GLU_MED",
+          "TIB_ANT"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 1,
+        "FLEX_ANT": 1,
+        "GLU_MED": 1,
+        "GASTRO": 3,
+        "SOLEO": 3,
+        "TIB_ANT": 1,
+        "FIB": 2
+      }
+    },
+    {
+      "id": "panturrilha_sentado",
+      "nome_pt": "Elevação de panturrilha sentado (KB sobre os joelhos)",
+      "nome_en": "Seated calf raise",
+      "categoria": "Membro inferior – isolados",
+      "padrao_movimento": "Flexão plantar com joelho flexionado",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral ou unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Tornozelo: dorsiflexão excêntrica → flexão plantar concêntrica; Joelho: estendido (em pé) ou flexionado (sentado)",
+      "notas": "Joelho a ~90° reduz a contribuição do gastrocnêmio (insuficiência ativa), enfatizando o sóleo.",
+      "musculos": {
+        "agonistas_primarios": [
+          "SOLEO"
+        ],
+        "sinergistas": [
+          "GASTRO",
+          "FIB"
+        ],
+        "estabilizadores": []
+      },
+      "matriz": {
+        "GASTRO": 2,
+        "SOLEO": 3,
+        "FIB": 2
+      }
+    },
+    {
+      "id": "tibial_raise",
+      "nome_pt": "Dorsiflexão com KB preso ao pé",
+      "nome_en": "Kettlebell tibialis raise",
+      "categoria": "Membro inferior – isolados",
+      "padrao_movimento": "Dorsiflexão",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Unilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Tornozelo: flexão plantar excêntrica → dorsiflexão concêntrica contra a carga presa ao pé",
+      "notas": "Executado sentado em banco com a alça do KB apoiada no dorso do pé.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TIB_ANT"
+        ],
+        "sinergistas": [],
+        "estabilizadores": [
+          "FIB"
+        ]
+      },
+      "matriz": {
+        "TIB_ANT": 3,
+        "FIB": 1
+      }
+    },
+    {
+      "id": "flexora_kb",
+      "nome_pt": "Flexão de joelho prona com KB entre os pés",
+      "nome_en": "Prone kettlebell leg curl",
+      "categoria": "Membro inferior – isolados",
+      "padrao_movimento": "Flexão do joelho",
+      "tipo_contracao": "Força lenta (grind)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "acoes_articulares": "Joelho: flexão concêntrica → extensão excêntrica em decúbito ventral; Quadril: extensão isométrica; Adutores: compressão isométrica da carga entre os pés",
+      "notas": "Enfatiza a função de flexor do joelho, complementar à dobradiça de quadril.",
+      "musculos": {
+        "agonistas_primarios": [
+          "ISQ"
+        ],
+        "sinergistas": [
+          "GASTRO"
+        ],
+        "estabilizadores": [
+          "GLU_MAX",
+          "ADU"
+        ]
+      },
+      "matriz": {
+        "GLU_MAX": 1,
+        "ADU": 1,
+        "ISQ": 3,
+        "GASTRO": 2
+      }
+    },
+    {
+      "id": "thruster",
+      "nome_pt": "Thruster com KB (goblet ou duplo)",
+      "nome_en": "Kettlebell thruster",
+      "categoria": "Complexos e combinados",
+      "padrao_movimento": "Agachamento + empurrar vertical",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Agachamento frontal (flexão → extensão de quadril/joelho) encadeado com press (flexão do ombro e extensão do cotovelo) usando a energia da subida",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_LM",
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "PEIT_C",
+          "DELT_M",
+          "TRI_L",
+          "ADU_MAG",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "clean_and_press",
+      "nome_pt": "Clean e desenvolvimento (clean & press)",
+      "nome_en": "Clean and press",
+      "categoria": "Complexos e combinados",
+      "padrao_movimento": "Dobradiça balística + empurrar vertical",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Intermediário",
+      "acoes_articulares": "Clean (extensão explosiva de quadril/joelho e recepção em rack) seguido de press estrito (flexão do ombro e extensão do cotovelo)",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "DELT_A",
+          "TRI_LM",
+          "GLU_MAX",
+          "ISQ"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "PEIT_C",
+          "DELT_M",
+          "BIC",
+          "BRAQ",
+          "TRI_L",
+          "ERET",
+          "ADU_MAG",
+          "VASTOS"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "PEIT_C": 2,
+        "DELT_A": 3,
+        "DELT_M": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "BIC": 2,
+        "BRAQ": 2,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "VASTOS": 2,
+        "ISQ": 3
+      }
+    },
+    {
+      "id": "long_cycle",
+      "nome_pt": "Ciclo longo (clean & jerk)",
+      "nome_en": "Long cycle (clean and jerk)",
+      "categoria": "Complexos e combinados",
+      "padrao_movimento": "Clean balístico + jerk",
+      "tipo_contracao": "Balístico",
+      "lateralidade": "Unilateral ou bilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Quadril e joelho: flexão → extensão explosiva; Ombro: extensão no backswing → flexão até o rack; Cotovelo: flexão até ~45° no rack; Antebraço: 'envolve' o KB (rotação para posição neutra); Punho: neutro; Coluna: neutra → Duplo dip: 1º dip e extensão explosiva de quadril/joelho/tornozelo; 2º dip (recepção) com cotovelos já estendidos; Ombro: flexão até ~180°; Cotovelo: extensão rápida; recuperação com extensão de joelhos",
+      "notas": "Prova clássica do kettlebell sport (girevoy), normalmente em séries de 10 minutos.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRI_LM",
+          "GLU_MAX",
+          "VASTOS",
+          "ISQ",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "sinergistas": [
+          "TRAP_S",
+          "SERR",
+          "DELT_A",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "ERET",
+          "ADU_MAG"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "DELT_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_S": 2,
+        "TRAP_I": 1,
+        "SERR": 2,
+        "DELT_A": 2,
+        "DELT_M": 1,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 2,
+        "BIC": 2,
+        "BRAQ": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 2,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 3,
+        "GASTRO": 3,
+        "SOLEO": 3
+      }
+    },
+    {
+      "id": "man_maker",
+      "nome_pt": "Man maker com KBs",
+      "nome_en": "Kettlebell man maker",
+      "categoria": "Complexos e combinados",
+      "padrao_movimento": "Complexo de corpo inteiro",
+      "tipo_contracao": "Misto",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "acoes_articulares": "Remada em prancha (extensão do ombro/flexão do cotovelo) + flexão de braço + agachamento/clean + thruster (extensão tripla e press)",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_E",
+          "DELT_A",
+          "LAT",
+          "TRI_LM",
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "TRAP_M",
+          "ROMB",
+          "SERR",
+          "DELT_P",
+          "BIC",
+          "TRI_L",
+          "ADU_MAG",
+          "ISQ"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ERET",
+          "MULTI",
+          "QL",
+          "GLU_MED"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 2,
+        "ROMB": 2,
+        "SERR": 2,
+        "PEIT_E": 3,
+        "DELT_A": 3,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "LAT": 3,
+        "BIC": 2,
+        "TRI_L": 2,
+        "TRI_LM": 3,
+        "FLEX_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ERET": 1,
+        "MULTI": 1,
+        "QL": 1,
+        "GLU_MAX": 3,
+        "GLU_MED": 1,
+        "ADU_MAG": 2,
+        "VASTOS": 3,
+        "ISQ": 2
+      }
+    }
+  ]
+}

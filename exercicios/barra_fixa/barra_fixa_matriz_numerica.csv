@@ -1,0 +1,32 @@
+﻿id,exercicio,TRAP_S,TRAP_M,TRAP_I,ROMB,LEV_ESC,SERR,PEIT_C,PEIT_E,DELT_A,DELT_M,DELT_P,SUPRA,INFRA,SUBESC,RED_MAI,LAT,BIC,BRAQ,BRAQRAD,TRI_L,TRI_LM,FLEX_ANT,EXT_ANT,RETO_ABD,OBL_EXT,OBL_INT,TRANSV,ERET,MULTI,QL,GLU_MAX,GLU_MED,GLU_MIN,ROT_EXT_QUAD,ILIOPS,TFL,ADU_MAG,ADU,RETO_FEM,VASTOS,ISQ,GASTRO,SOLEO,TIB_ANT,FIB,ECM
+pullup_aberta,Barra fixa pegada aberta (pronada larga),0,2,3,2,1,0,0,2,0,0,2,0,2,1,3,3,2,3,3,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_pronada_media,Barra fixa pronada na largura dos ombros,0,2,3,2,0,0,0,2,0,0,2,0,2,1,3,3,2,3,3,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_pronada_fechada,Barra fixa pegada pronada fechada,0,1,2,2,0,0,0,2,0,0,2,0,1,1,3,3,2,3,3,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+chinup_supinada,Barra fixa pegada supinada (chin-up),0,1,2,2,0,0,0,3,0,0,2,0,1,1,3,3,3,3,2,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_neutra,Barra fixa pegada neutra (pegadores paralelos),0,1,2,2,0,0,0,2,0,0,2,0,1,1,3,3,3,3,3,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_mista,"Barra fixa pegada mista (uma pronada, uma supinada)",0,1,2,2,0,0,0,2,0,0,2,0,1,1,3,3,3,3,3,0,0,1,1,1,2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_comando,Barra fixa 'comando' (mãos uma à frente da outra),0,0,2,1,0,0,0,2,0,0,2,1,1,1,2,3,3,3,3,0,0,1,1,1,2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_toalha,Barra fixa com toalhas,0,1,2,2,0,0,0,2,0,0,2,1,1,1,2,3,3,3,3,0,0,3,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_negativa,Barra fixa negativa (excêntrica),0,0,2,2,0,0,0,2,0,0,2,0,1,1,3,3,3,3,3,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_assistida_elastico,Barra fixa assistida com elástico,0,0,2,2,0,0,0,2,0,0,2,1,1,1,3,3,3,3,3,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_com_salto,Barra fixa com salto (jumping pull-up),0,0,2,2,0,0,0,0,0,0,0,0,0,0,2,3,3,3,2,0,0,1,1,1,1,1,1,0,0,0,3,0,0,0,0,0,0,0,0,3,0,2,2,0,0,0
+pullup_com_carga,Barra fixa com carga (kettlebell no cinto ou entre os pés),0,2,3,2,0,0,0,2,0,0,2,0,1,1,3,3,3,3,3,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+pullup_l_sit,Barra fixa em L (L-sit pull-up),0,0,2,2,0,0,0,2,0,0,0,0,0,0,3,3,3,3,2,0,0,1,1,2,1,1,1,0,0,0,0,0,0,0,2,1,0,1,2,1,0,0,0,0,0,0
+pullup_arqueiro,Barra fixa arqueiro (archer),0,0,2,2,0,0,0,2,0,0,2,0,1,1,3,3,3,3,3,0,2,1,1,1,2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_typewriter,Barra fixa 'máquina de escrever' (typewriter),0,0,2,2,0,0,0,2,0,0,2,0,1,1,3,3,3,3,3,0,2,1,1,0,2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_unilateral_assistida,Barra fixa unilateral assistida,0,0,2,2,0,0,0,2,0,0,2,0,1,1,3,3,3,3,3,0,0,3,1,1,2,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_peito_na_barra,Barra fixa com peito na barra (chest-to-bar),0,2,3,3,0,0,0,2,0,0,2,0,1,1,3,3,3,3,2,2,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_isometria_topo,Sustentação no topo (flexed-arm hang),0,1,2,2,0,0,0,2,0,0,2,1,1,1,2,3,3,3,3,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+pullup_isometria_90,Sustentação a 90° de cotovelo,0,0,2,2,0,0,0,2,0,0,0,1,1,1,2,3,3,3,3,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dead_hang,Suspensão passiva (dead hang),0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,1,0,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+active_hang,Suspensão ativa (escápulas deprimidas),0,0,3,2,0,0,0,2,0,0,0,1,1,1,2,3,0,0,0,1,0,3,2,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+suspensao_unilateral,Suspensão unilateral,0,0,2,0,0,0,0,0,0,0,0,1,1,1,2,2,0,0,0,0,0,3,2,0,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+scap_pullup,Puxada escapular (scap pull-up),0,0,3,2,2,0,0,2,0,0,0,1,1,1,2,3,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+elevacao_joelhos,Abdominal inferior – elevação de joelhos (pernas flexionadas),0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,0,1,1,3,2,2,1,0,0,0,0,0,0,0,3,2,0,2,2,0,0,0,0,0,0,0
+elevacao_pernas_estendidas,Abdominal inferior – elevação de pernas estendidas,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,0,1,1,3,2,2,1,0,0,0,0,0,0,0,3,2,0,2,3,1,0,0,0,0,0,0
+elevacao_obliqua_joelhos,Abdominal oblíquo – elevação de joelhos com rotação,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,0,1,1,2,3,3,1,0,0,2,0,0,0,0,3,2,0,2,2,0,0,0,0,0,0,0
+elevacao_obliqua_estendidas,Abdominal oblíquo – elevação de pernas estendidas com rotação,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,0,1,1,2,3,3,1,0,0,2,0,0,0,0,3,2,0,2,3,1,0,0,0,0,0,0
+toes_to_bar,Pés na barra (toes-to-bar),0,0,1,0,0,0,0,2,0,0,0,0,0,0,2,3,0,0,0,2,0,1,1,3,2,2,1,0,0,0,0,0,0,0,3,2,0,1,3,1,0,0,0,0,0,0
+limpador_parabrisa,Limpador de para-brisa (windshield wipers),0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,0,1,1,2,3,3,1,0,0,2,0,0,0,0,2,0,0,1,2,1,0,0,0,0,0,0
+l_sit_suspenso,L-sit suspenso (sustentação em L),0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,0,1,1,3,2,2,2,0,0,0,0,0,0,0,3,2,0,2,3,1,0,0,0,0,0,0
+front_lever_tuck,Front lever grupado (tuck) e progressões,0,1,3,2,0,0,0,2,0,0,2,0,1,1,3,3,0,0,0,2,0,1,1,3,2,2,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0

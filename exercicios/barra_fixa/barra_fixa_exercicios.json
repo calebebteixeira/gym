@@ -1,0 +1,2243 @@
+{
+  "meta": {
+    "titulo": "Banco de dados de exercícios de barra fixa (barra de parede) e recrutamento muscular",
+    "versao": "1.0",
+    "data": "2026-11-21",
+    "n_exercicios": 31,
+    "n_musculos": 46,
+    "equipamento": "Barra fixa de parede com barra reta, extremidades anguladas e pegadores paralelos (neutros)",
+    "compatibilidade": "Usa os mesmos IDs de músculos de kettlebell_exercicios.json; as matrizes podem ser concatenadas diretamente.",
+    "legenda_papeis": {
+      "P": "Agonista primário – principal gerador do torque nas ações articulares-alvo (peso 3)",
+      "S": "Sinergista – contribui para o torque ou para a ação articular secundária (peso 2)",
+      "E": "Estabilizador – contração predominantemente isométrica para manter posição articular, postura ou preensão (peso 1)"
+    },
+    "metodologia": "Classificação qualitativa baseada em anatomia funcional (ações articulares, braços de momento e posição de cada músculo) e, quando disponível, em literatura eletromiográfica/biomecânica. Em exercícios isométricos (carries, arm bar, dead bug), 'P' indica os músculos de maior demanda. Os papéis não são %CVM: a ativação real varia com carga, técnica, amplitude, velocidade e antropometria.",
+    "nao_incluidos_nesta_barra": {
+      "muscle-up": "A barra de parede fica perto demais da parede para a transição por cima da barra.",
+      "kipping / butterfly pull-up": "Exigem balanço amplo; além disso, o kipping reduz a ativação dos membros superiores e aumenta a dos inferiores (Williamson-Price et al., 2021).",
+      "puxada atrás da nuca": "A parede atrapalha a posição e o movimento costuma ser mal tolerado pelo ombro.",
+      "skin the cat / back lever": "Exigem rotação completa do corpo sob a barra, sem espaço suficiente na barra de parede."
+    },
+    "referencias": [
+      "Youdas JW et al. Surface electromyographic activation patterns and elbow joint motion during a pull-up, chin-up, or perfect-pullup rotational exercise. J Strength Cond Res. 2010;24(12):3404-3414.",
+      "Dickie JA, Faulkner JA, Barnes MJ, Lark SD. Electromyographic analysis of muscle activation during pull-up variations. J Electromyogr Kinesiol. 2017;32:30-36.",
+      "Snarr RL et al. Comparison of muscle activity between traditional, suspension and towel pull-up variations. J Hum Kinet. 2017;58:5-13.",
+      "Williamson-Price M et al. Muscle activation during kipping, butterfly and strict pull-ups. St Mary's University, 2021.",
+      "Neumann DA. Kinesiology of the Musculoskeletal System. 3rd ed. Elsevier; 2017."
+    ]
+  },
+  "musculos": [
+    {
+      "id": "TRAP_S",
+      "nome_pt": "Trapézio – parte descendente (superior)",
+      "terminologia_anatomica": "M. trapezius, pars descendens",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. acessório (XI) + ramos C3–C4",
+      "acoes_principais": "Elevação e rotação superior da escápula; extensão/inclinação cervical"
+    },
+    {
+      "id": "TRAP_M",
+      "nome_pt": "Trapézio – parte transversa (média)",
+      "terminologia_anatomica": "M. trapezius, pars transversa",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. acessório (XI) + ramos C3–C4",
+      "acoes_principais": "Retração (adução) da escápula"
+    },
+    {
+      "id": "TRAP_I",
+      "nome_pt": "Trapézio – parte ascendente (inferior)",
+      "terminologia_anatomica": "M. trapezius, pars ascendens",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. acessório (XI) + ramos C3–C4",
+      "acoes_principais": "Depressão e rotação superior da escápula"
+    },
+    {
+      "id": "ROMB",
+      "nome_pt": "Romboides maior e menor",
+      "terminologia_anatomica": "Mm. rhomboidei major et minor",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. dorsal da escápula (C4–C5)",
+      "acoes_principais": "Retração, elevação e rotação inferior da escápula"
+    },
+    {
+      "id": "LEV_ESC",
+      "nome_pt": "Levantador da escápula",
+      "terminologia_anatomica": "M. levator scapulae",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. dorsal da escápula + C3–C4",
+      "acoes_principais": "Elevação e rotação inferior da escápula"
+    },
+    {
+      "id": "SERR",
+      "nome_pt": "Serrátil anterior",
+      "terminologia_anatomica": "M. serratus anterior",
+      "regiao": "Cintura escapular",
+      "inervacao": "N. torácico longo (C5–C7)",
+      "acoes_principais": "Protração e rotação superior da escápula; mantém a escápula contra o tórax"
+    },
+    {
+      "id": "PEIT_C",
+      "nome_pt": "Peitoral maior – parte clavicular",
+      "terminologia_anatomica": "M. pectoralis major, pars clavicularis",
+      "regiao": "Tórax/ombro",
+      "inervacao": "N. peitoral lateral (C5–C7)",
+      "acoes_principais": "Flexão, adução horizontal e rotação medial do ombro"
+    },
+    {
+      "id": "PEIT_E",
+      "nome_pt": "Peitoral maior – parte esternocostal",
+      "terminologia_anatomica": "M. pectoralis major, pars sternocostalis",
+      "regiao": "Tórax/ombro",
+      "inervacao": "Nn. peitorais medial e lateral (C6–T1)",
+      "acoes_principais": "Adução, adução horizontal, extensão do ombro a partir da flexão, rotação medial"
+    },
+    {
+      "id": "DELT_A",
+      "nome_pt": "Deltoide – parte clavicular (anterior)",
+      "terminologia_anatomica": "M. deltoideus, pars clavicularis",
+      "regiao": "Ombro",
+      "inervacao": "N. axilar (C5–C6)",
+      "acoes_principais": "Flexão, rotação medial e adução horizontal do ombro"
+    },
+    {
+      "id": "DELT_M",
+      "nome_pt": "Deltoide – parte acromial (média)",
+      "terminologia_anatomica": "M. deltoideus, pars acromialis",
+      "regiao": "Ombro",
+      "inervacao": "N. axilar (C5–C6)",
+      "acoes_principais": "Abdução do ombro"
+    },
+    {
+      "id": "DELT_P",
+      "nome_pt": "Deltoide – parte espinal (posterior)",
+      "terminologia_anatomica": "M. deltoideus, pars spinalis",
+      "regiao": "Ombro",
+      "inervacao": "N. axilar (C5–C6)",
+      "acoes_principais": "Extensão, abdução horizontal e rotação lateral do ombro"
+    },
+    {
+      "id": "SUPRA",
+      "nome_pt": "Supraespinal",
+      "terminologia_anatomica": "M. supraspinatus",
+      "regiao": "Ombro (manguito rotador)",
+      "inervacao": "N. supraescapular (C5–C6)",
+      "acoes_principais": "Início da abdução; compressão/centralização da cabeça umeral"
+    },
+    {
+      "id": "INFRA",
+      "nome_pt": "Infraespinal e redondo menor",
+      "terminologia_anatomica": "Mm. infraspinatus et teres minor",
+      "regiao": "Ombro (manguito rotador)",
+      "inervacao": "N. supraescapular (infraespinal); n. axilar (redondo menor)",
+      "acoes_principais": "Rotação lateral; depressão e estabilização posterior da cabeça umeral"
+    },
+    {
+      "id": "SUBESC",
+      "nome_pt": "Subescapular",
+      "terminologia_anatomica": "M. subscapularis",
+      "regiao": "Ombro (manguito rotador)",
+      "inervacao": "Nn. subescapulares superior e inferior (C5–C6)",
+      "acoes_principais": "Rotação medial; estabilização anterior da cabeça umeral"
+    },
+    {
+      "id": "RED_MAI",
+      "nome_pt": "Redondo maior",
+      "terminologia_anatomica": "M. teres major",
+      "regiao": "Ombro",
+      "inervacao": "N. subescapular inferior (C5–C7)",
+      "acoes_principais": "Extensão, adução e rotação medial do ombro"
+    },
+    {
+      "id": "LAT",
+      "nome_pt": "Latíssimo do dorso",
+      "terminologia_anatomica": "M. latissimus dorsi",
+      "regiao": "Dorso/ombro",
+      "inervacao": "N. toracodorsal (C6–C8)",
+      "acoes_principais": "Extensão, adução e rotação medial do ombro; enrijece a fáscia toracolombar"
+    },
+    {
+      "id": "BIC",
+      "nome_pt": "Bíceps braquial",
+      "terminologia_anatomica": "M. biceps brachii",
+      "regiao": "Braço",
+      "inervacao": "N. musculocutâneo (C5–C6)",
+      "acoes_principais": "Flexão do cotovelo, supinação do antebraço, flexão fraca do ombro"
+    },
+    {
+      "id": "BRAQ",
+      "nome_pt": "Braquial",
+      "terminologia_anatomica": "M. brachialis",
+      "regiao": "Braço",
+      "inervacao": "N. musculocutâneo (+ ramo do n. radial)",
+      "acoes_principais": "Flexão do cotovelo (em qualquer posição do antebraço)"
+    },
+    {
+      "id": "BRAQRAD",
+      "nome_pt": "Braquiorradial",
+      "terminologia_anatomica": "M. brachioradialis",
+      "regiao": "Antebraço",
+      "inervacao": "N. radial (C5–C6)",
+      "acoes_principais": "Flexão do cotovelo, sobretudo com antebraço neutro"
+    },
+    {
+      "id": "TRI_L",
+      "nome_pt": "Tríceps braquial – cabeça longa",
+      "terminologia_anatomica": "M. triceps brachii, caput longum",
+      "regiao": "Braço",
+      "inervacao": "N. radial (C6–C8)",
+      "acoes_principais": "Extensão do cotovelo; extensão e adução do ombro"
+    },
+    {
+      "id": "TRI_LM",
+      "nome_pt": "Tríceps braquial – cabeças lateral e medial",
+      "terminologia_anatomica": "M. triceps brachii, caput laterale et mediale",
+      "regiao": "Braço",
+      "inervacao": "N. radial (C6–C8)",
+      "acoes_principais": "Extensão do cotovelo"
+    },
+    {
+      "id": "FLEX_ANT",
+      "nome_pt": "Flexores do punho e dos dedos",
+      "terminologia_anatomica": "Mm. flexor carpi radialis/ulnaris, flexor digitorum superficialis/profundus, flexor pollicis longus",
+      "regiao": "Antebraço",
+      "inervacao": "Nn. mediano e ulnar (C7–T1)",
+      "acoes_principais": "Flexão do punho e dos dedos; força de preensão"
+    },
+    {
+      "id": "EXT_ANT",
+      "nome_pt": "Extensores do punho e dos dedos",
+      "terminologia_anatomica": "Mm. extensor carpi radialis longus/brevis, extensor carpi ulnaris, extensor digitorum",
+      "regiao": "Antebraço",
+      "inervacao": "N. radial / interósseo posterior (C6–C8)",
+      "acoes_principais": "Extensão do punho; estabilização do punho durante a preensão"
+    },
+    {
+      "id": "RETO_ABD",
+      "nome_pt": "Reto do abdome",
+      "terminologia_anatomica": "M. rectus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "Nn. intercostais T7–T11 e subcostal T12",
+      "acoes_principais": "Flexão da coluna; anti-extensão; retroversão pélvica"
+    },
+    {
+      "id": "OBL_EXT",
+      "nome_pt": "Oblíquo externo do abdome",
+      "terminologia_anatomica": "M. obliquus externus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "Nn. intercostais T7–T11, subcostal T12",
+      "acoes_principais": "Rotação contralateral, flexão lateral, anti-rotação/anti-flexão lateral"
+    },
+    {
+      "id": "OBL_INT",
+      "nome_pt": "Oblíquo interno do abdome",
+      "terminologia_anatomica": "M. obliquus internus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "T7–T12, nn. ílio-hipogástrico e ilioinguinal (L1)",
+      "acoes_principais": "Rotação ipsilateral, flexão lateral, anti-rotação"
+    },
+    {
+      "id": "TRANSV",
+      "nome_pt": "Transverso do abdome",
+      "terminologia_anatomica": "M. transversus abdominis",
+      "regiao": "Tronco",
+      "inervacao": "T7–T12, L1",
+      "acoes_principais": "Aumento da pressão intra-abdominal; rigidez do tronco"
+    },
+    {
+      "id": "ERET",
+      "nome_pt": "Eretores da espinha (iliocostal, longuíssimo, espinal)",
+      "terminologia_anatomica": "M. erector spinae",
+      "regiao": "Tronco",
+      "inervacao": "Ramos dorsais dos nervos espinhais",
+      "acoes_principais": "Extensão e flexão lateral da coluna; controle excêntrico da flexão"
+    },
+    {
+      "id": "MULTI",
+      "nome_pt": "Multífidos",
+      "terminologia_anatomica": "Mm. multifidi",
+      "regiao": "Tronco",
+      "inervacao": "Ramos mediais dos ramos dorsais",
+      "acoes_principais": "Estabilização segmentar; extensão e rotação vertebral"
+    },
+    {
+      "id": "QL",
+      "nome_pt": "Quadrado do lombo",
+      "terminologia_anatomica": "M. quadratus lumborum",
+      "regiao": "Tronco",
+      "inervacao": "Ramos ventrais T12–L4",
+      "acoes_principais": "Flexão lateral do tronco; elevação da pelve; estabilização no plano frontal"
+    },
+    {
+      "id": "GLU_MAX",
+      "nome_pt": "Glúteo máximo",
+      "terminologia_anatomica": "M. gluteus maximus",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo inferior (L5–S2)",
+      "acoes_principais": "Extensão e rotação lateral do quadril"
+    },
+    {
+      "id": "GLU_MED",
+      "nome_pt": "Glúteo médio",
+      "terminologia_anatomica": "M. gluteus medius",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo superior (L4–S1)",
+      "acoes_principais": "Abdução do quadril; estabilização da pelve no apoio unipodal"
+    },
+    {
+      "id": "GLU_MIN",
+      "nome_pt": "Glúteo mínimo",
+      "terminologia_anatomica": "M. gluteus minimus",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo superior (L4–S1)",
+      "acoes_principais": "Abdução e rotação medial; estabilização da cabeça femoral"
+    },
+    {
+      "id": "ROT_EXT_QUAD",
+      "nome_pt": "Rotadores laterais profundos do quadril",
+      "terminologia_anatomica": "Mm. piriformis, gemelli, obturatorii internus/externus, quadratus femoris",
+      "regiao": "Quadril",
+      "inervacao": "Plexo sacral (L4–S2); n. obturatório (obturador externo)",
+      "acoes_principais": "Rotação lateral; centralização da cabeça femoral"
+    },
+    {
+      "id": "ILIOPS",
+      "nome_pt": "Iliopsoas (psoas maior + ilíaco)",
+      "terminologia_anatomica": "M. iliopsoas",
+      "regiao": "Quadril",
+      "inervacao": "Ramos L1–L3 / n. femoral",
+      "acoes_principais": "Flexão do quadril; estabilização lombar (psoas)"
+    },
+    {
+      "id": "TFL",
+      "nome_pt": "Tensor da fáscia lata",
+      "terminologia_anatomica": "M. tensor fasciae latae",
+      "regiao": "Quadril",
+      "inervacao": "N. glúteo superior (L4–S1)",
+      "acoes_principais": "Flexão, abdução e rotação medial do quadril; tensiona o trato iliotibial"
+    },
+    {
+      "id": "ADU_MAG",
+      "nome_pt": "Adutor magno",
+      "terminologia_anatomica": "M. adductor magnus",
+      "regiao": "Coxa (medial)",
+      "inervacao": "N. obturatório (parte adutora) + n. isquiático/tibial (parte isquiotibial) L2–L4",
+      "acoes_principais": "Adução; extensão potente do quadril (parte posterior)"
+    },
+    {
+      "id": "ADU",
+      "nome_pt": "Adutores longo, curto, pectíneo e grácil",
+      "terminologia_anatomica": "Mm. adductor longus/brevis, pectineus, gracilis",
+      "regiao": "Coxa (medial)",
+      "inervacao": "N. obturatório (L2–L4); n. femoral (pectíneo)",
+      "acoes_principais": "Adução do quadril; flexão auxiliar"
+    },
+    {
+      "id": "RETO_FEM",
+      "nome_pt": "Reto femoral",
+      "terminologia_anatomica": "M. rectus femoris",
+      "regiao": "Coxa (anterior)",
+      "inervacao": "N. femoral (L2–L4)",
+      "acoes_principais": "Extensão do joelho; flexão do quadril"
+    },
+    {
+      "id": "VASTOS",
+      "nome_pt": "Vastos lateral, medial e intermédio",
+      "terminologia_anatomica": "Mm. vastus lateralis, medialis, intermedius",
+      "regiao": "Coxa (anterior)",
+      "inervacao": "N. femoral (L2–L4)",
+      "acoes_principais": "Extensão do joelho"
+    },
+    {
+      "id": "ISQ",
+      "nome_pt": "Isquiotibiais (bíceps femoral, semitendinoso, semimembranoso)",
+      "terminologia_anatomica": "M. biceps femoris, M. semitendinosus, M. semimembranosus",
+      "regiao": "Coxa (posterior)",
+      "inervacao": "N. isquiático – partes tibial e fibular (L5–S2)",
+      "acoes_principais": "Extensão do quadril; flexão do joelho"
+    },
+    {
+      "id": "GASTRO",
+      "nome_pt": "Gastrocnêmio",
+      "terminologia_anatomica": "M. gastrocnemius",
+      "regiao": "Perna",
+      "inervacao": "N. tibial (S1–S2)",
+      "acoes_principais": "Flexão plantar; flexão do joelho"
+    },
+    {
+      "id": "SOLEO",
+      "nome_pt": "Sóleo",
+      "terminologia_anatomica": "M. soleus",
+      "regiao": "Perna",
+      "inervacao": "N. tibial (S1–S2)",
+      "acoes_principais": "Flexão plantar (independente do ângulo do joelho)"
+    },
+    {
+      "id": "TIB_ANT",
+      "nome_pt": "Tibial anterior",
+      "terminologia_anatomica": "M. tibialis anterior",
+      "regiao": "Perna",
+      "inervacao": "N. fibular profundo (L4–L5)",
+      "acoes_principais": "Dorsiflexão e inversão do pé"
+    },
+    {
+      "id": "FIB",
+      "nome_pt": "Fibulares longo e curto",
+      "terminologia_anatomica": "Mm. fibularis longus et brevis",
+      "regiao": "Perna",
+      "inervacao": "N. fibular superficial (L5–S1)",
+      "acoes_principais": "Eversão; estabilidade lateral do tornozelo"
+    },
+    {
+      "id": "ECM",
+      "nome_pt": "Esternocleidomastoideo e flexores cervicais profundos",
+      "terminologia_anatomica": "M. sternocleidomastoideus, Mm. longus colli/capitis",
+      "regiao": "Pescoço",
+      "inervacao": "N. acessório (XI); ramos C1–C6",
+      "acoes_principais": "Flexão cervical; estabilização da cabeça"
+    }
+  ],
+  "exercicios": [
+    {
+      "id": "pullup_aberta",
+      "nome_pt": "Barra fixa pegada aberta (pronada larga)",
+      "nome_en": "Wide-grip pull-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada, ~1,5× largura dos ombros",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": true,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: adução no plano frontal (de ~180° de abdução até ~ braços ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: leve extensão torácica, pelve neutra (anti-extensão)",
+      "notas": "Pegada pronada gera maior ativação do trapézio médio que a neutra (Dickie et al., 2017) e do trapézio inferior que a supinada (Youdas et al., 2010). Amplitude menor que nas pegadas fechadas.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_I",
+          "RED_MAI",
+          "LAT",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_M",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "INFRA",
+          "BIC",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "LEV_ESC",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 2,
+        "TRAP_I": 3,
+        "ROMB": 2,
+        "LEV_ESC": 1,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 2,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 2,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_pronada_media",
+      "nome_pt": "Barra fixa pronada na largura dos ombros",
+      "nome_en": "Shoulder-width pull-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada, largura dos ombros",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: adução no plano escapular (entre frontal e sagital) (de ~180° de abdução até ~ braços ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: leve extensão torácica, pelve neutra (anti-extensão)",
+      "notas": "Variação 'padrão' de testes de força; maior amplitude articular que a pegada larga.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_I",
+          "RED_MAI",
+          "LAT",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_M",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "INFRA",
+          "BIC",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 2,
+        "TRAP_I": 3,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 2,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 2,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_pronada_fechada",
+      "nome_pt": "Barra fixa pegada pronada fechada",
+      "nome_en": "Close-grip pronated pull-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada, mãos próximas (< largura dos ombros)",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": true,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão",
+      "notas": "Movimento predominantemente de extensão do ombro; mais amplitude e maior contribuição do peitoral (porção esternocostal). Pronação favorece braquial e braquiorradial em relação ao bíceps.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "BIC",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 2,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "chinup_supinada",
+      "nome_pt": "Barra fixa pegada supinada (chin-up)",
+      "nome_en": "Chin-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Supinada, largura dos ombros ou menor",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": true,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão",
+      "notas": "Maior ativação do peitoral maior e do bíceps braquial que o pull-up pronado (Youdas et al., 2010, J Strength Cond Res). Costuma ser a variação em que se faz mais repetições.",
+      "musculos": {
+        "agonistas_primarios": [
+          "PEIT_E",
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "DELT_P",
+          "BRAQRAD",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 3,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 2,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_neutra",
+      "nome_pt": "Barra fixa pegada neutra (pegadores paralelos)",
+      "nome_en": "Neutral-grip pull-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Neutra (palmas uma de frente para a outra)",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": true,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão",
+      "notas": "Posição neutra do antebraço favorece o braquiorradial; geralmente a mais confortável para ombros e cotovelos. Ativação global semelhante às outras pegadas (Dickie et al., 2017). Usa os pegadores paralelos da sua barra.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_mista",
+      "nome_pt": "Barra fixa pegada mista (uma pronada, uma supinada)",
+      "nome_en": "Mixed-grip pull-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical assimétrico",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Mista",
+      "lateralidade": "Bilateral (assimétrico)",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão; Tronco: anti-rotação",
+      "notas": "Alternar o lado da mão supinada entre séries para equilibrar a carga.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "pullup_comando",
+      "nome_pt": "Barra fixa 'comando' (mãos uma à frente da outra)",
+      "nome_en": "Commando pull-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical com rotação",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Mãos alinhadas no eixo da barra, uma pronada e outra supinada",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Com adaptação (posicionar-se de lado para a parede)",
+      "acoes_articulares": "Mãos uma à frente da outra, barra no plano sagital do corpo; Ombro: extensão/adução assimétrica; Cotovelo: flexão; Tronco: rotação alternada para levar a cabeça a cada lado da barra",
+      "notas": "Na sua barra, usar a parte reta próxima a um dos suportes, de lado para a parede.",
+      "musculos": {
+        "agonistas_primarios": [
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "PEIT_E",
+          "DELT_P",
+          "RED_MAI",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "estabilizadores": [
+          "ROMB",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 1,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "pullup_toalha",
+      "nome_pt": "Barra fixa com toalhas",
+      "nome_en": "Towel pull-up",
+      "categoria": "Puxada vertical – variações de pegada",
+      "padrao_movimento": "Puxar vertical com preensão em toalha",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Neutra (toalhas penduradas na barra)",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão",
+      "notas": "Ativação do latíssimo semelhante à barra tradicional e menor no trapézio médio (Snarr et al., 2017, J Hum Kinet). Grande demanda de preensão.",
+      "musculos": {
+        "agonistas_primarios": [
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD",
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "RED_MAI",
+          "EXT_ANT"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_negativa",
+      "nome_pt": "Barra fixa negativa (excêntrica)",
+      "nome_en": "Negative (eccentric) pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical – fase excêntrica",
+      "tipo_contracao": "Excêntrico",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Mesmas ações do pull-up, executadas em fase excêntrica (descida controlada de 3–10 s): ombro em abdução/flexão excêntrica, cotovelo em extensão excêntrica",
+      "notas": "Sobe com salto ou apoio e desce devagar. Progressão clássica para quem ainda não completa repetições concêntricas.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_assistida_elastico",
+      "nome_pt": "Barra fixa assistida com elástico",
+      "nome_en": "Band-assisted pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical com assistência",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão",
+      "notas": "A assistência é maior embaixo (elástico mais esticado) e menor no topo; a dificuldade fica desigual ao longo da amplitude.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_com_salto",
+      "nome_pt": "Barra fixa com salto (jumping pull-up)",
+      "nome_en": "Jumping pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical assistido pelos membros inferiores",
+      "tipo_contracao": "Misto",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Salto (extensão de quadril, joelho e tornozelo) fornece impulso; Ombro: extensão/adução; Cotovelo: flexão; ênfase na descida controlada",
+      "notas": "Exige uma caixa ou banco se a barra for alta.",
+      "musculos": {
+        "agonistas_primarios": [
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "GLU_MAX",
+          "VASTOS"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "RED_MAI",
+          "BRAQRAD",
+          "GASTRO",
+          "SOLEO"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "GLU_MAX": 3,
+        "VASTOS": 3,
+        "GASTRO": 2,
+        "SOLEO": 2
+      }
+    },
+    {
+      "id": "pullup_com_carga",
+      "nome_pt": "Barra fixa com carga (kettlebell no cinto ou entre os pés)",
+      "nome_en": "Weighted pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical com sobrecarga",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão",
+      "notas": "Integra com a base de kettlebell: o KB pode ir pendurado em cinto ou preso entre os pés (adutores isométricos). Verificar a carga máxima suportada pela barra e pela fixação na parede.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_I",
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_M",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "ILIOPS",
+          "ADU"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 2,
+        "TRAP_I": 3,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ILIOPS": 1,
+        "ADU": 1
+      }
+    },
+    {
+      "id": "pullup_l_sit",
+      "nome_pt": "Barra fixa em L (L-sit pull-up)",
+      "nome_en": "L-sit pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical + flexão isométrica do quadril",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Com adaptação (de costas para a parede)",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão; Quadril: flexão isométrica ~90° com joelhos estendidos",
+      "notas": "A perna à frente desloca o centro de massa e exige forte anti-extensão. Pernas podem bater na parede se estiver de frente para ela.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "BRAQRAD",
+          "RETO_ABD",
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "FLEX_ANT",
+          "EXT_ANT",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "TFL",
+          "ADU",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "ILIOPS": 2,
+        "TFL": 1,
+        "ADU": 1,
+        "RETO_FEM": 2,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "pullup_arqueiro",
+      "nome_pt": "Barra fixa arqueiro (archer)",
+      "nome_en": "Archer pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical com predominância unilateral",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada larga",
+      "lateralidade": "Alternado",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Braço de trabalho: adução/extensão do ombro com flexão do cotovelo; Braço auxiliar: cotovelo estendido, ombro em abdução controlada (empurra/estabiliza a barra para baixo); Tronco desloca-se lateralmente",
+      "notas": "Progressão para a barra unilateral; braço auxiliar estendido trabalha em adução com tríceps isométrico.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "TRI_LM",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "pullup_typewriter",
+      "nome_pt": "Barra fixa 'máquina de escrever' (typewriter)",
+      "nome_en": "Typewriter pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical com deslocamento lateral no topo",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada larga",
+      "lateralidade": "Alternado",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Braço de trabalho: adução/extensão do ombro com flexão do cotovelo; Braço auxiliar: cotovelo estendido, ombro em abdução controlada (empurra/estabiliza a barra para baixo); Tronco desloca-se lateralmente; No topo: deslocamento lateral de uma mão à outra mantendo o queixo acima da barra",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "TRI_LM",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "TRI_LM": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "pullup_unilateral_assistida",
+      "nome_pt": "Barra fixa unilateral assistida",
+      "nome_en": "Assisted one-arm pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical unilateral",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Uma mão na barra; a outra no punho, antebraço ou toalha",
+      "lateralidade": "Unilateral",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Braço de trabalho: extensão/adução do ombro com flexão do cotovelo; Braço auxiliar segura o punho, antebraço ou toalha (assistência); Tronco: anti-rotação",
+      "notas": "Quanto mais baixa a mão auxiliar (no antebraço ou na toalha), menor a assistência.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD",
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "EXT_ANT",
+          "RETO_ABD",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "pullup_peito_na_barra",
+      "nome_pt": "Barra fixa com peito na barra (chest-to-bar)",
+      "nome_en": "Chest-to-bar pull-up",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Puxar vertical de amplitude máxima",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada ou neutra",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro: extensão no plano sagital (de ~180° de flexão até o cotovelo ao lado do tronco); Cotovelo: flexão; Escápula: depressão, retração e rotação inferior; Tronco: anti-extensão; Fase final: extensão máxima do ombro com retração escapular acentuada",
+      "notas": "A amplitude extra no topo aumenta a demanda dos retratores da escápula e do deltoide posterior. Na barra de parede, cuidado com a distância até a parede.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_I",
+          "ROMB",
+          "RED_MAI",
+          "LAT",
+          "BIC",
+          "BRAQ"
+        ],
+        "sinergistas": [
+          "TRAP_M",
+          "PEIT_E",
+          "DELT_P",
+          "BRAQRAD",
+          "TRI_L"
+        ],
+        "estabilizadores": [
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 2,
+        "TRAP_I": 3,
+        "ROMB": 3,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 2,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_isometria_topo",
+      "nome_pt": "Sustentação no topo (flexed-arm hang)",
+      "nome_en": "Flexed-arm hang",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Isometria em flexão máxima",
+      "tipo_contracao": "Isométrico",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Isometria no topo: cotovelo em flexão máxima, ombro em extensão/adução, escápula deprimida e retraída",
+      "notas": "Usado em testes de aptidão física e como progressão inicial.",
+      "musculos": {
+        "agonistas_primarios": [
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "RED_MAI"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "pullup_isometria_90",
+      "nome_pt": "Sustentação a 90° de cotovelo",
+      "nome_en": "90° isometric hold",
+      "categoria": "Puxada vertical – variações de dificuldade/método",
+      "padrao_movimento": "Isometria em amplitude intermediária",
+      "tipo_contracao": "Isométrico",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Isometria com cotovelo a ~90° e ombro em abdução/flexão intermediária; Escápula deprimida",
+      "notas": "Treina o 'ponto de travamento' (sticking point) típico da metade da subida.",
+      "musculos": {
+        "agonistas_primarios": [
+          "LAT",
+          "BIC",
+          "BRAQ",
+          "BRAQRAD"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "ROMB",
+          "PEIT_E",
+          "RED_MAI"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "BIC": 3,
+        "BRAQ": 3,
+        "BRAQRAD": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "dead_hang",
+      "nome_pt": "Suspensão passiva (dead hang)",
+      "nome_en": "Dead hang",
+      "categoria": "Suspensão e escápula",
+      "padrao_movimento": "Suspensão",
+      "tipo_contracao": "Isométrico",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro em flexão/abdução ~180°; Cotovelos estendidos; Mãos: preensão isométrica; Escápula: elevada (passiva) ou deprimida (ativa)",
+      "notas": "Pouca atividade muscular no ombro (escápula elevada); o fator limitante é a preensão. Também usada como alongamento/descompressão do complexo do ombro.",
+      "musculos": {
+        "agonistas_primarios": [
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "EXT_ANT"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "RED_MAI",
+          "LAT",
+          "TRI_L"
+        ]
+      },
+      "matriz": {
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 1,
+        "LAT": 1,
+        "TRI_L": 1,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 2
+      }
+    },
+    {
+      "id": "active_hang",
+      "nome_pt": "Suspensão ativa (escápulas deprimidas)",
+      "nome_en": "Active hang",
+      "categoria": "Suspensão e escápula",
+      "padrao_movimento": "Suspensão com depressão escapular",
+      "tipo_contracao": "Isométrico",
+      "pegada": "Qualquer",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro em flexão/abdução ~180°; Cotovelos estendidos; Mãos: preensão isométrica; Escápula: elevada (passiva) ou deprimida (ativa)",
+      "notas": "Posição de partida recomendada para todas as puxadas.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_I",
+          "LAT",
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "ROMB",
+          "PEIT_E",
+          "RED_MAI",
+          "EXT_ANT"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "TRI_L",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 3,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "TRI_L": 1,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 2,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "suspensao_unilateral",
+      "nome_pt": "Suspensão unilateral",
+      "nome_en": "One-arm hang",
+      "categoria": "Suspensão e escápula",
+      "padrao_movimento": "Suspensão unilateral",
+      "tipo_contracao": "Isométrico",
+      "pegada": "Qualquer",
+      "lateralidade": "Unilateral",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Ombro em flexão/abdução ~180°; Cotovelos estendidos; Mãos: preensão isométrica; Escápula: elevada (passiva) ou deprimida (ativa); Tronco: anti-rotação e anti-flexão lateral",
+      "notas": "Alta carga de preensão e de tração no ombro; progredir a partir da suspensão bilateral.",
+      "musculos": {
+        "agonistas_primarios": [
+          "FLEX_ANT"
+        ],
+        "sinergistas": [
+          "TRAP_I",
+          "RED_MAI",
+          "LAT",
+          "EXT_ANT"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "QL"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 2,
+        "LAT": 2,
+        "FLEX_ANT": 3,
+        "EXT_ANT": 2,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1,
+        "QL": 1
+      }
+    },
+    {
+      "id": "scap_pullup",
+      "nome_pt": "Puxada escapular (scap pull-up)",
+      "nome_en": "Scapular pull-up",
+      "categoria": "Suspensão e escápula",
+      "padrao_movimento": "Depressão escapular",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Cotovelos estendidos; Escápula: depressão e rotação inferior a partir da elevação total (suspensão passiva) → retorno controlado; Ombro: mínima participação glenoumeral",
+      "notas": "Isola o componente escapular da puxada; útil para aprender o início correto do movimento.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_I",
+          "LAT"
+        ],
+        "sinergistas": [
+          "ROMB",
+          "LEV_ESC",
+          "PEIT_E",
+          "RED_MAI"
+        ],
+        "estabilizadores": [
+          "SUPRA",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "RETO_ABD",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 3,
+        "ROMB": 2,
+        "LEV_ESC": 2,
+        "PEIT_E": 2,
+        "SUPRA": 1,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 1,
+        "OBL_EXT": 1,
+        "OBL_INT": 1,
+        "TRANSV": 1
+      }
+    },
+    {
+      "id": "elevacao_joelhos",
+      "nome_pt": "Abdominal inferior – elevação de joelhos (pernas flexionadas)",
+      "nome_en": "Hanging knee raise",
+      "categoria": "Core na barra (abdominais suspensos)",
+      "padrao_movimento": "Flexão do quadril + retroversão pélvica",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada",
+      "lateralidade": "Bilateral",
+      "nivel": "Iniciante",
+      "mostrado_nas_imagens": true,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Quadril: flexão até ~90°+ com joelhos flexionados; Pelve: retroversão no final (flexão lombar); Ombro: extensão isométrica para evitar balanço; Mãos: preensão",
+      "notas": "O 'abdominal inferior' é, na prática, o reto do abdome agindo na retroversão pélvica no final do movimento; até ~90° quem mais trabalha é o iliopsoas. O reto do abdome é um só músculo e não tem divisões funcionais claras em superior e inferior.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "ILIOPS"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT",
+          "TFL",
+          "ADU",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "PEIT_E",
+          "RED_MAI",
+          "LAT",
+          "TRI_L",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 1,
+        "PEIT_E": 1,
+        "RED_MAI": 1,
+        "LAT": 1,
+        "TRI_L": 1,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ILIOPS": 3,
+        "TFL": 2,
+        "ADU": 2,
+        "RETO_FEM": 2
+      }
+    },
+    {
+      "id": "elevacao_pernas_estendidas",
+      "nome_pt": "Abdominal inferior – elevação de pernas estendidas",
+      "nome_en": "Hanging straight-leg raise",
+      "categoria": "Core na barra (abdominais suspensos)",
+      "padrao_movimento": "Flexão do quadril com alavanca longa + retroversão pélvica",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": true,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Quadril: flexão até ~90° (ou mais) com joelhos estendidos; Pelve: retroversão no final; Joelhos: extensão isométrica; Ombro: extensão isométrica anti-balanço",
+      "notas": "Pernas estendidas aumentam muito o momento de força no quadril (alavanca longa) e exigem flexibilidade dos isquiotibiais. Para trabalhar o abdome, levar além de 90° com retroversão da pelve.",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT",
+          "TFL",
+          "ADU"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "PEIT_E",
+          "RED_MAI",
+          "LAT",
+          "TRI_L",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 1,
+        "PEIT_E": 1,
+        "RED_MAI": 1,
+        "LAT": 1,
+        "TRI_L": 1,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ILIOPS": 3,
+        "TFL": 2,
+        "ADU": 2,
+        "RETO_FEM": 3,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "elevacao_obliqua_joelhos",
+      "nome_pt": "Abdominal oblíquo – elevação de joelhos com rotação",
+      "nome_en": "Hanging oblique knee raise",
+      "categoria": "Core na barra (abdominais suspensos)",
+      "padrao_movimento": "Flexão do quadril + rotação/flexão lateral do tronco",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada",
+      "lateralidade": "Alternado",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": true,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Quadril: flexão com rotação da pelve para um lado; Tronco: flexão lateral + rotação (encurtamento do oblíquo do lado ao qual os joelhos se dirigem); Ombro: estabilização isométrica",
+      "notas": "O oblíquo externo de um lado e o oblíquo interno do outro trabalham juntos para girar a pelve.",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT",
+          "ILIOPS"
+        ],
+        "sinergistas": [
+          "RETO_ABD",
+          "QL",
+          "TFL",
+          "ADU",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "PEIT_E",
+          "RED_MAI",
+          "LAT",
+          "TRI_L",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 1,
+        "PEIT_E": 1,
+        "RED_MAI": 1,
+        "LAT": 1,
+        "TRI_L": 1,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "QL": 2,
+        "ILIOPS": 3,
+        "TFL": 2,
+        "ADU": 2,
+        "RETO_FEM": 2
+      }
+    },
+    {
+      "id": "elevacao_obliqua_estendidas",
+      "nome_pt": "Abdominal oblíquo – elevação de pernas estendidas com rotação",
+      "nome_en": "Hanging oblique leg raise",
+      "categoria": "Core na barra (abdominais suspensos)",
+      "padrao_movimento": "Flexão do quadril + rotação do tronco",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada",
+      "lateralidade": "Alternado",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Quadril: flexão com rotação da pelve para um lado; Tronco: flexão lateral + rotação (encurtamento do oblíquo do lado ao qual os joelhos se dirigem); Ombro: estabilização isométrica",
+      "notas": "",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT",
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "sinergistas": [
+          "RETO_ABD",
+          "QL",
+          "TFL",
+          "ADU"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "PEIT_E",
+          "RED_MAI",
+          "LAT",
+          "TRI_L",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 1,
+        "PEIT_E": 1,
+        "RED_MAI": 1,
+        "LAT": 1,
+        "TRI_L": 1,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "QL": 2,
+        "ILIOPS": 3,
+        "TFL": 2,
+        "ADU": 2,
+        "RETO_FEM": 3,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "toes_to_bar",
+      "nome_pt": "Pés na barra (toes-to-bar)",
+      "nome_en": "Toes-to-bar",
+      "categoria": "Core na barra (abdominais suspensos)",
+      "padrao_movimento": "Flexão máxima do quadril e da coluna",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Com adaptação (de costas para a parede, sem kipping)",
+      "acoes_articulares": "Quadril: flexão máxima até os pés tocarem a barra; Coluna: flexão; Ombro: extensão ativa (puxa o corpo contra a barra); Joelhos: estendidos",
+      "notas": "O latíssimo ajuda a aproximar os pés da barra, porque a extensão do ombro inclina o tronco para trás. Na barra de parede, fazer de costas para a parede, sem balanço (kipping).",
+      "musculos": {
+        "agonistas_primarios": [
+          "LAT",
+          "RETO_ABD",
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "sinergistas": [
+          "PEIT_E",
+          "RED_MAI",
+          "TRI_L",
+          "OBL_EXT",
+          "OBL_INT",
+          "TFL"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV",
+          "ADU",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 1,
+        "PEIT_E": 2,
+        "RED_MAI": 2,
+        "LAT": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 1,
+        "ILIOPS": 3,
+        "TFL": 2,
+        "ADU": 1,
+        "RETO_FEM": 3,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "limpador_parabrisa",
+      "nome_pt": "Limpador de para-brisa (windshield wipers)",
+      "nome_en": "Hanging windshield wipers",
+      "categoria": "Core na barra (abdominais suspensos)",
+      "padrao_movimento": "Rotação do tronco com quadril flexionado",
+      "tipo_contracao": "Força lenta (grind)",
+      "pegada": "Pronada",
+      "lateralidade": "Alternado",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Com adaptação (de costas para a parede)",
+      "acoes_articulares": "Quadril: flexão mantida ~90–120°; Tronco/pelve: rotação de um lado ao outro com pernas unidas; Ombro: estabilização e leve extensão",
+      "notas": "Exige primeiro chegar à posição de pés na barra ou em L. Na barra de parede, ficar de costas para a parede.",
+      "musculos": {
+        "agonistas_primarios": [
+          "OBL_EXT",
+          "OBL_INT"
+        ],
+        "sinergistas": [
+          "LAT",
+          "RETO_ABD",
+          "QL",
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "RED_MAI",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "TRANSV",
+          "ADU",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 1,
+        "RED_MAI": 1,
+        "LAT": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 2,
+        "OBL_EXT": 3,
+        "OBL_INT": 3,
+        "TRANSV": 1,
+        "QL": 2,
+        "ILIOPS": 2,
+        "ADU": 1,
+        "RETO_FEM": 2,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "l_sit_suspenso",
+      "nome_pt": "L-sit suspenso (sustentação em L)",
+      "nome_en": "Hanging L-sit",
+      "categoria": "Core na barra (abdominais suspensos)",
+      "padrao_movimento": "Flexão isométrica do quadril",
+      "tipo_contracao": "Isométrico",
+      "pegada": "Pronada",
+      "lateralidade": "Bilateral",
+      "nivel": "Intermediário",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Total",
+      "acoes_articulares": "Isometria: quadril em flexão ~90°, joelhos estendidos, pelve em retroversão; Ombro: extensão isométrica anti-balanço",
+      "notas": "Regressão: joelhos flexionados (tuck hold).",
+      "musculos": {
+        "agonistas_primarios": [
+          "RETO_ABD",
+          "ILIOPS",
+          "RETO_FEM"
+        ],
+        "sinergistas": [
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV",
+          "TFL",
+          "ADU"
+        ],
+        "estabilizadores": [
+          "TRAP_I",
+          "PEIT_E",
+          "RED_MAI",
+          "LAT",
+          "TRI_L",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "VASTOS"
+        ]
+      },
+      "matriz": {
+        "TRAP_I": 1,
+        "PEIT_E": 1,
+        "RED_MAI": 1,
+        "LAT": 1,
+        "TRI_L": 1,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 2,
+        "ILIOPS": 3,
+        "TFL": 2,
+        "ADU": 2,
+        "RETO_FEM": 3,
+        "VASTOS": 1
+      }
+    },
+    {
+      "id": "front_lever_tuck",
+      "nome_pt": "Front lever grupado (tuck) e progressões",
+      "nome_en": "Tuck front lever",
+      "categoria": "Isometrias avançadas",
+      "padrao_movimento": "Isometria horizontal em extensão de ombro",
+      "tipo_contracao": "Isométrico",
+      "pegada": "Pronada",
+      "lateralidade": "Bilateral",
+      "nivel": "Avançado",
+      "mostrado_nas_imagens": false,
+      "viabilidade_barra_parede": "Com adaptação (de costas para a parede; verificar o espaço)",
+      "acoes_articulares": "Isometria horizontal: ombro em extensão isométrica com cotovelo estendido (alavanca longa), escápula deprimida/retraída; Tronco: anti-extensão; Quadril: flexão (tuck) ou neutro (full)",
+      "notas": "Progressão: grupado → grupado avançado → uma perna → straddle → completo; a dificuldade cresce com o comprimento da alavanca. Precisa de espaço livre atrás e embaixo da barra, então faça de costas para a parede.",
+      "musculos": {
+        "agonistas_primarios": [
+          "TRAP_I",
+          "RED_MAI",
+          "LAT",
+          "RETO_ABD"
+        ],
+        "sinergistas": [
+          "ROMB",
+          "PEIT_E",
+          "DELT_P",
+          "TRI_L",
+          "OBL_EXT",
+          "OBL_INT",
+          "TRANSV"
+        ],
+        "estabilizadores": [
+          "TRAP_M",
+          "INFRA",
+          "SUBESC",
+          "FLEX_ANT",
+          "EXT_ANT",
+          "ILIOPS"
+        ]
+      },
+      "matriz": {
+        "TRAP_M": 1,
+        "TRAP_I": 3,
+        "ROMB": 2,
+        "PEIT_E": 2,
+        "DELT_P": 2,
+        "INFRA": 1,
+        "SUBESC": 1,
+        "RED_MAI": 3,
+        "LAT": 3,
+        "TRI_L": 2,
+        "FLEX_ANT": 1,
+        "EXT_ANT": 1,
+        "RETO_ABD": 3,
+        "OBL_EXT": 2,
+        "OBL_INT": 2,
+        "TRANSV": 2,
+        "ILIOPS": 1
+      }
+    }
+  ]
+}
