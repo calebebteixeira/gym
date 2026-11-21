@@ -8,7 +8,8 @@
     "check": "node scripts/check.ts",
     "check:fix": "vp check --fix",
     "prepare": "vp config --no-agent",
-    "musclewiki": "node scripts/musclewiki.ts"
+    "musclewiki": "node scripts/musclewiki.ts",
+    "musclewiki:videos": "node scripts/musclewiki-videos.ts"
   },
   "devDependencies": {
     "@types/node": "catalog:",
