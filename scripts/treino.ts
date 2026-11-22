@@ -21,3 +21,11 @@ export interface Treino {
 export function defineTreino(treino: Treino): Treino {
   return treino
 }
+
+/** Several workouts on one page, one tab each. `treino` is a key of `treinos` in `treinos/index.ts`. */
+export interface Plano<Slug extends string = string> {
+  titulo: string
+  descricao?: string
+  /** `dia` is the short tab label: `Seg`, `Ter`. */
+  treinos: { dia: string; treino: Slug }[]
+}

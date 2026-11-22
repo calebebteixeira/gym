@@ -1303,6 +1303,27 @@
       }
     }
   },
+  "push-up": {
+    "slug": "push-up",
+    "nome": "Flexão de braço",
+    "nome_en": "Push Up",
+    "passos": [
+      "Apoie as mãos firmemente no chão, diretamente abaixo dos ombros.",
+      "Mantenha as costas retas para que todo o corpo fique alinhado e abaixe-se lentamente.",
+      "Puxe as omoplatas para trás e para baixo, mantendo os cotovelos próximos ao corpo",
+      "Expire enquanto empurra de volta à posição inicial."
+    ],
+    "videos": {
+      "male": {
+        "front": "https://musclewiki.com/api-next/videos/male-Bodyweight-push-up-front.mp4",
+        "side": "https://musclewiki.com/api-next/videos/male-Bodyweight-push-up-side.mp4"
+      },
+      "female": {
+        "front": "https://musclewiki.com/api-next/videos/female-Bodyweight-push-up-front.mp4",
+        "side": "https://musclewiki.com/api-next/videos/female-Bodyweight-push-up-side.mp4"
+      }
+    }
+  },
   "swing-to-upright-row": {
     "slug": "swing-to-upright-row",
     "nome": "Balanço Para Remada Alta",
