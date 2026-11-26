@@ -2,9 +2,12 @@
 // slug of the same exercise on MuscleWiki (often under another name), or `null` when MuscleWiki
 // does not have it; `musclewiki/cache.json` holds what `pnpm musclewiki` read from those pages.
 import { existsSync, readFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { basename, join } from 'node:path'
 
 export const ORIGEM = 'https://musclewiki.com'
+
+/** GitHub Pages of this repository serves the committed copies in `musclewiki/videos/`. */
+const COPIAS = 'https://calebebteixeira.github.io/gym/musclewiki/videos'
 
 export type Video = string
 
@@ -18,6 +21,12 @@ export interface ExercicioMuscleWiki {
 }
 
 const pasta = join(import.meta.dirname, '..', 'musclewiki')
+
+/** URL of this repository's copy of a MuscleWiki video, when `pnpm musclewiki:videos` has it. */
+export function copia(video: Video): string | undefined {
+  const arquivo = basename(video)
+  return existsSync(join(pasta, 'videos', arquivo)) ? `${COPIAS}/${arquivo}` : undefined
+}
 
 function ler(arquivo: string): unknown {
   const caminho = join(pasta, arquivo)

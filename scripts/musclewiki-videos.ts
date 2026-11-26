@@ -1,6 +1,6 @@
 // Downloads every video referenced by `musclewiki/cache.json` (both models, both angles) into
-// `musclewiki/videos/`, which git ignores. A local copy for reference and auditing; the pages
-// keep playing the videos from musclewiki.com.
+// `musclewiki/videos/`. The files are committed: GitHub Pages serves them and the pages play that
+// copy first (see `copia` in `musclewiki-dados.ts`). Run it after adding a slug to the map.
 //
 //   pnpm musclewiki:videos
 //

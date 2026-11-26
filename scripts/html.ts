@@ -1,12 +1,13 @@
 // Renders workouts as self-contained HTML pages with inline CSS, so a file opens on its own when
 // sent over WhatsApp. The page works without JavaScript; the only script is the set timer
-// (`cronometro.ts`), added when a workout has timed sets. The only remote resources are the MuscleWiki videos, which play from
-// musclewiki.com with MuscleWiki's watermark; the page footer links to musclewiki.com.
+// (`cronometro.ts`), added when a workout has timed sets. The only remote resources are the MuscleWiki videos, with MuscleWiki's
+// watermark, played from this repository's copy or from musclewiki.com; the footer links to
+// musclewiki.com.
 import { nomeMusculo, type Exercicio } from './catalogo.ts'
 import { corpo, spriteCorpo } from './corpo.ts'
 import { cronometro } from './cronometro.ts'
 import { duracaoEstimada, tempoDaSerie } from './duracao.ts'
-import type { ExercicioMuscleWiki } from './musclewiki-dados.ts'
+import { copia, type ExercicioMuscleWiki } from './musclewiki-dados.ts'
 import type { ItemTreino, Plano, Treino } from './treino.ts'
 
 export interface ItemResolvido {
@@ -79,11 +80,16 @@ function campo(rotulo: string, valor: string | undefined): string {
 
 // Browsers autoplay a video without JavaScript only when it is muted and, on iOS, `playsinline`.
 // `#t=0.1` paints the first frame where autoplay is blocked (iOS Low Power Mode, data saver).
+// Two sources: this repository's copy first, then musclewiki.com, which the browser tries when the
+// copy does not load. MuscleWiki alone is not reliable: it serves other sites only while its CDN
+// has the file cached.
 function video(mw: ItemResolvido['musclewiki'], modelo: Modelo): string {
-  const src = mw?.videos[modelo].front ?? mw?.videos[modelo].side
-  return src
-    ? `<video class="item-video" src="${esc(src)}#t=0.1" controls autoplay muted loop playsinline></video>`
-    : ''
+  const original = mw?.videos[modelo].front ?? mw?.videos[modelo].side
+  if (!original) return ''
+  const fontes = [copia(original), original]
+    .filter((url) => url !== undefined)
+    .map((url) => `<source src="${esc(url)}#t=0.1" type="video/mp4">`)
+  return `<video class="item-video" controls autoplay muted loop playsinline>${fontes.join('')}</video>`
 }
 
 function passos(mw: ItemResolvido['musclewiki']): string {
@@ -202,8 +208,8 @@ body {
   z-index: 1;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  gap: 0.375rem;
+  grid-auto-columns: minmax(0, 1fr);
+  gap: 0.25rem;
   margin-inline: calc(-1 * var(--margem));
   margin-block-end: 1rem;
   padding-block: calc(0.5rem + env(safe-area-inset-top)) 0.5rem;
@@ -216,8 +222,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-inline-size: 0;
   min-block-size: 3.25rem;
-  padding: 0.375rem 0.25rem;
+  padding: 0.375rem 0.125rem;
   background: var(--cor-cartao);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio);
@@ -227,7 +234,15 @@ body {
   touch-action: manipulation;
 }
 .aba-dia { font-weight: 700; }
-.aba-nome { font-size: var(--fonte-mini); color: var(--cor-suave); overflow-wrap: normal; white-space: nowrap; }
+.aba-nome {
+  max-inline-size: 100%;
+  overflow: hidden;
+  font-size: var(--fonte-mini);
+  color: var(--cor-suave);
+  overflow-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .treino { display: none; }
 .duracao {
   margin-block: 0 0.25rem;
