@@ -1,6 +1,6 @@
 # Gym
 
-Generates one self-contained HTML page per workout (`dist/<treino>.html`), sent over WhatsApp and opened on a phone. Do not treat `node_modules/` or `dist/` as source.
+Generates one self-contained HTML page per workout (`dist/<treino>.html`), opened on a phone. `dist/` is generated but committed: GitHub Pages publishes it (`https://calebebteixeira.github.io/gym/dist/<page>.html`), and a file can also be sent over WhatsApp. Never edit `dist/` by hand: run `pnpm gerar` and commit the result. Do not treat `node_modules/` or `dist/` as source.
 
 ## Boundaries
 
@@ -29,7 +29,7 @@ Generates one self-contained HTML page per workout (`dist/<treino>.html`), sent 
 ## Commands
 
 ```bash
-pnpm gerar        # dist/<treino>.html
+pnpm gerar        # dist/<treino>.html (commit it: Pages publishes dist/)
 pnpm musclewiki          # refresh musclewiki/cache.json
 pnpm musclewiki:videos   # copies in musclewiki/videos/, served by GitHub Pages
 pnpm check        # repository gate
