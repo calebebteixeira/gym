@@ -1,7 +1,7 @@
 import { defineTreino } from '../scripts/treino.ts'
 
 export default defineTreino({
-  titulo: 'Inferior B',
+  titulo: 'Pernas B',
   descricao:
     'Sexta. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.',
   itens: [

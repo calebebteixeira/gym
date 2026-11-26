@@ -1,29 +1,50 @@
 // Every workout that `pnpm gerar` renders. The key is the output file name: `dist/<key>.html`.
 import type { Plano } from '../scripts/treino.ts'
+import empurrar from './empurrar.ts'
 import exemplo from './exemplo.ts'
-import inferiorA from './inferior-a.ts'
-import inferiorB from './inferior-b.ts'
-import superiorA from './superior-a.ts'
-import superiorB from './superior-b.ts'
+import kbPernasA from './kb-pernas-a.ts'
+import kbPuxarA from './kb-puxar-a.ts'
+import kbPuxarB from './kb-puxar-b.ts'
+import pernasA from './pernas-a.ts'
+import pernasB from './pernas-b.ts'
+import puxarA from './puxar-a.ts'
+import puxarB from './puxar-b.ts'
 
 export const treinos = {
   exemplo,
-  'superior-a': superiorA,
-  'inferior-a': inferiorA,
-  'superior-b': superiorB,
-  'inferior-b': inferiorB,
+  'puxar-a': puxarA,
+  'pernas-a': pernasA,
+  empurrar,
+  'puxar-b': puxarB,
+  'pernas-b': pernasB,
+  'kb-puxar-a': kbPuxarA,
+  'kb-pernas-a': kbPernasA,
+  'kb-puxar-b': kbPuxarB,
 }
 
 // Pages with several workouts, one tab each: `dist/<key>.html`.
 export const planos: Record<string, Plano<keyof typeof treinos>> = {
   semana: {
     titulo: 'Treino da semana',
-    descricao: 'Kettlebell e barra fixa, 4 dias por semana.',
+    descricao: 'Kettlebell e barra fixa, 5 dias por semana.',
     treinos: [
-      { dia: 'Seg', treino: 'superior-a' },
-      { dia: 'Ter', treino: 'inferior-a' },
-      { dia: 'Qui', treino: 'superior-b' },
-      { dia: 'Sex', treino: 'inferior-b' },
+      { dia: 'Seg', treino: 'puxar-a' },
+      { dia: 'Ter', treino: 'pernas-a' },
+      { dia: 'Qua', treino: 'empurrar' },
+      { dia: 'Qui', treino: 'puxar-b' },
+      { dia: 'Sex', treino: 'pernas-b' },
+    ],
+  },
+  // Same week without the pull-up bar. `empurrar` and `pernas-b` already use no bar.
+  'semana-kettlebell': {
+    titulo: 'Treino da semana: só kettlebell',
+    descricao: 'Só kettlebell, sem barra fixa. 5 dias por semana.',
+    treinos: [
+      { dia: 'Seg', treino: 'kb-puxar-a' },
+      { dia: 'Ter', treino: 'kb-pernas-a' },
+      { dia: 'Qua', treino: 'empurrar' },
+      { dia: 'Qui', treino: 'kb-puxar-b' },
+      { dia: 'Sex', treino: 'pernas-b' },
     ],
   },
 }

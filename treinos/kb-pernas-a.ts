@@ -1,7 +1,8 @@
 import { defineTreino } from '../scripts/treino.ts'
 
+// Kettlebell-only week (`planos['semana-kettlebell']`): no pull-up bar.
 export default defineTreino({
-  titulo: 'Inferior A',
+  titulo: 'Pernas A',
   descricao:
     'Terça. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.',
   itens: [
@@ -31,11 +32,12 @@ export default defineTreino({
       obs: 'Uma perna por vez, kettlebell na mão do mesmo lado e a outra mão na parede.',
     },
     {
-      exercicio: 'elevacao_joelhos',
-      series: 3,
-      repeticoes: '8–10',
+      exercicio: 'farmers_carry',
+      series: 4,
+      repeticoes: '20 m',
+      carga: '16 kg + 20 kg',
       descanso: '60 s',
-      obs: 'Sem balançar o corpo.',
+      obs: 'Um kettlebell em cada mão, tronco reto e ombros para trás. Troque os kettlebells de lado a cada série.',
     },
   ],
 })
