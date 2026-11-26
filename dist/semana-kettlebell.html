@@ -27,6 +27,8 @@
   --fonte-titulo: 1.5rem;
   --fonte-item: 1.125rem;
   --raio: 12px;
+  /* Height of whatever sticks to the top of the page (the tab bar). */
+  --topo: 0rem;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -121,7 +123,91 @@ body {
 .titulo { margin-block: 0 0.25rem; font-size: var(--fonte-titulo); }
 .descricao { margin-block: 0 1rem; font-size: var(--fonte-pequena); color: var(--cor-suave); }
 .lista { list-style: none; margin: 0; padding: 0; counter-reset: item; }
+.abas ~ .treino { --topo: 4.5rem; }
+/* Phone: a strip of thumbnails to swipe sideways. */
+.galeria {
+  display: flex;
+  gap: 0.5rem;
+  margin-inline: calc(-1 * var(--margem));
+  margin-block-end: 1rem;
+  padding-inline: var(--margem);
+  padding-block-end: 0.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--margem);
+}
+.galeria-item {
+  flex: 0 0 7.5rem;
+  scroll-snap-align: start;
+  font-size: var(--fonte-mini);
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+.galeria-quadro { position: relative; display: block; }
+.galeria-foto {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--cor-borda);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+}
+.galeria-num {
+  position: absolute;
+  inset-block-start: 0.25rem;
+  inset-inline-start: 0.25rem;
+  min-inline-size: 1.25rem;
+  padding-inline: 0.25rem;
+  background: var(--cor-destaque);
+  border-radius: 999px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--cor-sobre-destaque);
+}
+.galeria-nome {
+  display: -webkit-box;
+  margin-block-start: 0.25rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+/* Wide screen: the gallery becomes a sidebar that stays in view beside the cards. */
+@media (min-width: 62rem) {
+  .pagina, .rodape { max-inline-size: 58rem; }
+  .treino-corpo {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .galeria {
+    position: sticky;
+    inset-block-start: calc(var(--topo) + 0.75rem);
+    flex-direction: column;
+    max-block-size: calc(100dvh - var(--topo) - 1.5rem);
+    margin: 0;
+    padding: 0;
+    padding-inline-end: 0.25rem;
+    overflow: hidden auto;
+  }
+  .galeria-item {
+    display: grid;
+    flex: none;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    font-size: var(--fonte-pequena);
+  }
+  .galeria-nome { margin: 0; -webkit-line-clamp: 3; line-clamp: 3; }
+}
 .item {
+  scroll-margin-block-start: calc(var(--topo) + 0.5rem);
   counter-increment: item;
   margin-block-end: 0.75rem;
   padding: 1rem;
@@ -305,13 +391,15 @@ body {
 <h2 class="titulo">Puxar A</h2>
 <p class="descricao">Segunda. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.</p>
 </header>
+<div class="treino-corpo">
+<nav class="galeria" aria-label="Exercícios do treino"><a class="galeria-item" href="#kb-puxar-a-1"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-gorilla-row-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">1</span></span><span class="galeria-nome">Remada gorila (alternada a partir do chão)</span></a><a class="galeria-item" href="#kb-puxar-a-2"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">2</span></span><span class="galeria-nome">Remada unilateral apoiada (serrote)</span></a><a class="galeria-item" href="#kb-puxar-a-3"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-curl-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">3</span></span><span class="galeria-nome">Rosca bíceps com KB</span></a><a class="galeria-item" href="#kb-puxar-a-4"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-wood-chopper-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">4</span></span><span class="galeria-nome">Lenhador diagonal (alto → baixo)</span></a></nav>
 <ol class="lista">
-<li class="item">
+<li class="item" id="kb-puxar-a-1">
   <div class="item-cabeca">
   <h3 class="item-nome">Remada gorila (alternada a partir do chão)</h3>
   <p class="item-meta">Kettlebell · Intermediário</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-gorilla-row-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-erector_spinae:var(--nivel-1);--mm-gluteus_maximus:var(--nivel-1);--mm-hip_adductors:var(--nivel-1);--mm-vastus_lateralis:var(--nivel-1);--mm-vastus_medialis:var(--nivel-1);--mm-biceps_femoris:var(--nivel-1);--mm-medial_hamstrings:var(--nivel-1);--mm-posterior_rotator_cuff:var(--nivel-2);--mm-biceps_brachii:var(--nivel-2);--mm-brachialis:var(--nivel-2);--mm-forearm_extensors:var(--nivel-2);--mm-external_oblique:var(--nivel-2);--mm-trapezius-middle_lower:var(--nivel-3);--mm-posterior_deltoid:var(--nivel-3);--mm-latissimus_dorsi:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">4 séries × 8 cada lado</p><p class="item-etiquetas"><span class="etiqueta">16 kg + 20 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -339,12 +427,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-puxar-a-2">
   <div class="item-cabeca">
   <h3 class="item-nome">Remada unilateral apoiada (serrote)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-erector_spinae:var(--nivel-1);--mm-trapezius-middle_lower:var(--nivel-3);--mm-posterior_rotator_cuff:var(--nivel-2);--mm-biceps_brachii:var(--nivel-2);--mm-brachialis:var(--nivel-2);--mm-forearm_extensors:var(--nivel-2);--mm-posterior_deltoid:var(--nivel-3);--mm-latissimus_dorsi:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 10 cada lado</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -372,12 +460,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-puxar-a-3">
   <div class="item-cabeca">
   <h3 class="item-nome">Rosca bíceps com KB</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-curl-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-curl-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-curl-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-curl-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-curl-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-anterior_deltoid:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-forearm_extensors:var(--nivel-2);--mm-forearm_flexors:var(--nivel-2);--mm-biceps_brachii:var(--nivel-3);--mm-brachialis:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 8–10</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -405,12 +493,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-puxar-a-4">
   <div class="item-cabeca">
   <h3 class="item-nome">Lenhador diagonal (alto → baixo)</h3>
   <p class="item-meta">Kettlebell · Intermediário</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-wood-chopper-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-erector_spinae:var(--nivel-1);--mm-gluteus_medius:var(--nivel-1);--mm-serratus_anterior:var(--nivel-2);--mm-triceps_brachii:var(--nivel-2);--mm-rectus_abdominis:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-2);--mm-vastus_lateralis:var(--nivel-2);--mm-vastus_medialis:var(--nivel-2);--mm-pectoralis_major:var(--nivel-3);--mm-latissimus_dorsi:var(--nivel-3);--mm-external_oblique:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 10 cada lado</p><p class="item-etiquetas"><span class="etiqueta">16 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -439,6 +527,7 @@ body {
   </div>
 </li>
 </ol>
+</div>
 </section>
 <section class="treino treino-1">
 <header>
@@ -446,13 +535,15 @@ body {
 <h2 class="titulo">Pernas A</h2>
 <p class="descricao">Terça. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.</p>
 </header>
+<div class="treino-corpo">
+<nav class="galeria" aria-label="Exercícios do treino"><a class="galeria-item" href="#kb-pernas-a-1"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-goblet-squat-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">1</span></span><span class="galeria-nome">Agachamento goblet</span></a><a class="galeria-item" href="#kb-pernas-a-2"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-reverse-lunge-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">2</span></span><span class="galeria-nome">Afundo reverso</span></a><a class="galeria-item" href="#kb-pernas-a-3"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-romanian-deadlift-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">3</span></span><span class="galeria-nome">Terra romeno (RDL) bilateral</span></a><a class="galeria-item" href="#kb-pernas-a-4"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-calf-raise-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">4</span></span><span class="galeria-nome">Elevação de panturrilha em pé com KB</span></a><a class="galeria-item" href="#kb-pernas-a-5"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-farmers-carry-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">5</span></span><span class="galeria-nome">Caminhada do fazendeiro (bilateral)</span></a></nav>
 <ol class="lista">
-<li class="item">
+<li class="item" id="kb-pernas-a-1">
   <div class="item-cabeca">
   <h3 class="item-nome">Agachamento goblet</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-goblet-squat-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-goblet-squat-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-goblet-squat-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-goblet-squat-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-goblet-squat-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-trapezius-upper:var(--nivel-1);--mm-trapezius-upper_lateral:var(--nivel-1);--mm-trapezius-middle_lower:var(--nivel-1);--mm-anterior_deltoid:var(--nivel-1);--mm-biceps_brachii:var(--nivel-1);--mm-brachialis:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-erector_spinae:var(--nivel-1);--mm-hip_adductors:var(--nivel-3);--mm-rectus_femoris:var(--nivel-2);--mm-biceps_femoris:var(--nivel-2);--mm-medial_hamstrings:var(--nivel-2);--mm-soleus:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-3);--mm-vastus_lateralis:var(--nivel-3);--mm-vastus_medialis:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">4 séries × 8–10</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 2 min</span></p>
@@ -480,12 +571,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-pernas-a-2">
   <div class="item-cabeca">
   <h3 class="item-nome">Afundo reverso</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-reverse-lunge-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-reverse-lunge-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-reverse-lunge-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-reverse-lunge-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-reverse-lunge-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-gluteus_medius:var(--nivel-1);--mm-soleus:var(--nivel-1);--mm-fibularis_group:var(--nivel-1);--mm-hip_adductors:var(--nivel-2);--mm-biceps_femoris:var(--nivel-2);--mm-medial_hamstrings:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-3);--mm-vastus_lateralis:var(--nivel-3);--mm-vastus_medialis:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 8 cada perna</p><p class="item-etiquetas"><span class="etiqueta">16 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -513,12 +604,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-pernas-a-3">
   <div class="item-cabeca">
   <h3 class="item-nome">Terra romeno (RDL) bilateral</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-romanian-deadlift-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-romanian-deadlift-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-romanian-deadlift-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-romanian-deadlift-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-romanian-deadlift-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-trapezius-upper:var(--nivel-1);--mm-trapezius-upper_lateral:var(--nivel-1);--mm-trapezius-middle_lower:var(--nivel-1);--mm-latissimus_dorsi:var(--nivel-1);--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-erector_spinae:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-3);--mm-hip_adductors:var(--nivel-3);--mm-biceps_femoris:var(--nivel-3);--mm-medial_hamstrings:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 10</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -546,12 +637,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-pernas-a-4">
   <div class="item-cabeca">
   <h3 class="item-nome">Elevação de panturrilha em pé com KB</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-calf-raise-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-calf-raise-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-calf-raise-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-calf-raise-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-calf-raise-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-trapezius-upper:var(--nivel-1);--mm-trapezius-upper_lateral:var(--nivel-1);--mm-forearm_flexors:var(--nivel-1);--mm-gluteus_medius:var(--nivel-1);--mm-tibialis_anterior:var(--nivel-1);--mm-fibularis_group:var(--nivel-2);--mm-gastrocnemius:var(--nivel-3);--mm-soleus:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 12–15 cada perna</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -579,12 +670,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-pernas-a-5">
   <div class="item-cabeca">
   <h3 class="item-nome">Caminhada do fazendeiro (bilateral)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-farmers-carry-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-farmers-carry-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-farmers-carry-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-farmers-carry-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-farmers-carry-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-trapezius-middle_lower:var(--nivel-1);--mm-latissimus_dorsi:var(--nivel-1);--mm-forearm_extensors:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-erector_spinae:var(--nivel-2);--mm-vastus_lateralis:var(--nivel-1);--mm-vastus_medialis:var(--nivel-1);--mm-gastrocnemius:var(--nivel-1);--mm-soleus:var(--nivel-1);--mm-tibialis_anterior:var(--nivel-1);--mm-fibularis_group:var(--nivel-1);--mm-trapezius-upper:var(--nivel-3);--mm-gluteus_medius:var(--nivel-2);--mm-trapezius-upper_lateral:var(--nivel-3);--mm-forearm_flexors:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">4 séries × 20 m</p><p class="item-etiquetas"><span class="etiqueta">16 kg + 20 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -613,6 +704,7 @@ body {
   </div>
 </li>
 </ol>
+</div>
 </section>
 <section class="treino treino-2">
 <header>
@@ -620,13 +712,15 @@ body {
 <h2 class="titulo">Empurrar</h2>
 <p class="descricao">Quarta. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.</p>
 </header>
+<div class="treino-corpo">
+<nav class="galeria" aria-label="Exercícios do treino"><a class="galeria-item" href="#empurrar-1"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-push-press-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">1</span></span><span class="galeria-nome">Push press</span></a><a class="galeria-item" href="#empurrar-2"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Bodyweight-push-up-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">2</span></span><span class="galeria-nome">Flexão de braço sobre KBs</span></a><a class="galeria-item" href="#empurrar-3"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-upright-row-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">3</span></span><span class="galeria-nome">Remada alta (upright row)</span></a><a class="galeria-item" href="#empurrar-4"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-overhead-tricep-extension-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">4</span></span><span class="galeria-nome">Extensão de tríceps acima da cabeça</span></a></nav>
 <ol class="lista">
-<li class="item">
+<li class="item" id="empurrar-1">
   <div class="item-cabeca">
   <h3 class="item-nome">Push press</h3>
   <p class="item-meta">Kettlebell · Intermediário</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-push-press-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-push-press-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-push-press-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-push-press-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-push-press-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-trapezius-middle_lower:var(--nivel-1);--mm-posterior_rotator_cuff:var(--nivel-1);--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-trapezius-upper:var(--nivel-2);--mm-trapezius-upper_lateral:var(--nivel-2);--mm-serratus_anterior:var(--nivel-2);--mm-lateral_deltoid:var(--nivel-2);--mm-triceps_brachii:var(--nivel-3);--mm-gluteus_maximus:var(--nivel-2);--mm-gastrocnemius:var(--nivel-2);--mm-soleus:var(--nivel-2);--mm-anterior_deltoid:var(--nivel-3);--mm-vastus_lateralis:var(--nivel-3);--mm-vastus_medialis:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 6–8 cada lado</p><p class="item-etiquetas"><span class="etiqueta">16 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -654,12 +748,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="empurrar-2">
   <div class="item-cabeca">
   <h3 class="item-nome">Flexão de braço sobre KBs</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Bodyweight-push-up-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Bodyweight-push-up-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Bodyweight-push-up-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Bodyweight-push-up-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Bodyweight-push-up-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-posterior_rotator_cuff:var(--nivel-1);--mm-forearm_flexors:var(--nivel-1);--mm-forearm_extensors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-gluteus_maximus:var(--nivel-1);--mm-vastus_lateralis:var(--nivel-1);--mm-vastus_medialis:var(--nivel-1);--mm-serratus_anterior:var(--nivel-2);--mm-triceps_brachii:var(--nivel-3);--mm-pectoralis_major:var(--nivel-3);--mm-anterior_deltoid:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">4 séries × 8–12</p><p class="item-etiquetas"><span class="etiqueta">descanso 90 s</span></p>
@@ -687,12 +781,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="empurrar-3">
   <div class="item-cabeca">
   <h3 class="item-nome">Remada alta (upright row)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-upright-row-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-upright-row-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-upright-row-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-upright-row-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-upright-row-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-trapezius-upper:var(--nivel-3);--mm-serratus_anterior:var(--nivel-2);--mm-anterior_deltoid:var(--nivel-2);--mm-biceps_brachii:var(--nivel-2);--mm-brachialis:var(--nivel-2);--mm-forearm_extensors:var(--nivel-2);--mm-trapezius-upper_lateral:var(--nivel-3);--mm-lateral_deltoid:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 10</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -720,12 +814,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="empurrar-4">
   <div class="item-cabeca">
   <h3 class="item-nome">Extensão de tríceps acima da cabeça</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-overhead-tricep-extension-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-overhead-tricep-extension-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-overhead-tricep-extension-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-overhead-tricep-extension-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-overhead-tricep-extension-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-serratus_anterior:var(--nivel-1);--mm-anterior_deltoid:var(--nivel-1);--mm-posterior_rotator_cuff:var(--nivel-1);--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-triceps_brachii:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">2 séries × 10–12</p><p class="item-etiquetas"><span class="etiqueta">16 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -754,6 +848,7 @@ body {
   </div>
 </li>
 </ol>
+</div>
 </section>
 <section class="treino treino-3">
 <header>
@@ -761,13 +856,15 @@ body {
 <h2 class="titulo">Puxar B</h2>
 <p class="descricao">Quinta. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.</p>
 </header>
+<div class="treino-corpo">
+<nav class="galeria" aria-label="Exercícios do treino"><a class="galeria-item" href="#kb-puxar-b-1"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-gorilla-row-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">1</span></span><span class="galeria-nome">Remada gorila (alternada a partir do chão)</span></a><a class="galeria-item" href="#kb-puxar-b-2"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">2</span></span><span class="galeria-nome">Remada unilateral apoiada (serrote)</span></a><a class="galeria-item" href="#kb-puxar-b-3"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-shrug-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">3</span></span><span class="galeria-nome">Encolhimento de ombros (shrug)</span></a><a class="galeria-item" href="#kb-puxar-b-4"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-wood-chopper-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">4</span></span><span class="galeria-nome">Lenhador diagonal (alto → baixo)</span></a></nav>
 <ol class="lista">
-<li class="item">
+<li class="item" id="kb-puxar-b-1">
   <div class="item-cabeca">
   <h3 class="item-nome">Remada gorila (alternada a partir do chão)</h3>
   <p class="item-meta">Kettlebell · Intermediário</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-gorilla-row-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-gorilla-row-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-erector_spinae:var(--nivel-1);--mm-gluteus_maximus:var(--nivel-1);--mm-hip_adductors:var(--nivel-1);--mm-vastus_lateralis:var(--nivel-1);--mm-vastus_medialis:var(--nivel-1);--mm-biceps_femoris:var(--nivel-1);--mm-medial_hamstrings:var(--nivel-1);--mm-posterior_rotator_cuff:var(--nivel-2);--mm-biceps_brachii:var(--nivel-2);--mm-brachialis:var(--nivel-2);--mm-forearm_extensors:var(--nivel-2);--mm-external_oblique:var(--nivel-2);--mm-trapezius-middle_lower:var(--nivel-3);--mm-posterior_deltoid:var(--nivel-3);--mm-latissimus_dorsi:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">4 séries × 8 cada lado</p><p class="item-etiquetas"><span class="etiqueta">16 kg + 20 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -795,12 +892,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-puxar-b-2">
   <div class="item-cabeca">
   <h3 class="item-nome">Remada unilateral apoiada (serrote)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-single-arm-row-on-bench-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-erector_spinae:var(--nivel-1);--mm-trapezius-middle_lower:var(--nivel-3);--mm-posterior_rotator_cuff:var(--nivel-2);--mm-biceps_brachii:var(--nivel-2);--mm-brachialis:var(--nivel-2);--mm-forearm_extensors:var(--nivel-2);--mm-posterior_deltoid:var(--nivel-3);--mm-latissimus_dorsi:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 10 cada lado</p><p class="item-etiquetas"><span class="etiqueta">16 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -828,12 +925,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-puxar-b-3">
   <div class="item-cabeca">
   <h3 class="item-nome">Encolhimento de ombros (shrug)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-shrug-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-shrug-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-shrug-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-shrug-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-shrug-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-trapezius-middle_lower:var(--nivel-2);--mm-trapezius-upper:var(--nivel-3);--mm-trapezius-upper_lateral:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 12</p><p class="item-etiquetas"><span class="etiqueta">16 kg + 20 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -861,12 +958,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="kb-puxar-b-4">
   <div class="item-cabeca">
   <h3 class="item-nome">Lenhador diagonal (alto → baixo)</h3>
   <p class="item-meta">Kettlebell · Intermediário</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-wood-chopper-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-wood-chopper-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-erector_spinae:var(--nivel-1);--mm-gluteus_medius:var(--nivel-1);--mm-serratus_anterior:var(--nivel-2);--mm-triceps_brachii:var(--nivel-2);--mm-rectus_abdominis:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-2);--mm-vastus_lateralis:var(--nivel-2);--mm-vastus_medialis:var(--nivel-2);--mm-pectoralis_major:var(--nivel-3);--mm-latissimus_dorsi:var(--nivel-3);--mm-external_oblique:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 10 cada lado</p><p class="item-etiquetas"><span class="etiqueta">16 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -895,6 +992,7 @@ body {
   </div>
 </li>
 </ol>
+</div>
 </section>
 <section class="treino treino-4">
 <header>
@@ -902,13 +1000,15 @@ body {
 <h2 class="titulo">Pernas B</h2>
 <p class="descricao">Sexta. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.</p>
 </header>
+<div class="treino-corpo">
+<nav class="galeria" aria-label="Exercícios do treino"><a class="galeria-item" href="#pernas-b-1"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-swing-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">1</span></span><span class="galeria-nome">Swing bilateral (russo / hardstyle)</span></a><a class="galeria-item" href="#pernas-b-2"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-staggered-deadlift-single-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">2</span></span><span class="galeria-nome">Terra romeno &#39;kickstand&#39; (B-stance)</span></a><a class="galeria-item" href="#pernas-b-3"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-box-squat-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">3</span></span><span class="galeria-nome">Agachamento no banco/caixa (goblet)</span></a><a class="galeria-item" href="#pernas-b-4"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-lateral-lunge-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">4</span></span><span class="galeria-nome">Afundo lateral</span></a><a class="galeria-item" href="#pernas-b-5"><span class="galeria-quadro"><img class="galeria-foto" src="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Recovery-farmers-walk-front.jpg" alt="" width="480" height="270" loading="lazy" decoding="async"><span class="galeria-num">5</span></span><span class="galeria-nome">Caminhada &#39;mala&#39; (suitcase carry)</span></a></nav>
 <ol class="lista">
-<li class="item">
+<li class="item" id="pernas-b-1">
   <div class="item-cabeca">
   <h3 class="item-nome">Swing bilateral (russo / hardstyle)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-swing-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-swing-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-swing-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-swing-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-swing-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-trapezius-upper:var(--nivel-1);--mm-trapezius-upper_lateral:var(--nivel-1);--mm-trapezius-middle_lower:var(--nivel-1);--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-erector_spinae:var(--nivel-2);--mm-anterior_deltoid:var(--nivel-2);--mm-latissimus_dorsi:var(--nivel-2);--mm-vastus_lateralis:var(--nivel-2);--mm-vastus_medialis:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-3);--mm-hip_adductors:var(--nivel-3);--mm-biceps_femoris:var(--nivel-3);--mm-medial_hamstrings:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">5 séries × 10</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -936,12 +1036,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="pernas-b-2">
   <div class="item-cabeca">
   <h3 class="item-nome">Terra romeno &#39;kickstand&#39; (B-stance)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-staggered-deadlift-single-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-staggered-deadlift-single-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-staggered-deadlift-single-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-staggered-deadlift-single-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-staggered-deadlift-single-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-forearm_flexors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-erector_spinae:var(--nivel-2);--mm-fibularis_group:var(--nivel-1);--mm-gluteus_medius:var(--nivel-2);--mm-hip_adductors:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-3);--mm-biceps_femoris:var(--nivel-3);--mm-medial_hamstrings:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 8 cada perna</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -969,12 +1069,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="pernas-b-3">
   <div class="item-cabeca">
   <h3 class="item-nome">Agachamento no banco/caixa (goblet)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-box-squat-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-box-squat-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-kettlebell-box-squat-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-kettlebell-box-squat-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-kettlebell-box-squat-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-trapezius-upper:var(--nivel-1);--mm-trapezius-upper_lateral:var(--nivel-1);--mm-anterior_deltoid:var(--nivel-1);--mm-biceps_brachii:var(--nivel-1);--mm-brachialis:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-hip_adductors:var(--nivel-2);--mm-biceps_femoris:var(--nivel-2);--mm-medial_hamstrings:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-3);--mm-vastus_lateralis:var(--nivel-3);--mm-vastus_medialis:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 10</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -1002,12 +1102,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="pernas-b-4">
   <div class="item-cabeca">
   <h3 class="item-nome">Afundo lateral</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-lateral-lunge-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-lateral-lunge-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Kettlebells-lateral-lunge-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Kettlebells-lateral-lunge-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Kettlebells-lateral-lunge-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-anterior_deltoid:var(--nivel-1);--mm-biceps_brachii:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-external_oblique:var(--nivel-1);--mm-tibialis_anterior:var(--nivel-1);--mm-fibularis_group:var(--nivel-1);--mm-gluteus_medius:var(--nivel-2);--mm-hip_adductors:var(--nivel-3);--mm-soleus:var(--nivel-2);--mm-gluteus_maximus:var(--nivel-3);--mm-vastus_lateralis:var(--nivel-3);--mm-vastus_medialis:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 8 cada lado</p><p class="item-etiquetas"><span class="etiqueta">16 kg</span><span class="etiqueta">descanso 90 s</span></p>
@@ -1035,12 +1135,12 @@ body {
   </details>
   </div>
 </li>
-<li class="item">
+<li class="item" id="pernas-b-5">
   <div class="item-cabeca">
   <h3 class="item-nome">Caminhada &#39;mala&#39; (suitcase carry)</h3>
   <p class="item-meta">Kettlebell · Iniciante</p>
   </div>
-  <video class="item-video" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Recovery-farmers-walk-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Recovery-farmers-walk-front.mp4#t=0.1" type="video/mp4"></video>
+  <video class="item-video" poster="https://calebebteixeira.github.io/gym/musclewiki/miniaturas/male-Recovery-farmers-walk-front.jpg" controls autoplay muted loop playsinline><source src="https://calebebteixeira.github.io/gym/musclewiki/videos/male-Recovery-farmers-walk-front.mp4#t=0.1" type="video/mp4"><source src="https://musclewiki.com/api-next/videos/male-Recovery-farmers-walk-front.mp4#t=0.1" type="video/mp4"></video>
   <div class="item-conteudo">
   <svg class="item-corpo" viewBox="0 0 1195 1140" role="img" aria-label="Músculos trabalhados, de frente e de costas" style="--mm-latissimus_dorsi:var(--nivel-1);--mm-forearm_extensors:var(--nivel-1);--mm-rectus_abdominis:var(--nivel-1);--mm-erector_spinae:var(--nivel-3);--mm-tibialis_anterior:var(--nivel-1);--mm-fibularis_group:var(--nivel-1);--mm-trapezius-upper:var(--nivel-2);--mm-trapezius-upper_lateral:var(--nivel-2);--mm-gluteus_medius:var(--nivel-2);--mm-forearm_flexors:var(--nivel-3);--mm-external_oblique:var(--nivel-3)"><use href="#corpo-male"/></svg>
   <p class="item-prescricao">3 séries × 30 m cada lado</p><p class="item-etiquetas"><span class="etiqueta">20 kg</span><span class="etiqueta">descanso 60 s</span></p>
@@ -1069,6 +1169,7 @@ body {
   </div>
 </li>
 </ol>
+</div>
 </section>
 </main>
 <footer class="rodape">Vídeos: <a href="https://musclewiki.com">MuscleWiki</a> · Mapa muscular: <a href="https://github.com/PerspicaciousGuy/Open-Muscle-Map">Open Muscle Map</a></footer>

@@ -7,7 +7,7 @@ import { nomeMusculo, type Exercicio } from './catalogo.ts'
 import { corpo, spriteCorpo } from './corpo.ts'
 import { cronometro } from './cronometro.ts'
 import { duracaoEstimada, tempoDaSerie } from './duracao.ts'
-import { copia, type ExercicioMuscleWiki } from './musclewiki-dados.ts'
+import { copia, miniatura, type ExercicioMuscleWiki } from './musclewiki-dados.ts'
 import type { ItemTreino, Plano, Treino } from './treino.ts'
 
 export interface ItemResolvido {
@@ -89,7 +89,22 @@ function video(mw: ItemResolvido['musclewiki'], modelo: Modelo): string {
   const fontes = [copia(original), original]
     .filter((url) => url !== undefined)
     .map((url) => `<source src="${esc(url)}#t=0.1" type="video/mp4">`)
-  return `<video class="item-video" controls autoplay muted loop playsinline>${fontes.join('')}</video>`
+  const capa = miniatura(original)
+  return `<video class="item-video"${capa ? ` poster="${esc(capa)}"` : ''} controls autoplay muted loop playsinline>${fontes.join('')}</video>`
+}
+
+// Thumbnails of a workout's exercises, each a link to its card: a strip to swipe on a phone, a
+// sidebar on a wide screen.
+function galeria(itens: ItemResolvido[], modelo: Modelo, prefixo: string): string {
+  const links = itens.map(({ exercicio: e, musclewiki: mw }, i) => {
+    const original = mw?.videos[modelo].front ?? mw?.videos[modelo].side
+    const capa = original ? miniatura(original) : undefined
+    const foto = capa
+      ? `<img class="galeria-foto" src="${esc(capa)}" alt="" width="480" height="270" loading="lazy" decoding="async">`
+      : '<span class="galeria-foto"></span>'
+    return `<a class="galeria-item" href="#${prefixo}-${i + 1}"><span class="galeria-quadro">${foto}<span class="galeria-num">${i + 1}</span></span><span class="galeria-nome">${esc(e.nome_pt)}</span></a>`
+  })
+  return `<nav class="galeria" aria-label="Exercícios do treino">${links.join('')}</nav>`
 }
 
 function passos(mw: ItemResolvido['musclewiki']): string {
@@ -105,8 +120,9 @@ function cartao(
   { item, exercicio: e, musclewiki: mw }: ItemResolvido,
   modelo: Modelo,
   nivel: 2 | 3,
+  id: string,
 ): string {
-  return `<li class="item">
+  return `<li class="item" id="${id}">
   <div class="item-cabeca">
   <h${nivel} class="item-nome">${esc(e.nome_pt)}</h${nivel}>
   <p class="item-meta">${esc(e.equipamento)} · ${esc(e.nivel)}</p>
@@ -159,6 +175,8 @@ const css = `
   --fonte-titulo: 1.5rem;
   --fonte-item: 1.125rem;
   --raio: 12px;
+  /* Height of whatever sticks to the top of the page (the tab bar). */
+  --topo: 0rem;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -253,7 +271,91 @@ body {
 .titulo { margin-block: 0 0.25rem; font-size: var(--fonte-titulo); }
 .descricao { margin-block: 0 1rem; font-size: var(--fonte-pequena); color: var(--cor-suave); }
 .lista { list-style: none; margin: 0; padding: 0; counter-reset: item; }
+.abas ~ .treino { --topo: 4.5rem; }
+/* Phone: a strip of thumbnails to swipe sideways. */
+.galeria {
+  display: flex;
+  gap: 0.5rem;
+  margin-inline: calc(-1 * var(--margem));
+  margin-block-end: 1rem;
+  padding-inline: var(--margem);
+  padding-block-end: 0.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--margem);
+}
+.galeria-item {
+  flex: 0 0 7.5rem;
+  scroll-snap-align: start;
+  font-size: var(--fonte-mini);
+  line-height: 1.3;
+  color: inherit;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+.galeria-quadro { position: relative; display: block; }
+.galeria-foto {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--cor-borda);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+}
+.galeria-num {
+  position: absolute;
+  inset-block-start: 0.25rem;
+  inset-inline-start: 0.25rem;
+  min-inline-size: 1.25rem;
+  padding-inline: 0.25rem;
+  background: var(--cor-destaque);
+  border-radius: 999px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--cor-sobre-destaque);
+}
+.galeria-nome {
+  display: -webkit-box;
+  margin-block-start: 0.25rem;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+/* Wide screen: the gallery becomes a sidebar that stays in view beside the cards. */
+@media (min-width: 62rem) {
+  .pagina, .rodape { max-inline-size: 58rem; }
+  .treino-corpo {
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .galeria {
+    position: sticky;
+    inset-block-start: calc(var(--topo) + 0.75rem);
+    flex-direction: column;
+    max-block-size: calc(100dvh - var(--topo) - 1.5rem);
+    margin: 0;
+    padding: 0;
+    padding-inline-end: 0.25rem;
+    overflow: hidden auto;
+  }
+  .galeria-item {
+    display: grid;
+    flex: none;
+    grid-template-columns: 6.5rem minmax(0, 1fr);
+    gap: 0.5rem;
+    align-items: center;
+    font-size: var(--fonte-pequena);
+  }
+  .galeria-nome { margin: 0; -webkit-line-clamp: 3; line-clamp: 3; }
+}
 .item {
+  scroll-margin-block-start: calc(var(--topo) + 0.5rem);
   counter-increment: item;
   margin-block-end: 0.75rem;
   padding: 1rem;
@@ -371,16 +473,20 @@ body {
 }
 `
 
-function conteudo(treino: Treino, itens: ItemResolvido[], nivel: 1 | 2): string {
+/** `prefixo` makes the card ids unique when a page holds several workouts. */
+function conteudo(treino: Treino, itens: ItemResolvido[], nivel: 1 | 2, prefixo: string): string {
   const modelo = treino.modelo ?? 'male'
   return `<header>
 <p class="duracao">Tempo total: cerca de ${duracaoEstimada(treino.itens)} min · ${itens.length} exercícios</p>
 <h${nivel} class="titulo">${esc(treino.titulo)}</h${nivel}>
 ${treino.descricao ? `<p class="descricao">${esc(treino.descricao)}</p>` : ''}
 </header>
+<div class="treino-corpo">
+${galeria(itens, modelo, prefixo)}
 <ol class="lista">
-${itens.map((item) => cartao(item, modelo, nivel === 1 ? 2 : 3)).join('\n')}
-</ol>`
+${itens.map((item, i) => cartao(item, modelo, nivel === 1 ? 2 : 3, `${prefixo}-${i + 1}`)).join('\n')}
+</ol>
+</div>`
 }
 
 function documento(titulo: string, principal: string, modelos: Modelo[], cssExtra = ''): string {
@@ -406,7 +512,7 @@ ${principal.includes('class="cronometro"') ? `<script>(${cronometro.toString()})
 }
 
 export function renderizar(treino: Treino, itens: ItemResolvido[]): string {
-  return documento(treino.titulo, conteudo(treino, itens, 1), [treino.modelo ?? 'male'])
+  return documento(treino.titulo, conteudo(treino, itens, 1, 'ex'), [treino.modelo ?? 'male'])
 }
 
 // Tabs without JavaScript: one radio per workout, placed before the tab bar and the workouts so
@@ -431,7 +537,7 @@ export function renderizarPlano(plano: Plano, abas: Aba[]): string {
   const secoes = abas
     .map(
       (aba, i) =>
-        `<section class="treino treino-${i}">\n${conteudo(aba.treino, aba.itens, 2)}\n</section>`,
+        `<section class="treino treino-${i}">\n${conteudo(aba.treino, aba.itens, 2, aba.slug)}\n</section>`,
     )
     .join('\n')
   const cssAbas = abas

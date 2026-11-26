@@ -6,8 +6,8 @@ import { basename, join } from 'node:path'
 
 export const ORIGEM = 'https://musclewiki.com'
 
-/** GitHub Pages of this repository serves the committed copies in `musclewiki/videos/`. */
-const COPIAS = 'https://calebebteixeira.github.io/gym/musclewiki/videos'
+/** GitHub Pages of this repository serves the committed files under `musclewiki/`. */
+const PUBLICO = 'https://calebebteixeira.github.io/gym/musclewiki'
 
 export type Video = string
 
@@ -25,7 +25,15 @@ const pasta = join(import.meta.dirname, '..', 'musclewiki')
 /** URL of this repository's copy of a MuscleWiki video, when `pnpm musclewiki:videos` has it. */
 export function copia(video: Video): string | undefined {
   const arquivo = basename(video)
-  return existsSync(join(pasta, 'videos', arquivo)) ? `${COPIAS}/${arquivo}` : undefined
+  return existsSync(join(pasta, 'videos', arquivo)) ? `${PUBLICO}/videos/${arquivo}` : undefined
+}
+
+/** URL of the thumbnail `pnpm musclewiki:miniaturas` extracted from a video, when it exists. */
+export function miniatura(video: Video): string | undefined {
+  const arquivo = basename(video).replace(/\.mp4$/u, '.jpg')
+  return existsSync(join(pasta, 'miniaturas', arquivo))
+    ? `${PUBLICO}/miniaturas/${arquivo}`
+    : undefined
 }
 
 function ler(arquivo: string): unknown {

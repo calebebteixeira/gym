@@ -9,7 +9,8 @@
     "check:fix": "vp check --fix",
     "prepare": "vp config --no-agent",
     "musclewiki": "node scripts/musclewiki.ts",
-    "musclewiki:videos": "node scripts/musclewiki-videos.ts"
+    "musclewiki:videos": "node scripts/musclewiki-videos.ts",
+    "musclewiki:miniaturas": "node scripts/musclewiki-miniaturas.ts"
   },
   "devDependencies": {
     "@types/node": "catalog:",
