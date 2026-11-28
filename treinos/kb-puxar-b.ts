@@ -23,14 +23,6 @@ export default defineTreino({
       obs: 'Mão livre e joelho apoiados numa cadeira. Hoje com o cotovelo aberto, afastado do corpo, para pegar a parte de cima das costas.',
     },
     {
-      exercicio: 'encolhimento',
-      series: 3,
-      repeticoes: '12',
-      carga: '16 kg + 20 kg',
-      descanso: '60 s',
-      obs: 'Um kettlebell em cada mão. Suba os ombros em direção às orelhas, sem dobrar os braços. Troque os kettlebells de lado a cada série.',
-    },
-    {
       exercicio: 'woodchop',
       series: 3,
       repeticoes: '10 cada lado',

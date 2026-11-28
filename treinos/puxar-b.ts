@@ -28,12 +28,5 @@ export default defineTreino({
       descanso: '90 s',
       obs: 'Mão livre e joelho apoiados numa cadeira. Cotovelo junto ao corpo.',
     },
-    {
-      exercicio: 'woodchop',
-      series: 3,
-      repeticoes: '10 cada lado',
-      carga: '16 kg',
-      descanso: '60 s',
-    },
   ],
 })

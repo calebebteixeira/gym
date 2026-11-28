@@ -15,14 +15,6 @@ export default defineTreino({
       obs: 'Os dois kettlebells no chão entre os pés, quadril para trás e costas retas. Puxe um de cada vez. Troque os kettlebells de lado a cada série.',
     },
     {
-      exercicio: 'remada_unilateral',
-      series: 3,
-      repeticoes: '10 cada lado',
-      carga: '20 kg',
-      descanso: '90 s',
-      obs: 'Mão livre e joelho apoiados numa cadeira. Cotovelo junto ao corpo.',
-    },
-    {
       exercicio: 'rosca_biceps',
       series: 3,
       repeticoes: '8–10',

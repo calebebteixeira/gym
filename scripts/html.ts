@@ -40,9 +40,11 @@ function esc(texto: string): string {
 
 // Sets and repetitions on one line to read at a glance; load and rest as tags below it.
 function prescricao({ series, repeticoes, carga, descanso }: ItemTreino): string {
+  // Word joiners (U+2060) keep a range such as `6–8` on one line.
   const volume = [series === undefined ? '' : `${series} séries`, repeticoes ?? '']
     .filter(Boolean)
     .join(' × ')
+    .replace(/(\d)–(\d)/gu, '$1\u2060–\u2060$2')
   const etiquetas = [carga ?? '', descanso === undefined ? '' : `descanso ${descanso}`]
     .filter(Boolean)
     .map((texto) => `<span class="etiqueta">${esc(texto)}</span>`)
@@ -268,7 +270,7 @@ body {
   font-weight: 600;
   color: var(--cor-destaque);
 }
-.titulo { margin-block: 0 0.25rem; font-size: var(--fonte-titulo); }
+.titulo { margin-block: 0 0.25rem; font-size: var(--fonte-titulo); text-wrap: balance; }
 .descricao { margin-block: 0 1rem; font-size: var(--fonte-pequena); color: var(--cor-suave); }
 .lista { list-style: none; margin: 0; padding: 0; counter-reset: item; }
 .abas ~ .treino { --topo: 4.5rem; }
@@ -282,11 +284,15 @@ body {
   padding-block-end: 0.5rem;
   overflow-x: auto;
   overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--cor-borda) transparent;
   scroll-snap-type: x proximity;
   scroll-padding-inline: var(--margem);
 }
 .galeria-item {
-  flex: 0 0 7.5rem;
+  /* A little under a third of a phone screen: the next thumbnail peeks in, so the strip reads as
+     scrollable. */
+  flex: 0 0 6.75rem;
   scroll-snap-align: start;
   font-size: var(--fonte-mini);
   line-height: 1.3;
@@ -353,6 +359,7 @@ body {
     font-size: var(--fonte-pequena);
   }
   .galeria-nome { margin: 0; -webkit-line-clamp: 3; line-clamp: 3; }
+  .aba-nome { font-size: var(--fonte-pequena); }
 }
 .item {
   scroll-margin-block-start: calc(var(--topo) + 0.5rem);
@@ -385,11 +392,18 @@ body {
 }
 .item-nome {
   margin: 0;
+  text-wrap: balance;
   font-size: var(--fonte-item);
   &::before { content: counter(item) '. '; color: var(--cor-destaque); }
 }
 .item-meta, .item-musculos { font-size: var(--fonte-pequena); color: var(--cor-suave); }
-.item-prescricao { font-size: var(--fonte-item); font-weight: 700; line-height: 1.3; color: var(--cor-destaque); }
+.item-prescricao {
+  font-size: var(--fonte-item);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--cor-destaque);
+  text-wrap: balance;
+}
 .item-etiquetas { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-block: 0.375rem 0.5rem; }
 .etiqueta {
   padding: 0.125rem 0.5rem;
@@ -471,6 +485,19 @@ body {
   & dt { margin-block-start: 0.5rem; font-weight: 600; }
   & dd { margin-inline-start: 0; color: var(--cor-suave); }
 }
+.aba:active, .galeria-item:active { opacity: 0.7; }
+.galeria-item:focus-visible { outline: 2px solid var(--cor-destaque); outline-offset: 2px; border-radius: 8px; }
+/* Pointer feedback, only where there is a pointer that hovers. */
+@media (hover: hover) {
+  .aba:hover { border-color: var(--cor-destaque); }
+  .galeria-item:hover {
+    & .galeria-foto { border-color: var(--cor-destaque); }
+    & .galeria-nome { color: var(--cor-destaque); }
+  }
+  .serie:hover .serie-num { border-color: var(--cor-destaque); }
+  .item-detalhes summary:hover { text-decoration: underline; }
+  .cronometro:not(.cronometro-ativo):hover { background: color-mix(in srgb, var(--cor-destaque) 14%, transparent); }
+}
 `
 
 /** `prefixo` makes the card ids unique when a page holds several workouts. */
@@ -497,6 +524,7 @@ function documento(titulo: string, principal: string, modelos: Modelo[], cssExtr
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f6f7f8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#101214" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🏋️%3C/text%3E%3C/svg%3E">
 <title>${esc(titulo)}</title>
 <style>${css}${cssExtra}</style>
 </head>
