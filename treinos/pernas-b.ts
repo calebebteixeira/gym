@@ -14,19 +14,19 @@ export default defineTreino({
       obs: 'A força vem do quadril; os braços só guiam o kettlebell.',
     },
     {
-      exercicio: 'rdl_kickstand',
-      series: 3,
-      repeticoes: '8 cada perna',
-      carga: '20 kg',
-      descanso: '90 s',
-    },
-    {
       exercicio: 'box_squat',
       series: 3,
       repeticoes: '10',
       carga: '20 kg',
       descanso: '90 s',
       obs: 'Kettlebell junto ao peito. Sente de leve numa cadeira e levante sem impulso.',
+    },
+    {
+      exercicio: 'rdl_kickstand',
+      series: 3,
+      repeticoes: '8 cada perna',
+      carga: '20 kg',
+      descanso: '90 s',
     },
     {
       exercicio: 'avanco_lateral',

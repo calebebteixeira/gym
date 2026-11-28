@@ -31,6 +31,13 @@ export default defineTreino({
       obs: 'Segure a alça com as duas mãos, cotovelos junto ao corpo.',
     },
     {
+      exercicio: 'flexao_kb',
+      series: 3,
+      repeticoes: '8–12',
+      descanso: '90 s',
+      obs: 'Flexão normal, mãos no chão como no vídeo. Se não fizer 8, apoie os joelhos.',
+    },
+    {
       exercicio: 'woodchop',
       series: 3,
       repeticoes: '10 cada lado',

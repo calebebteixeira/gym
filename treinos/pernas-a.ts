@@ -12,7 +12,14 @@ export default defineTreino({
       descanso: '60 s',
       obs: 'Sem balançar o corpo.',
     },
-    { exercicio: 'goblet_squat', series: 4, repeticoes: '8–10', carga: '20 kg', descanso: '2 min' },
+    {
+      exercicio: 'goblet_squat',
+      series: 4,
+      repeticoes: '8–10',
+      carga: '20 kg',
+      descanso: '2 min',
+      obs: 'Desça contando 3 s e suba normal.',
+    },
     {
       exercicio: 'avanco_reverso',
       series: 3,
@@ -25,9 +32,9 @@ export default defineTreino({
       exercicio: 'rdl_bilateral',
       series: 3,
       repeticoes: '10',
-      carga: '20 kg',
+      carga: '16 kg + 20 kg',
       descanso: '90 s',
-      obs: 'Quadril para trás, coluna neutra, joelhos levemente dobrados.',
+      obs: 'Um kettlebell em cada mão, como no vídeo. Quadril para trás, coluna neutra, joelhos levemente dobrados. Troque os kettlebells de lado a cada série.',
     },
     {
       exercicio: 'panturrilha_em_pe',
