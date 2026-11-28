@@ -6,7 +6,7 @@ Generates one self-contained HTML page per workout (`dist/<treino>.html`), opene
 
 - `exercicios/` is the downloaded exercise database, kept verbatim. Do not edit or reformat it; replace it only with a new download.
 - A workout is `treinos/<nome>.ts` (`defineTreino`), registered in `treinos/index.ts`. `exercicio` is an `id` from `exercicios/*/…_exercicios.json`; `pnpm gerar` fails on an unknown id.
-- Pages are plain HTML with inline CSS and must work without JavaScript. The one script, by the owner's choice, is the set timer (`scripts/cronometro.ts`, inlined by `scripts/html.ts`): a start button on timed sets that beeps at the end. Add no other script. The only remote resources are the MuscleWiki videos (this repository's copy on GitHub Pages, then musclewiki.com).
+- Pages are plain HTML with inline CSS and must work without JavaScript. By the owner's choice there are two scripts, both inlined by `scripts/html.ts`: the set timer (`scripts/cronometro.ts`, a start button on timed sets that beeps at the end) and video autoplay (`scripts/autoplay.ts`, which plays each video while it is on screen; videos have `preload="none"`, so one downloads only when it first plays). Add no other script. The only remote resources are the MuscleWiki videos (this repository's copy on GitHub Pages, then musclewiki.com).
 
 ## MuscleWiki
 

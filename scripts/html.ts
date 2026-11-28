@@ -1,8 +1,10 @@
 // Renders workouts as self-contained HTML pages with inline CSS, so a file opens on its own when
-// sent over WhatsApp. The page works without JavaScript; the only script is the set timer
-// (`cronometro.ts`), added when a workout has timed sets. The only remote resources are the MuscleWiki videos, with MuscleWiki's
-// watermark, played from this repository's copy or from musclewiki.com; the footer links to
-// musclewiki.com.
+// sent over WhatsApp. The page works without JavaScript. Its two scripts are the set timer
+// (`cronometro.ts`, added when a workout has timed sets) and the one that plays each video while it
+// is on screen (`autoplay.ts`). The only remote resources are the MuscleWiki videos, with
+// MuscleWiki's watermark, played from this repository's copy or from musclewiki.com; the footer
+// links to musclewiki.com.
+import { autoplay } from './autoplay.ts'
 import { nomeMusculo, type Exercicio } from './catalogo.ts'
 import { corpo, spriteCorpo } from './corpo.ts'
 import { cronometro } from './cronometro.ts'
@@ -80,8 +82,9 @@ function campo(rotulo: string, valor: string | undefined): string {
   return valor ? `<dt>${esc(rotulo)}</dt><dd>${esc(valor)}</dd>` : ''
 }
 
-// Browsers autoplay a video without JavaScript only when it is muted and, on iOS, `playsinline`.
-// `#t=0.1` paints the first frame where autoplay is blocked (iOS Low Power Mode, data saver).
+// `preload="none"` and no `autoplay`: the thumbnail shows and nothing downloads until the video
+// plays, by a tap or by `autoplay.ts` when it comes on screen. Muted and `playsinline` so that
+// script may start it. `#t=0.1` paints a frame where there is no thumbnail.
 // Two sources: this repository's copy first, then musclewiki.com, which the browser tries when the
 // copy does not load. MuscleWiki alone is not reliable: it serves other sites only while its CDN
 // has the file cached.
@@ -92,7 +95,7 @@ function video(mw: ItemResolvido['musclewiki'], modelo: Modelo): string {
     .filter((url) => url !== undefined)
     .map((url) => `<source src="${esc(url)}#t=0.1" type="video/mp4">`)
   const capa = miniatura(original)
-  return `<video class="item-video"${capa ? ` poster="${esc(capa)}"` : ''} controls autoplay muted loop playsinline>${fontes.join('')}</video>`
+  return `<video class="item-video"${capa ? ` poster="${esc(capa)}"` : ''} controls muted loop playsinline preload="none">${fontes.join('')}</video>`
 }
 
 // Thumbnails of a workout's exercises, each a link to its card: a strip to swipe on a phone, a
@@ -264,8 +267,20 @@ body {
   white-space: nowrap;
 }
 .treino { display: none; }
+/* Title and duration share one line; a description, when there is one, goes below. */
+.treino-cabeca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 0.75rem;
+  margin-block-end: 0.75rem;
+  & .titulo { margin: 0; }
+  & .descricao { flex-basis: 100%; margin-block: 0.25rem 0; }
+}
+.nota { margin-block: 1rem 0; font-size: var(--fonte-pequena); color: var(--cor-suave); }
 .duracao {
-  margin-block: 0 0.25rem;
+  margin: 0;
   font-size: var(--fonte-pequena);
   font-weight: 600;
   color: var(--cor-destaque);
@@ -503,9 +518,9 @@ body {
 /** `prefixo` makes the card ids unique when a page holds several workouts. */
 function conteudo(treino: Treino, itens: ItemResolvido[], nivel: 1 | 2, prefixo: string): string {
   const modelo = treino.modelo ?? 'male'
-  return `<header>
-<p class="duracao">Tempo total: cerca de ${duracaoEstimada(treino.itens)} min · ${itens.length} exercícios</p>
+  return `<header class="treino-cabeca">
 <h${nivel} class="titulo">${esc(treino.titulo)}</h${nivel}>
+<p class="duracao">~${duracaoEstimada(treino.itens)} min · ${itens.length} exercícios</p>
 ${treino.descricao ? `<p class="descricao">${esc(treino.descricao)}</p>` : ''}
 </header>
 <div class="treino-corpo">
@@ -533,7 +548,7 @@ ${spriteCorpo(modelos)}
 <main class="pagina">
 ${principal}
 </main>
-${principal.includes('class="cronometro"') ? `<script>(${cronometro.toString()})()</script>\n` : ''}<footer class="rodape">Vídeos: <a href="https://musclewiki.com">MuscleWiki</a> · Mapa muscular: <a href="https://github.com/PerspicaciousGuy/Open-Muscle-Map">Open Muscle Map</a></footer>
+${principal.includes('class="cronometro"') ? `<script>(${cronometro.toString()})()</script>\n` : ''}${principal.includes('class="item-video"') ? `<script>(${autoplay.toString()})()</script>\n` : ''}<footer class="rodape">Vídeos: <a href="https://musclewiki.com">MuscleWiki</a> · Mapa muscular: <a href="https://github.com/PerspicaciousGuy/Open-Muscle-Map">Open Muscle Map</a></footer>
 </body>
 </html>
 `
@@ -591,7 +606,8 @@ ${radios}
 <nav class="abas" aria-label="Treinos">
 ${rotulos}
 </nav>
-${secoes}`,
+${secoes}
+${plano.nota ? `<p class="nota">${esc(plano.nota)}</p>` : ''}`,
     abas.map((aba) => aba.treino.modelo ?? 'male'),
     cssAbas,
   )

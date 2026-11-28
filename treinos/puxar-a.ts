@@ -2,8 +2,6 @@ import { defineTreino } from '../scripts/treino.ts'
 
 export default defineTreino({
   titulo: 'Puxar A',
-  descricao:
-    'Segunda. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.',
   itens: [
     {
       exercicio: 'chinup_supinada',

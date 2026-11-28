@@ -2,8 +2,6 @@ import { defineTreino } from '../scripts/treino.ts'
 
 export default defineTreino({
   titulo: 'Puxar B',
-  descricao:
-    'Quinta. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.',
   itens: [
     { exercicio: 'dead_hang', series: 3, repeticoes: '20–30 s', descanso: '60 s' },
     {

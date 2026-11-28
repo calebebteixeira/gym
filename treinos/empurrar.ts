@@ -2,8 +2,6 @@ import { defineTreino } from '../scripts/treino.ts'
 
 export default defineTreino({
   titulo: 'Empurrar',
-  descricao:
-    'Quarta. Aqueça 5 minutos antes. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.',
   itens: [
     {
       exercicio: 'push_press',

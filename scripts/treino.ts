@@ -26,6 +26,8 @@ export function defineTreino(treino: Treino): Treino {
 export interface Plano<Slug extends string = string> {
   titulo: string
   descricao?: string
+  /** Standing guidance for every workout of the plan, shown once at the end of the page. */
+  nota?: string
   /** `dia` is the short tab label: `Seg`, `Ter`. */
   treinos: { dia: string; treino: Slug }[]
 }

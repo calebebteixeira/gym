@@ -1,6 +1,7 @@
-// The only JavaScript on a page: a start button on timed sets (`20–30 s`). `html.ts` inlines the
-// source of this function with `toString()` (Node has already stripped the types), so it runs in
-// the browser and must not use anything from outside its own body.
+// One of the two scripts on a page (the other is `autoplay.ts`): a start button on timed sets
+// (`20–30 s`). `html.ts` inlines the source of this function with `toString()` (Node has already
+// stripped the types), so it runs in the browser and must not use anything from outside its own
+// body.
 //
 // Each run is one generated WAV played by an <audio> element started by the tap: 5 seconds to get
 // in position (ticks on the last three), a start beep, a short beep at the minimum time and an

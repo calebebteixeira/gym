@@ -22,11 +22,15 @@ export const treinos = {
   'kb-puxar-b': kbPuxarB,
 }
 
+const nota =
+  'Aqueça 5 minutos antes de cada treino. Quando fizer o máximo de repetições em todas as séries, suba a carga ou as repetições.'
+
 // Pages with several workouts, one tab each: `dist/<key>.html`.
 export const planos: Record<string, Plano<keyof typeof treinos>> = {
   semana: {
     titulo: 'Treino da semana',
     descricao: 'Kettlebell e barra fixa, 5 dias por semana.',
+    nota,
     treinos: [
       { dia: 'Seg', treino: 'puxar-a' },
       { dia: 'Ter', treino: 'pernas-a' },
@@ -39,6 +43,7 @@ export const planos: Record<string, Plano<keyof typeof treinos>> = {
   'semana-kettlebell': {
     titulo: 'Treino da semana: só kettlebell',
     descricao: 'Só kettlebell, sem barra fixa. 5 dias por semana.',
+    nota,
     treinos: [
       { dia: 'Seg', treino: 'kb-puxar-a' },
       { dia: 'Ter', treino: 'kb-pernas-a' },
