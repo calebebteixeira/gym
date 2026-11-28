@@ -36,13 +36,5 @@ export default defineTreino({
       descanso: '60 s',
       obs: 'Uma perna por vez, kettlebell na mão do mesmo lado e a outra mão na parede.',
     },
-    {
-      exercicio: 'farmers_carry',
-      series: 4,
-      repeticoes: '20 m',
-      carga: '16 kg + 20 kg',
-      descanso: '60 s',
-      obs: 'Um kettlebell em cada mão, tronco reto e ombros para trás. Troque os kettlebells de lado a cada série.',
-    },
   ],
 })

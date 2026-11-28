@@ -27,5 +27,13 @@ export default defineTreino({
       carga: '16 kg',
       descanso: '60 s',
     },
+    {
+      exercicio: 'farmers_carry',
+      series: 4,
+      repeticoes: '20 m',
+      carga: '16 kg + 20 kg',
+      descanso: '60 s',
+      obs: 'Um kettlebell em cada mão, tronco reto e ombros para trás. Troque os kettlebells de lado a cada série.',
+    },
   ],
 })
